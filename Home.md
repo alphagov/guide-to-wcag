@@ -1,4 +1,15 @@
-This is a work in progress and not finished yet.
+# How to do a WCAG audit
+
+**This is a work in progress and not finished yet.**
+
+## Testing tips
+
+* [General tips](general)
+* [Which pages to choose](pages-to-choose)
+* [How to document issues](document-issues)
+* [Resources](resources)
+
+## Success Criteria
 
 * [1.1.1 Non-text Content](1.1.1)
 * [1.2.x Time-based Media](1.2.x)
