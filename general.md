@@ -18,7 +18,7 @@ It’s ideal to at least sometimes test:
 * different settings or preferences if a website offers those
 
 ## Critical errors
-Some content can interfere with the rest of the page in a way which makes the whole page inaccessible to some people. Such a page would fail even if the content causing the issue is otherwise exempt from the audit. WCAG calls this ‘non-interference’. That means that exempt content must still pass the following criteria:
+Some content can interfere with the rest of the page in a way which makes the whole page inaccessible to some people. Such a page would fail even if the content causing the issue is otherwise exempt from the audit. WCAG calls this [‘non-interference’](https://www.w3.org/TR/WCAG21/#cc5). That means that exempt content must still pass the following criteria:
 
 * 1.4.2 - Audio Control
 * 2.1.2 - No Keyboard Trap
