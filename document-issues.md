@@ -1,0 +1,11 @@
+# How to document issues
+
+There is no consistent and unified way to document WCAG issues. How you do this will depend on personal preference or however best works for the team. Some helpful resources include:  
+
+* [W3C's Website Accessibility Evaluation Report Generator](https://www.w3.org/WAI/eval/report-tool/)
+* [Anika Henke's WCAG audit template (Google Sheet)](https://docs.google.com/spreadsheets/d/1tlwHV4O5Yi8MKf7zs6jNr2WRCarPDv-cTei_vWsczQE/edit?usp=sharing)
+* [a checklist based on what the UK monitoring team use (Google Sheet)](https://docs.google.com/spreadsheets/d/1o7icjYY55Xan9ZytFtOVds7fYWRVE-TlSsl0RLdKOuM/edit#gid=1035580620) - this is partially based on Anika Henke's version
+* [Richard Morton's WCAG 2.0 accessibility testing template (XLSx)](https://docs.google.com/spreadsheets/d/1cXfCqXVLSnPNd4-2qnfPKtd2W--ki7B2/edit?usp=sharing&ouid=107464948553210397587&rtpof=true&sd=true) - note this is based on an older version of WCAG
+* the US government's [Accessibility Conformance Reporting Tool (ACRT) tool](https://github.com/Section508Coordinators/ACRT) which creates reports for Section 508 checks which is the equivalent to WCAG 2.0 AA
+* [Accessibility Insights](https://accessibilityinsights.io/) has different evaluation methods but creates a report
+* putting issues straight into GitHub, Trello, Google Doc, or other tracking tools
