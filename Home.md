@@ -1,6 +1,8 @@
-# How to do a WCAG audit
+# Accessibility testing guide
 
-**This is a work in progress and not finished yet.**
+This guide outlines some approaches for testing websites and applications against the [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/) AA Level. It is based on one interpretation of WCAG. WCAG can be difficult, so there are many other interpretations which might be conflicting but equally valid. 
+
+This is a work in progress.
 
 ## Testing tips
 
