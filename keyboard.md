@@ -1,6 +1,6 @@
 ## How to use a keyboard
 
-To navigate with a keyboard, use:  
+To navigate with a keyboard, use:
 
 * Tab to move around interactive things (links and form elements)
 * Shift + Tab to move backwards
@@ -8,7 +8,7 @@ To navigate with a keyboard, use:
 * Space for selecting radio buttons and checkboxes
 * Space or Enter for activating buttons
 * Enter for following links
-* Esc for closing things (this can sometimes be done with, for example, a Close button)  
+* Esc for closing things (this can sometimes be done with, for example, a Close button)
 
 See [more on how to use a keyboard](https://webaim.org/techniques/keyboard/#testing).
 

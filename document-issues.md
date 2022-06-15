@@ -1,6 +1,6 @@
 # How to document issues
 
-There is no consistent and unified way to document WCAG issues. How you do this will depend on personal preference or however best works for the team. Some helpful resources include:  
+There is no consistent and unified way to document WCAG issues. How you do this will depend on personal preference or however best works for the team. Some helpful resources include:
 
 * [W3C's Website Accessibility Evaluation Report Generator](https://www.w3.org/WAI/eval/report-tool/)
 * [Anika Henke's WCAG audit template (Google Sheet)](https://docs.google.com/spreadsheets/d/1tlwHV4O5Yi8MKf7zs6jNr2WRCarPDv-cTei_vWsczQE/edit?usp=sharing)

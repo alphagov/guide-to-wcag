@@ -7,9 +7,9 @@ Both testing guidelines say to test:
 * help and legal information pages, including the accessibility statement
 * contact pages - this should include the feedback mechanism mentioned in the accessibility statement
 * essential functionality and primary intended uses
-* web pages and page types that have a substantially distinct appearance or present a different type of content 
+* web pages and page types that have a substantially distinct appearance or present a different type of content
 * pages using different web technologies
-* other pages you think are relevant 
+* other pages you think are relevant
 * a representative sample, typically at least one relevant page for each type of service
 * complete processes, journeys and interactions
 * at least one downloadable document

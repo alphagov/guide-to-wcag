@@ -1,6 +1,6 @@
 # Resources
 
-This page includes useful resources and tools from other governments, industry organisations as well as notable individuals in the field of accessibility. 
+This page includes useful resources and tools from other governments, industry organisations as well as notable individuals in the field of accessibility.
 
 ### General resources
 
@@ -19,7 +19,7 @@ This page includes useful resources and tools from other governments, industry o
 * [Adrian Roselli's bookmarklets](https://adrianroselli.com/2015/01/css-bookmarklets-for-testing-and-fixing.html)
 * [Lloydi's A11y Tools](https://a11y-tools.com/), including bookmarklets
 * [University of Illinois' bookmarklets](https://accessibility-bookmarklets.org/)
-* [Paul J. Adam's list of tools](https://pauljadam.com/resources.html), including bookmarklets 
+* [Paul J. Adam's list of tools](https://pauljadam.com/resources.html), including bookmarklets
 * [Smashing Magazine's list of tools](https://www.smashingmagazine.com/2021/06/complete-guide-accessibility-tooling/)
 * [Deque's screen reader cheat sheets](https://dequeuniversity.com/screenreaders/)
 
