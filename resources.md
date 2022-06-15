@@ -33,4 +33,4 @@ This page includes useful resources and tools from other governments, industry o
 * [Microsoft's Accessibility Insights](https://accessibilityinsights.io/) checklist
 * [IBM Accessibility Requirements](https://www.ibm.com/able/requirements/requirements/)
 * [Orange's testing instructions](https://a11y-guidelines.orange.com/en/)
-* [W3C's ​​Accessibility Education and Outreach Working Group's checklist](https://www.w3.org/WAI/EO/wiki/Accessibility_Checkpoint_Master_List)
+* [W3C's Accessibility Education and Outreach Working Group's checklist](https://www.w3.org/WAI/EO/wiki/Accessibility_Checkpoint_Master_List)
