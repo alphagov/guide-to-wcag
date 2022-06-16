@@ -1,4 +1,4 @@
-## How to use a keyboard
+# How to use a keyboard
 
 To navigate with a keyboard, use:
 

@@ -1,12 +1,12 @@
-## About semantics and specs
+# About semantics and specs
 
-### Specifications
+## Specifications
 
 If code is written to specification (such as specs for HTML or ARIA) and assistive technology interprets it incorrectly, then this is technically not a WCAG fail, but worth highlighting in an audit because it's still an accessibility issue.
 
 If code is not written to spec but assistive technology interprets it correctly, then this can technically be considered a fail as it may be a problem for other untested assistive technologies or for future updates of the tested assistive technologies. But writing code different from the spec can be better for users, depending on the circumstances, and failing it could be counterproductive.
 
-### Semantics
+## Semantics
 
 Semantics provide meaning. Most HTML elements have a specific meaning. Giving them a visually or behaviourally different meaning is confusing for assistive technology users. For example, a button should be correctly coded as a button and a heading as a heading.
 
@@ -16,6 +16,6 @@ Native semantic elements that are interactive include:
 * form elements (`input`, `select`, `datalist`, `textarea`, `button`)
 * media - this includes interactive elements which are provided by the browser (`video`, `audio`)
 
-### Helpful resources
+## Helpful resources
 
 * [Developer Accessibility Workshop](https://alphagov.github.io/a11y-dev-workshop/)

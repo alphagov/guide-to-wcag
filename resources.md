@@ -2,12 +2,12 @@
 
 This page includes useful resources and tools from other governments, industry organisations as well as notable individuals in the field of accessibility.
 
-### General resources
+## General resources
 
 * [WCAG quick reference](https://www.w3.org/WAI/WCAG21/quickref/)
 * [Resources listed on The A11y Project](https://www.a11yproject.com/resources/)
 
-### Lists of tools
+## Lists of tools
 
 * [the US government's testing bookmarklet ANDI](https://www.ssa.gov/accessibility/andi/help/install.html)
 * [other bookmarklets from the US government](https://github.com/Section508Coordinators/a11ybookmarklets)
@@ -23,7 +23,7 @@ This page includes useful resources and tools from other governments, industry o
 * [Smashing Magazine's list of tools](https://www.smashingmagazine.com/2021/06/complete-guide-accessibility-tooling/)
 * [Deque's screen reader cheat sheets](https://dequeuniversity.com/screenreaders/)
 
-### Other testing instructions
+## Other testing instructions
 
 * The [Home Office's testing instructions](https://design.homeoffice.gov.uk/accessibility/standard)
 * The German government's [old test list](https://testen.bitv-test.de/index.php?a=dl&mode=wcag) and [new test list](https://webtest.bitv-test.de/index.php?a=dl&t=s) (the new one covers WCAG only under 9.x points)

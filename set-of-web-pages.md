@@ -1,4 +1,4 @@
-## What is "a set of web pages"?
+# What is "a set of web pages"?
 
 [WCAG 2.1 defines a "set of web pages"](https://www.w3.org/TR/WCAG21/#dfn-set-of-web-pages) as a "collection of web pages that share a common purpose and that are created by the same author, group or organization."
 

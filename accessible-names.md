@@ -1,4 +1,4 @@
-## Accessible names
+# Accessible names
 
 Checking the 'accessible name' of a component is part of various Success Criteria.
 
