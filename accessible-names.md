@@ -12,7 +12,7 @@ For example:
 
 Find what the accessible name is using either:
 
-* the browser inspector's "accessibility" tab to find the accessible name of specific things <img width="867" alt="accessibility tree in Chrome inspector" src="https://user-images.githubusercontent.com/108893/167848065-c8cb1acc-8611-4869-aef5-64fcd5301d00.png">
+* the browser inspector's "accessibility" tab to find the accessible name of specific things ![accessibility tree in Chrome inspector](accessibility-tree.png)
 * a screen reader (ideally NVDA) - this will always read out the accessible name, although some screen readers are clever and will fix an accessible name if it is wrong
 * the '[Visual ARIA](http://whatsock.com/training/matrices/visual-aria.htm)' or '[Web Evaluation Tools](https://accessibility.oit.ncsu.edu/tools/web-evaluation-tools/)' bookmarklet to make some hidden text visible
 
