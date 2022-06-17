@@ -14,7 +14,7 @@ Find what the accessible name is using either:
 
 * the browser inspector's "accessibility" tab to find the accessible name of specific things ![accessibility tree in Chrome inspector](accessibility-tree.png)
 * a screen reader (ideally NVDA) - this will always read out the accessible name, although some screen readers are clever and will fix an accessible name if it is wrong
-* the '[Visual ARIA](http://whatsock.com/training/matrices/visual-aria.htm)' or '[Web Evaluation Tools](https://accessibility.oit.ncsu.edu/tools/web-evaluation-tools/)' bookmarklet to make some hidden text visible
+* the [Visual ARIA bookmarklet](http://whatsock.com/training/matrices/visual-aria.htm) or the [Web Evaluation Tools bookmarklet](https://accessibility.oit.ncsu.edu/tools/web-evaluation-tools/) to make some hidden text visible
 
 You do not need to check every single interactive element, just a random sample. For example you could check one link out of a list of links or one button out of the footer.
 
