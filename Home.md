@@ -66,3 +66,5 @@ This is a work in progress.
 * [4.1.3 Status Messages](4.1.3)
 
 All content is available under the [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/), except where otherwise stated or when quoted from other sources.
+
+[Accessibility statement for this guide](accessibility-statement)
