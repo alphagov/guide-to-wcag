@@ -46,7 +46,7 @@ In order to test language support within web views, you need to add appropriate 
 
 ## Differences between websites and mobile apps  
 
-This section highlights where there are differences in the approach for testing against WCAG success criteria between websites and mobile apps. Where the approach is different, there is more information on the relevant success criterion page.
+This section highlights where there are differences in the approach for testing against Web Content Accessibility Guidelines (WCAG) v2.1 AA success criteria between websites and mobile apps. Where the approach is different, there is more information on the relevant success criterion page.
 
 <table>
 <tbody align="left">
