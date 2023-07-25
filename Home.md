@@ -4,12 +4,13 @@ This guide outlines some approaches for testing websites and applications agains
 
 This is a work in progress.
 
-## Testing tips
+## General guidance
 
 * [General tips](general)
 * [Which pages to choose](pages-to-choose)
 * [How to document issues](document-issues)
 * [Resources](resources)
+* [Mobile app testing](mobile-app-testing)
 
 ## Success Criteria
 
