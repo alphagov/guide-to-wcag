@@ -89,13 +89,13 @@ This section highlights where there are differences in the approach for testing 
 </tr>
 <tr>
   <th scope="row"><a href="1.3.1#mobile-app-testing">1.3.1 Info and relationships</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Use a screen reader</td>
 </tr>
 <tr>
   <th scope="row"><a href="1.3.2#mobile-app-testing">1.3.2 Meaningful sequence</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Use a screen reader</td>
 </tr>
 <tr>
   <th scope="row"><a href="1.3.3#mobile-app-testing">1.3.3 Sensory characteristics</a></th>
@@ -109,8 +109,8 @@ This section highlights where there are differences in the approach for testing 
 </tr>
 <tr>
   <th scope="row"><a href="1.3.5#mobile-app-testing">1.3.5 Identify input purpose</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Use auto-fill on the device</td>
 </tr>
 <tr>
   <th scope="row"><a href="1.4.1#mobile-app-testing">1.4.1 Use of colour</a></th>
@@ -124,13 +124,13 @@ This section highlights where there are differences in the approach for testing 
 </tr>
 <tr>
   <th scope="row"><a href="1.4.3#mobile-app-testing">1.4.3 Contrast (minimum)</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Use screenshots</td>
 </tr>
 <tr>
   <th scope="row"><a href="1.4.4#mobile-app-testing">1.4.4 Resize text</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Change the operating system text size</td>
 </tr>
 <tr>
   <th scope="row"><a href="1.4.5#mobile-app-testing">1.4.5 Images of text</a></th>
@@ -139,38 +139,38 @@ This section highlights where there are differences in the approach for testing 
 </tr>
 <tr>
   <th scope="row"><a href="1.4.10#mobile-app-testing">1.4.10 Reflow</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Unclear how to test</td>
 </tr>
 <tr>
   <th scope="row"><a href="1.4.11#mobile-app-testing">1.4.11 Non-text contrast</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Use screenshots</td>
 </tr>
 <tr>
   <th scope="row"><a href="1.4.12#mobile-app-testing">1.4.12 Text spacing</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Unclear how to test</td>
 </tr>
 <tr>
   <th scope="row"><a href="1.4.13#mobile-app-testing">1.4.13 Content on hover or focus</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>See page</td>
 </tr>
 <tr>
   <th scope="row"><a href="2.1.1#mobile-app-testing">2.1.1 Keyboard</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
 </tr>
 <tr>
   <th scope="row"><a href="2.1.2#mobile-app-testing">2.1.2 No keyboard trap</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
 </tr>
 <tr>
   <th scope="row"><a href="2.1.4#mobile-app-testing">2.1.4 Character key shortcuts</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Use an external keyboard</td>
 </tr>
 <tr>
   <th scope="row"><a href="2.2.1#mobile-app-testing">2.2.1 Timing adjustable</a></th>
@@ -189,18 +189,18 @@ This section highlights where there are differences in the approach for testing 
 </tr>
 <tr>
   <th scope="row"><a href="2.4.1#mobile-app-testing">2.4.1 Bypass blocks</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Use an external keyboard</td>
 </tr>
 <tr>
   <th scope="row"><a href="2.4.2#mobile-app-testing">2.4.2 Page titled</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Use judgement</td>
 </tr>
 <tr>
   <th scope="row"><a href="2.4.3#mobile-app-testing">2.4.3 Focus order</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
 </tr>
 <tr>
   <th scope="row"><a href="2.4.4#mobile-app-testing">2.4.4 Link purpose (in context)</a></th>
@@ -209,8 +209,8 @@ This section highlights where there are differences in the approach for testing 
 </tr>
 <tr>
   <th scope="row"><a href="2.4.5#mobile-app-testing">2.4.5 Multiple ways</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Use judgement</td>
 </tr>
 <tr>
   <th scope="row"><a href="2.4.6#mobile-app-testing">2.4.6 Headings and labels</a></th>
@@ -219,8 +219,8 @@ This section highlights where there are differences in the approach for testing 
 </tr>
 <tr>
   <th scope="row"><a href="2.4.7#mobile-app-testing">2.4.7 Focus visible</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
 </tr>
 <tr>
   <th scope="row"><a href="2.5.1#mobile-app-testing">2.5.1 Pointer gestures</a></th>
@@ -234,8 +234,8 @@ This section highlights where there are differences in the approach for testing 
 </tr>
 <tr>
   <th scope="row"><a href="2.5.3#mobile-app-testing">2.5.3 Label in name</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Use a screen reader</td>
 </tr>
 <tr>
   <th scope="row"><a href="2.5.4#mobile-app-testing">2.5.4 Motion actuation</a></th>
@@ -244,23 +244,23 @@ This section highlights where there are differences in the approach for testing 
 </tr>
 <tr>
   <th scope="row"><a href="3.1.1#mobile-app-testing">3.1.1 Language of page</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Unclear how to test</td>
 </tr>
 <tr>
   <th scope="row"><a href="3.1.2#mobile-app-testing">3.1.2 Language of parts</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Unclear how to test</td>
 </tr>
 <tr>
   <th scope="row"><a href="3.2.1#mobile-app-testing">3.2.1 On focus</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
 </tr>
 <tr>
   <th scope="row"><a href="3.2.2#mobile-app-testing">3.2.2 On input</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
 </tr>
 <tr>
   <th scope="row"><a href="3.2.3#mobile-app-testing">3.2.3 Consistent navigation</a></th>
@@ -294,18 +294,18 @@ This section highlights where there are differences in the approach for testing 
 </tr>
 <tr>
   <th scope="row"><a href="4.1.1#mobile-app-testing">4.1.1 Parsing</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Unclear how to test</td>
 </tr>
 <tr>
   <th scope="row"><a href="4.1.2#mobile-app-testing">4.1.2 Name, role, value</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Use a screen reader</td>
 </tr>
 <tr>
   <th scope="row"><a href="4.1.3#mobile-app-testing">4.1.3 Status messages</a></th>
-  <td>text</td>
-  <td>text</td>
+  <td>Yes</td>
+  <td>Use a screen reader</td>
 </tr>
 </tbody>
 </table>
