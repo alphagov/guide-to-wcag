@@ -1,5 +1,3 @@
-**This page is a work in progress.**
-
 # Testing on mobile applications
 
 This page gives an overview of how to test mobile apps for accessibility compared to websites.
