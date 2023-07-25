@@ -49,7 +49,7 @@ In order to test language support within web views, you need to add appropriate 
 This section highlights where there are differences in the approach for testing against WCAG success criteria between websites and mobile apps. Where the approach is different, there is more information on the relevant success criterion page.
 
 <table>
-<tbody>
+<tbody align="left">
 <tr>
   <th scope="col">Success criterion</th>
   <th scope="col">Different for mobile?</th>
