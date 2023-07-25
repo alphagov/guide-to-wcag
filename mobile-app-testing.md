@@ -63,247 +63,247 @@ This section highlights where there are differences in the approach for testing 
   <td>Use a screen reader</td>
 </tr>
 <tr>
-  <th scope="row"><a href="1.2.1#mobile-app-testing">1.2.1 Audio-only and video-only (prerecorded)</a></th>
+  <th scope="row"><a href="1.2.x#mobile-app-testing">1.2.1 Audio-only and video-only (prerecorded)</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="1.2.2#mobile-app-testing">1.2.2 Captions (prerecorded)</a></th>
+  <th scope="row"><a href="1.2.x#mobile-app-testing">1.2.2 Captions (prerecorded)</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.2.3 Audio description or media alternative (prerecorded)</a></th>
+  <th scope="row"><a href="1.2.x#mobile-app-testing">1.2.3 Audio description or media alternative (prerecorded)</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.2.4 Captions (live)</a></th>
+  <th scope="row"><a href="1.2.x#mobile-app-testing">1.2.4 Captions (live)</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.2.5 Audio Description (prerecorded)</a></th>
+  <th scope="row"><a href="1.2.x#mobile-app-testing">1.2.5 Audio Description (prerecorded)</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.3.1 Info and relationships</a></th>
+  <th scope="row"><a href="1.3.1#mobile-app-testing">1.3.1 Info and relationships</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.3.2 Meaningful sequence</a></th>
+  <th scope="row"><a href="1.3.2#mobile-app-testing">1.3.2 Meaningful sequence</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.3.3 Sensory characteristics</a></th>
+  <th scope="row"><a href="1.3.3#mobile-app-testing">1.3.3 Sensory characteristics</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.3.4 Orientation</a></th>
+  <th scope="row"><a href="1.3.4#mobile-app-testing">1.3.4 Orientation</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.3.5 Identify input purpose</a></th>
+  <th scope="row"><a href="1.3.5#mobile-app-testing">1.3.5 Identify input purpose</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.4.1 Use of colour</a></th>
+  <th scope="row"><a href="1.4.1#mobile-app-testing">1.4.1 Use of colour</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.4.2 Audio control</a></th>
+  <th scope="row"><a href="1.4.2#mobile-app-testing">1.4.2 Audio control</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.4.3 Contrast (minimum)</a></th>
+  <th scope="row"><a href="1.4.3#mobile-app-testing">1.4.3 Contrast (minimum)</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.4.4 Resize text</a></th>
+  <th scope="row"><a href="1.4.4#mobile-app-testing">1.4.4 Resize text</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.4.5 Images of text</a></th>
+  <th scope="row"><a href="1.4.5#mobile-app-testing">1.4.5 Images of text</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.4.10 Reflow</a></th>
+  <th scope="row"><a href="1.4.10#mobile-app-testing">1.4.10 Reflow</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.4.11 Non-text contrast</a></th>
+  <th scope="row"><a href="1.4.11#mobile-app-testing">1.4.11 Non-text contrast</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.4.12 Text spacing</a></th>
+  <th scope="row"><a href="1.4.12#mobile-app-testing">1.4.12 Text spacing</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">1.4.13 Content on hover or focus</a></th>
+  <th scope="row"><a href="1.4.13#mobile-app-testing">1.4.13 Content on hover or focus</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.1.1 Keyboard</a></th>
+  <th scope="row"><a href="2.1.1#mobile-app-testing">2.1.1 Keyboard</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.1.2 No keyboard trap</a></th>
+  <th scope="row"><a href="2.1.2#mobile-app-testing">2.1.2 No keyboard trap</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.1.4 Character key shortcuts</a></th>
+  <th scope="row"><a href="2.1.4#mobile-app-testing">2.1.4 Character key shortcuts</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.2.1 Timing adjustable</a></th>
+  <th scope="row"><a href="2.2.1#mobile-app-testing">2.2.1 Timing adjustable</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.2.2 Pause, stop, hide</a></th>
+  <th scope="row"><a href="2.2.2#mobile-app-testing">2.2.2 Pause, stop, hide</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.3.1 Three flashes or below threshold</a></th>
+  <th scope="row"><a href="2.3.1#mobile-app-testing">2.3.1 Three flashes or below threshold</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.4.1 Bypass blocks</a></th>
+  <th scope="row"><a href="2.4.1#mobile-app-testing">2.4.1 Bypass blocks</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.4.2 Page titled</a></th>
+  <th scope="row"><a href="2.4.2#mobile-app-testing">2.4.2 Page titled</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.4.3 Focus order</a></th>
+  <th scope="row"><a href="2.4.3#mobile-app-testing">2.4.3 Focus order</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.4.4 Link purpose (in context)</a></th>
+  <th scope="row"><a href="2.4.4#mobile-app-testing">2.4.4 Link purpose (in context)</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.4.5 Multiple ways</a></th>
+  <th scope="row"><a href="2.4.5#mobile-app-testing">2.4.5 Multiple ways</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.4.6 Headings and labels</a></th>
+  <th scope="row"><a href="2.4.6#mobile-app-testing">2.4.6 Headings and labels</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.4.7 Focus visible</a></th>
+  <th scope="row"><a href="2.4.7#mobile-app-testing">2.4.7 Focus visible</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.5.1 Pointer gestures</a></th>
+  <th scope="row"><a href="2.5.1#mobile-app-testing">2.5.1 Pointer gestures</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.5.2 Pointer cancellation</a></th>
+  <th scope="row"><a href="2.5.2#mobile-app-testing">2.5.2 Pointer cancellation</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.5.3 Label in name</a></th>
+  <th scope="row"><a href="2.5.3#mobile-app-testing">2.5.3 Label in name</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">2.5.4 Motion actuation</a></th>
+  <th scope="row"><a href="2.5.4#mobile-app-testing">2.5.4 Motion actuation</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">3.1.1 Language of page</a></th>
+  <th scope="row"><a href="3.1.1#mobile-app-testing">3.1.1 Language of page</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">3.1.2 Language of parts</a></th>
+  <th scope="row"><a href="3.1.2#mobile-app-testing">3.1.2 Language of parts</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">3.2.1 On focus</a></th>
+  <th scope="row"><a href="3.2.1#mobile-app-testing">3.2.1 On focus</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">3.2.2 On input</a></th>
+  <th scope="row"><a href="3.2.2#mobile-app-testing">3.2.2 On input</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">3.2.3 Consistent navigation</a></th>
+  <th scope="row"><a href="3.2.3#mobile-app-testing">3.2.3 Consistent navigation</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">3.2.4 Consistent identification</a></th>
+  <th scope="row"><a href="3.2.4#mobile-app-testing">3.2.4 Consistent identification</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">3.3.1 Error identification</a></th>
+  <th scope="row"><a href="3.3.1#mobile-app-testing">3.3.1 Error identification</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">3.3.2 Labels or instructions</a></th>
+  <th scope="row"><a href="3.3.2#mobile-app-testing">3.3.2 Labels or instructions</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">3.3.3 Error suggestion</a></th>
+  <th scope="row"><a href="3.3.3#mobile-app-testing">3.3.3 Error suggestion</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">3.3.4 Error prevention (legal, financial, data)</a></th>
+  <th scope="row"><a href="3.3.4#mobile-app-testing">3.3.4 Error prevention (legal, financial, data)</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">4.1.1 Parsing</a></th>
+  <th scope="row"><a href="4.1.1#mobile-app-testing">4.1.1 Parsing</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">4.1.2 Name, role, value</a></th>
+  <th scope="row"><a href="4.1.2#mobile-app-testing">4.1.2 Name, role, value</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
 <tr>
-  <th scope="row"><a href="#mobile-app-testing">4.1.3 Status messages</a></th>
+  <th scope="row"><a href="4.1.3#mobile-app-testing">4.1.3 Status messages</a></th>
   <td>text</td>
   <td>text</td>
 </tr>
