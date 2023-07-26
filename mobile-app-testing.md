@@ -22,12 +22,12 @@ Android uses the TalkBack screen reader:
 * [Android TalkBack documentation](https://support.google.com/accessibility/android/topic/3529932?hl=en-GB&ref_topic=9078845)
 * [Setting the TalkBack language](https://support.google.com/accessibility/android/answer/6283655#change_your_talkback_spoken_language)  
 
-VoiceOver and Android work in different ways but have the following in common:
+VoiceOver and TalkBack work in different ways but have the following in common:
 
 * Reading out an object when it is single-tapped
 * Activating an object when it is then double-tapped
 * Swiping left and right to read sequentially through a page
-* Using a menu (called the rotor on iOS and reading controls on Android) to select which type of object to navigate, such as headings, then swiping up or down to navigate through them. Be aware that several options will not be available in mobile apps. The [VoiceOver rotor documentation](https://support.apple.com/en-us/HT204783) goes into more detail on this for iOS.  
+* Using a menu (called the rotor in VoiceOver and reading controls in TalkBack) to select which type of object to navigate, such as headings, then swiping up or down to navigate through them. Be aware that several options will not be available in mobile apps. The [VoiceOver rotor documentation](https://support.apple.com/en-us/HT204783) goes into more detail on this for iOS.  
 
 ### Keyboard  
 
