@@ -18,7 +18,7 @@ It’s ideal to at least sometimes test:
 * different settings or preferences if a website offers those
 
 ## Critical errors
-Some content can interfere with the rest of the page in a way which makes the whole page inaccessible to some people. Such a page would fail even if the content causing the issue is otherwise exempt from the audit. WCAG calls this [‘non-interference’](https://www.w3.org/TR/WCAG21/#cc5). That means that exempt content must still pass the following criteria:
+Some content can interfere with the rest of the page in a way which makes the whole page inaccessible to some people. Such a page would fail even if the content causing the issue is otherwise exempt from the audit. WCAG calls this [‘non-interference’](https://www.w3.org/TR/WCAG22/#cc5). That means that exempt content must still pass the following criteria:
 
 * 1.4.2 - Audio Control
 * 2.1.2 - No Keyboard Trap
@@ -26,6 +26,6 @@ Some content can interfere with the rest of the page in a way which makes the wh
 * 2.2.2 - Pause, Stop, Hide
 
 ## Conforming alternate versions
-While publishing inaccessible content is never recommended, a site can be considered to meet WCAG if any inaccessible content has an accessible alternative which has the same information, is as up to date, and can be reached in an accessible way. This is referred to in WCAG as a [conforming alternate version](https://www.w3.org/TR/WCAG21/#dfn-conforming-alternate-version).
+While publishing inaccessible content is never recommended, a site can be considered to meet WCAG if any inaccessible content has an accessible alternative which has the same information, is as up to date, and can be reached in an accessible way. This is referred to in WCAG as a [conforming alternate version](https://www.w3.org/TR/WCAG22/#dfn-conforming-alternate-versions).
 
 This includes, for example, an accessible mechanism to change font size or contrast as long as that mechanism fixes the issue across the whole page or site.
