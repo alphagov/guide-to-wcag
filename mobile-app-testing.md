@@ -221,6 +221,11 @@ This section highlights where there are differences in the approach for testing 
   <td>Use an external keyboard</td>
 </tr>
 <tr>
+  <th scope="row"><a href="2.4.11#mobile-app-testing">2.4.11 Focus not obscured (minimum)</a></th>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
+</tr>
+<tr>
   <th scope="row"><a href="2.5.1#mobile-app-testing">2.5.1 Pointer gestures</a></th>
   <td>No</td>
   <td>N/A</td>
@@ -239,6 +244,16 @@ This section highlights where there are differences in the approach for testing 
   <th scope="row"><a href="2.5.4#mobile-app-testing">2.5.4 Motion actuation</a></th>
   <td>No</td>
   <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.5.7#mobile-app-testing">2.5.7 Dragging movements</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.5.8#mobile-app-testing">2.5.8 Target size (minimum)</a></th>
+  <td>Yes</td>
+  <td>Use checker or check manually</td>
 </tr>
 <tr>
   <th scope="row"><a href="3.1.1#mobile-app-testing">3.1.1 Language of page</a></th>
@@ -271,6 +286,11 @@ This section highlights where there are differences in the approach for testing 
   <td>N/A</td>
 </tr>
 <tr>
+  <th scope="row"><a href="3.2.6#mobile-app-testing">3.2.6 Consistent help</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
   <th scope="row"><a href="3.3.1#mobile-app-testing">3.3.1 Error identification</a></th>
   <td>No</td>
   <td>N/A</td>
@@ -287,6 +307,16 @@ This section highlights where there are differences in the approach for testing 
 </tr>
 <tr>
   <th scope="row"><a href="3.3.4#mobile-app-testing">3.3.4 Error prevention (legal, financial, data)</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.3.7#mobile-app-testing">3.3.7 Redundant entry</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.3.8#mobile-app-testing">3.3.8 Accessible authentication (minimum)</a></th>
   <td>No</td>
   <td>N/A</td>
 </tr>

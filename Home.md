@@ -1,8 +1,6 @@
 # Accessibility testing guide
 
-This guide outlines some approaches for testing websites and applications against the [Web Content Accessibility Guidelines (WCAG) 2.1](https://www.w3.org/TR/WCAG21/) AA Level. It is based on one interpretation of WCAG. WCAG can be difficult, so there are many other interpretations which might be conflicting but equally valid.
-
-This is a work in progress.
+This guide outlines some approaches for testing websites and applications against the [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/TR/WCAG22/) AA Level. It is based on one interpretation of WCAG. WCAG can be difficult, so there are many other interpretations which might be conflicting but equally valid.
 
 ## General guidance
 
@@ -48,20 +46,26 @@ This is a work in progress.
 * [2.4.5 Multiple Ways](2.4.5)
 * [2.4.6 Headings and Labels](2.4.6)
 * [2.4.7 Focus Visible](2.4.7)
+* [2.4.11 Focus Not Obscured (Minimum)](2.4.11)
 * [2.5.1 Pointer Gestures](2.5.1)
 * [2.5.2 Pointer Cancellation](2.5.2)
 * [2.5.3 Label in Name](2.5.3)
 * [2.5.4 Motion Actuation](2.5.4)
+* [2.5.7 Dragging Movements](2.5.7)
+* [2.5.8 Target Size (Minimum)](2.5.8)
 * [3.1.1 Language of Page](3.1.1)
 * [3.1.2 Language of Parts](3.1.2)
 * [3.2.1 On Focus](3.2.1)
 * [3.2.2 On Input](3.2.2)
 * [3.2.3 Consistent Navigation](3.2.3)
 * [3.2.4 Consistent Identification](3.2.4)
+* [3.2.6 Consistent Help](3.2.6)
 * [3.3.1 Error Identification](3.3.1)
 * [3.3.2 Labels or Instructions](3.3.2)
 * [3.3.3 Error Suggestion](3.3.3)
 * [3.3.4 Error Prevention (Legal, Financial, Data)](3.3.4)
+* [3.3.7 Redundant Entry](3.3.7)
+* [3.3.8 Accessible Authentication (Minimum)](3.3.8)
 * [4.1.1 Parsing](4.1.1)
 * [4.1.2 Name, Role, Value](4.1.2)
 * [4.1.3 Status Messages](4.1.3)
