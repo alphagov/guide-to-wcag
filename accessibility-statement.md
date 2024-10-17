@@ -46,7 +46,7 @@ The content listed below is non-accessible for the following reasons.
 
 ### Non-compliance with the accessibility regulations  
 
-* The "number of revisions" links rely on colour to identify them, failing WCAG 1.4.1 Use of Colour. This was raised as part of ticket 3054039 with GitHub on 17 October 2024.
+* The "number of revisions" links rely on colour to identify them, failing WCAG 1.4.1 Use of Colour. This was raised as ticket 3054039 with GitHub on 17 October 2024.
 * On the Pages menu, each expandable page title contains links. However, interactive controls should not be nested, as their behaviour might be interpreted incorrectly. This fails WCAG 4.1.2 Name, Role, Value. This was raised as part of ticket 1734737 with GitHub on 8 August 2022.
 * The page titles for each WCAG success criterion are not descriptive. For example, one title is "1.3.1 \* alphagov/wcag-primer Wiki \* GitHub", failing WCAG 2.4.2 Page Titled. Our aim is to move this content on to the main [WCAG Primer](https://alphagov.github.io/wcag-primer/) pages which would fix this issue. 
 
@@ -72,7 +72,7 @@ In the longer term, we intend to move our content into the main [WCAG Primer](ht
 
 ## Preparation of this accessibility statement
 
-This statement was prepared on 6 October 2022. The statement was last reviewed on 17 October 2024.  
+This statement was prepared on 6 October 2022. It was last reviewed on 17 October 2024.  
 
 This website was last tested by the Government Digital Service accessibility monitoring team on 17 October 2024, covering a representative sample of pages.  
 
