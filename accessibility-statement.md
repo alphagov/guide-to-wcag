@@ -34,7 +34,7 @@ We'll consider your request and get back to you within 10 days.
 
 ### Reporting accessibility problems with this website
 
-We're always looking to improve the accessibility of this website. If you find any problems not listed on this page or think we're not meeting accessibility requirements, contact [accessibility-guide@digital.cabinet-office.gov.uk](mailto:accessibility@digital.cabinet-office.gov.uk).
+We're always looking to improve the accessibility of this website. If you find any problems not listed on this page or think we're not meeting accessibility requirements, contact [accessibility-guide@digital.cabinet-office.gov.uk](mailto:accessibility-guide@digital.cabinet-office.gov.uk).
 
 ## Compliance status
 
