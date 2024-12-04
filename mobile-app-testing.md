@@ -321,11 +321,6 @@ This section highlights where there are differences in the approach for testing 
   <td>N/A</td>
 </tr>
 <tr>
-  <th scope="row"><a href="4.1.1#mobile-app-testing">4.1.1 Parsing</a></th>
-  <td>Yes</td>
-  <td>Unclear how to test</td>
-</tr>
-<tr>
   <th scope="row"><a href="4.1.2#mobile-app-testing">4.1.2 Name, role, value</a></th>
   <td>Yes</td>
   <td>Use a screen reader</td>
