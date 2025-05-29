@@ -1,8 +1,9 @@
 # Which pages to choose
 
-The [monitoring body](https://www.gov.uk/guidance/public-sector-website-and-mobile-application-accessibility-monitoring) has their own [legal text which describes what to test](https://www.legislation.gov.uk/eudn/2018/1524/annex/I). The [WCAG Evaluation Methodology (WCAG-EM)](https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/) describes what the W3C recommends to test.
+The [WCAG Evaluation Methodology (WCAG-EM)](https://www.w3.org/WAI/test-evaluate/conformance/wcag-em/) describes what the W3C recommends to test.
 
-Both testing guidelines say to test:
+It says to test:
+
 * common web pages and entry pages such as home, login, sitemap and search
 * help and legal information pages, including the accessibility statement
 * contact pages - this should include the feedback mechanism mentioned in the accessibility statement
