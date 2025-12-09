@@ -39,7 +39,7 @@ max_toc_heading_level: 4
 enable_anchored_headings: false
 
 # Prevent robots from indexing (e.g. whilst in development)
-prevent_indexing: true
+prevent_indexing: false
 
 # Show GitHub source/issue/repo links at the bottom of each page
 show_contribution_banner: true
