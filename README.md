@@ -1,6 +1,6 @@
-# WCAG Primer
+# A guide to WCAG
 
-A primer to help people get up to speed quickly with the Web Content Accessibility Guidelines.
+A guide to help people get up to speed quickly with the Web Content Accessibility Guidelines.
 
 Contains:
 * an overview of WCAG.
@@ -8,17 +8,17 @@ Contains:
 * the most relevant success criteria for content, design and code
 * some questions to help you evaluate if a digital product meets WCAG
 
-https://alphagov.github.io/wcag-primer/
+https://alphagov.github.io/guide-to-wcag/
 
 # Contributing
 
-This WCAG Primer is for everyone. You can help make sure it stays up to date by:
+This guide to WCAG is for everyone. You can help make sure it stays up to date by:
 
-1. Making changes to the [WCAG primer on Github](https://github.com/alphagov/wcag-primer).
+1. Making changes to the [guide to WCAG on Github](https://github.com/alphagov/guide-to-wcag).
 
-To contribute to this repository, you first need to [fork it](https://help.github.com/en/articles/fork-a-repo)* You can raise PRs from your forked copy.
+To contribute to this repository, you first need to [fork it](https://help.github.com/en/articles/fork-a-repo). You can raise PRs from your forked copy.
 
-2. Emailing the Accessibility Capability team at <accessibility@digital.cabinet-office.gov.uk> with suggestions
+2. Emailing the Accessibility Guide team at <accessibility-guide@digital.cabinet-office.gov.uk> with suggestions
 
 This repo uses Middleman. To test changes locally, run:
 

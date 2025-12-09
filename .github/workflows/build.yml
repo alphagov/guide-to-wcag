@@ -1,4 +1,4 @@
-name: Build the WCAG Primer
+name: Build the guide to WCAG
 
 on:
   push:

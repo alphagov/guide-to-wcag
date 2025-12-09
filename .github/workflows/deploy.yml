@@ -1,4 +1,4 @@
-name: Build and deploy the WCAG Primer
+name: Build and deploy the guide to WCAG
 
 on:
   push:

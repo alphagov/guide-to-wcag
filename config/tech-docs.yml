@@ -3,7 +3,7 @@ host:
 
 # Header-related options
 show_govuk_logo: false
-service_name: WCAG Primer
+service_name: A guide to WCAG
 service_link: /index.html
 
 # Links to show on right-hand-side of header
@@ -43,4 +43,4 @@ prevent_indexing: true
 
 # Show GitHub source/issue/repo links at the bottom of each page
 show_contribution_banner: true
-github_repo: alphagov/wcag-primer
+github_repo: alphagov/guide-to-wcag
