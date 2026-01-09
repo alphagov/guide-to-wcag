@@ -4,23 +4,72 @@ title: 2.1.1 Keyboard (A)
 
 # <%= current_page.data.title %>
 
-[Understanding <%= current_page.data.title %>](https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html)
+## What WCAG says:
 
-It must be possible for someone using only a keyboard (or a device that emulates keyboard commands) to complete all tasks in a service. This ensures that people with mobility or dexterity impairments who do not use a mouse can successfully complete their goals.
+> “All functionality of the content is operable through a keyboard interface…” (with additional notes)
 
-## Requirements / What to do?
+[Understanding 2.1.1 Keyboard](https://www.w3.org/WAI/WCAG22/Understanding/keyboard)
 
-*   All interaction and functionality is usable with a keyboard.
+## What this means
+
+It must be possible for someone using only a keyboard to use a website or service.
+
+## Why it matters
+
+This ensures that people with mobility or dexterity impairments who do not use a mouse or touchscreen can successfully complete their goals. It also helps people who use assistive technology such as screen readers or speech recognition.
+
+## How to check
+
+Use the Tab key to navigate through a page and interact with menus, buttons and links. Check that any action that is possible using a mouse or touchscreen is also possible using a keyboard.
+
+Common controls include:
+
+* **tab** to move to the next interactive element
+* **shift and tab** to move to the previous interactive element
+* **enter** to activate links and menus, or submit a form
+* **space** to use a form control like a checkbox or button
+* **arrow keys** to use some controls, such as radio buttons or tabs
+* **escape** to dismiss some content, such as dialogs
+
+[How to set up keyboard navigation on a Mac](https://www.a11y-collective.com/blog/how-to-activate-keyboard-navigation-on-macos/) (A11y Collective)
+
+[How to test in detail for 2.1.1 Keyboard](https://github.com/alphagov/guide-to-wcag/wiki/2.1.1)
+
+## Good example
+
+### Accessible search
+
+The search on GOV.UK is fully usable without a mouse, including the filter and sort options.
+
+<figure>
+    <%= image_tag "../images/211/211-pass-gov-search.png", { :alt => 'GOV.UK search for "accessibility", with an option selected to sort by updated (newest)' } %>
+</figure>
 
 ## Common mistakes
 
-*   A custom widget has been created, but the necessary keyboard support has not been provided;
-*   An `<a>` element has been used as the basis for a button, but the additional keyboard interaction (activation with the space key) has not been provided;
-*   A dialogue opens but cannot be dismissed by touch, because it does not have a close button;
-*   The tabindex attribute has been used with a value of “-1” to mistakenly remove it from the tab order.
+### Functionality cannot be reached by keyboard
 
-## Useful resources
+The second (red) button in this example does not receive focus and cannot be reached using a keyboard. The following screenshot illustrates the order each component receives focus.
 
-*   [Keyboard accessibility](http://webaim.org/techniques/keyboard/)
-*   [Using the tabindex attribute](https://www.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/)
-*   [Ridiculously easy trick for keyboard accessibility](http://www.karlgroves.com/2014/11/24/ridiculously-easy-trick-for-keyboard-accessibility/)
+<figure>
+    <%= image_tag "../images/211/211-fail-button-with-no-focus.png", { :alt => 'Two buttons and two links. The first button and the two links are labelled with 1 2 and 3, but the second button does not appear in the focus order.' } %>
+</figure>
+
+In this case, it has been created using custom code rather than standard HTML (Hypertext Markup Language) components. While this can be made accessible, using standard elements such as `<button>` is more likely to make it accessible by default.
+
+### Functionality cannot be activated by keyboard
+
+A button (like the first one in the previous example) may receive keyboard focus, but not work when a user attempts to activate it using a keyboard.
+
+This commonly happens when a button is created using custom code, as it is simpler for developers to make custom buttons respond to clicks rather than keyboard interactions.
+
+While custom buttons can be made to be accessible, it takes extra effort to ensure that they work predictably with a keyboard as well as a mouse. As with the previous example, a standard HTML button is much more likely to be keyboard accessible by default.
+
+## Related success criteria
+
+* [2.1.2 No Keyboard Trap](2.1.2.html) requires that the keyboard never gets stuck in one part of a page.
+* [2.4.1 Bypass Blocks](2.4.1.html) requires that there’s a way to skip past repeated content.
+* [2.4.3 Focus Order](2.4.3.html) requires that keyboard focus is in a logical order.
+* [2.4.7 Focus Visible](2.4.7.html) requires that you can see where keyboard focus currently is.
+* [2.4.11 Focus Not Obscured](2.4.11.html) requires that focused components are not hidden by other components.
+* [3.2.1 On Focus](3.2.1.html) and [3.2.2 On Input](3.2.2.html) require that no disorienting changes happen when focusing on, or updating a user interface component.
