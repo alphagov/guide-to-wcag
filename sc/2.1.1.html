@@ -95,13 +95,38 @@
     <a href="#2-1-1-keyboard-a"><span>2.1.1 Keyboard (A)</span></a>
     <ul>
       <li>
-        <a href="#requirements-what-to-do"><span>Requirements / What to do?</span></a>
+        <a href="#what-wcag-says"><span>What WCAG says:</span></a>
+      </li>
+      <li>
+        <a href="#what-this-means"><span>What this means</span></a>
+      </li>
+      <li>
+        <a href="#why-it-matters"><span>Why it matters</span></a>
+      </li>
+      <li>
+        <a href="#how-to-check"><span>How to check</span></a>
+      </li>
+      <li>
+        <a href="#good-example"><span>Good example</span></a>
+        <ul>
+          <li>
+            <a href="#accessible-search"><span>Accessible search</span></a>
+          </li>
+        </ul>
       </li>
       <li>
         <a href="#common-mistakes"><span>Common mistakes</span></a>
+        <ul>
+          <li>
+            <a href="#functionality-cannot-be-reached-by-keyboard"><span>Functionality cannot be reached by keyboard</span></a>
+          </li>
+          <li>
+            <a href="#functionality-cannot-be-activated-by-keyboard"><span>Functionality cannot be activated by keyboard</span></a>
+          </li>
+        </ul>
       </li>
       <li>
-        <a href="#useful-resources"><span>Useful resources</span></a>
+        <a href="#related-success-criteria"><span>Related success criteria</span></a>
       </li>
     </ul>
   </li>
@@ -115,27 +140,58 @@
         <div class="app-pane__content toc-open-disabled" aria-label="Content">
           <main id="content" class="technical-documentation">
             <h1 id="2-1-1-keyboard-a">2.1.1 Keyboard (A)</h1>
-<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/keyboard.html">Understanding 2.1.1 Keyboard (A)</a></p>
-<p>It must be possible for someone using only a keyboard (or a device that emulates keyboard commands) to complete all tasks in a service. This ensures that people with mobility or dexterity impairments who do not use a mouse can successfully complete their goals.</p>
-<h2 id="requirements-what-to-do">Requirements / What to do?</h2>
+<h2 id="what-wcag-says">What WCAG says:</h2>
+
+<blockquote>
+<p>“All functionality of the content is operable through a keyboard interface…” (with additional notes)</p>
+</blockquote>
+<p><a href="https://www.w3.org/WAI/WCAG22/Understanding/keyboard">Understanding 2.1.1 Keyboard</a></p>
+<h2 id="what-this-means">What this means</h2>
+<p>It must be possible for someone using only a keyboard to use a website or service.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>This ensures that people with mobility or dexterity impairments who do not use a mouse or touchscreen can successfully complete their goals. It also helps people who use assistive technology such as screen readers or speech recognition.</p>
+<h2 id="how-to-check">How to check</h2>
+<p>Use the Tab key to navigate through a page and interact with menus, buttons and links. Check that any action that is possible using a mouse or touchscreen is also possible using a keyboard.</p>
+<p>Common controls include:</p>
 
 <ul>
-<li>  All interaction and functionality is usable with a keyboard.</li>
+<li><strong>tab</strong> to move to the next interactive element</li>
+<li><strong>shift and tab</strong> to move to the previous interactive element</li>
+<li><strong>enter</strong> to activate links and menus, or submit a form</li>
+<li><strong>space</strong> to use a form control like a checkbox or button</li>
+<li><strong>arrow keys</strong> to use some controls, such as radio buttons or tabs</li>
+<li><strong>escape</strong> to dismiss some content, such as dialogs</li>
 </ul>
+<p><a href="https://www.a11y-collective.com/blog/how-to-activate-keyboard-navigation-on-macos/">How to set up keyboard navigation on a Mac</a> (A11y Collective)</p>
+<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/2.1.1">How to test in detail for 2.1.1 Keyboard</a></p>
+<h2 id="good-example">Good example</h2>
+<h3 id="accessible-search">Accessible search</h3>
+<p>The search on GOV.UK is fully usable without a mouse, including the filter and sort options.</p>
+
+<figure>
+    <img src="../images/211/211-pass-gov-search.png" alt="GOV.UK search for &quot;accessibility&quot;, with an option selected to sort by updated (newest)" />
+</figure>
 <h2 id="common-mistakes">Common mistakes</h2>
+<h3 id="functionality-cannot-be-reached-by-keyboard">Functionality cannot be reached by keyboard</h3>
+<p>The second (red) button in this example does not receive focus and cannot be reached using a keyboard. The following screenshot illustrates the order each component receives focus.</p>
+
+<figure>
+    <img src="../images/211/211-fail-button-with-no-focus.png" alt="Two buttons and two links. The first button and the two links are labelled with 1 2 and 3, but the second button does not appear in the focus order." />
+</figure>
+<p>In this case, it has been created using custom code rather than standard HTML (Hypertext Markup Language) components. While this can be made accessible, using standard elements such as <code>&lt;button&gt;</code> is more likely to make it accessible by default.</p>
+<h3 id="functionality-cannot-be-activated-by-keyboard">Functionality cannot be activated by keyboard</h3>
+<p>A button (like the first one in the previous example) may receive keyboard focus, but not work when a user attempts to activate it using a keyboard.</p>
+<p>This commonly happens when a button is created using custom code, as it is simpler for developers to make custom buttons respond to clicks rather than keyboard interactions.</p>
+<p>While custom buttons can be made to be accessible, it takes extra effort to ensure that they work predictably with a keyboard as well as a mouse. As with the previous example, a standard HTML button is much more likely to be keyboard accessible by default.</p>
+<h2 id="related-success-criteria">Related success criteria</h2>
 
 <ul>
-<li>  A custom widget has been created, but the necessary keyboard support has not been provided;</li>
-<li>  An <code>&lt;a&gt;</code> element has been used as the basis for a button, but the additional keyboard interaction (activation with the space key) has not been provided;</li>
-<li>  A dialogue opens but cannot be dismissed by touch, because it does not have a close button;</li>
-<li>  The tabindex attribute has been used with a value of “-1” to mistakenly remove it from the tab order.</li>
-</ul>
-<h2 id="useful-resources">Useful resources</h2>
-
-<ul>
-<li>  <a href="http://webaim.org/techniques/keyboard/">Keyboard accessibility</a></li>
-<li>  <a href="https://www.paciellogroup.com/blog/2014/08/using-the-tabindex-attribute/">Using the tabindex attribute</a></li>
-<li>  <a href="http://www.karlgroves.com/2014/11/24/ridiculously-easy-trick-for-keyboard-accessibility/">Ridiculously easy trick for keyboard accessibility</a></li>
+<li><a href="2.1.2.html">2.1.2 No Keyboard Trap</a> requires that the keyboard never gets stuck in one part of a page.</li>
+<li><a href="2.4.1.html">2.4.1 Bypass Blocks</a> requires that there’s a way to skip past repeated content.</li>
+<li><a href="2.4.3.html">2.4.3 Focus Order</a> requires that keyboard focus is in a logical order.</li>
+<li><a href="2.4.7.html">2.4.7 Focus Visible</a> requires that you can see where keyboard focus currently is.</li>
+<li><a href="2.4.11.html">2.4.11 Focus Not Obscured</a> requires that focused components are not hidden by other components.</li>
+<li><a href="3.2.1.html">3.2.1 On Focus</a> and <a href="3.2.2.html">3.2.2 On Input</a> require that no disorienting changes happen when focusing on, or updating a user interface component.</li>
 </ul>
 
             
