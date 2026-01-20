@@ -2,7 +2,7 @@
 
 Government Digital Service is committed to making this guide accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.  
 
-This accessibility statement applies to all content related to the accessibility testing guide on [https://github.com/alphagov/wcag-primer/wiki](https://github.com/alphagov/guide-to-wcag/wiki).  
+This accessibility statement applies to all content related to the accessibility testing guide on [https://github.com/alphagov/guide-to-wcag/wiki](https://github.com/alphagov/guide-to-wcag/wiki).  
 
 It does not apply to the GitHub platform itself (this is covered by the [Accessibility Conformance Report for GitHub.com](https://accessibility.github.com/conformance/github-com/)), except where issues with GitHub directly affect the content in this guide.  
 
