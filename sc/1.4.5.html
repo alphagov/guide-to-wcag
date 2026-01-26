@@ -95,13 +95,40 @@
     <a href="#1-4-5-images-of-text-aa"><span>1.4.5 Images of Text (AA)</span></a>
     <ul>
       <li>
-        <a href="#requirements-what-to-do"><span>Requirements / What to do?</span></a>
+        <a href="#what-wcag-says"><span>What WCAG says</span></a>
+      </li>
+      <li>
+        <a href="#what-this-means"><span>What this means</span></a>
+      </li>
+      <li>
+        <a href="#why-it-matters"><span>Why it matters</span></a>
+      </li>
+      <li>
+        <a href="#how-to-check"><span>How to check</span></a>
+      </li>
+      <li>
+        <a href="#good-example"><span>Good example</span></a>
+        <ul>
+          <li>
+            <a href="#infographic-or-posters"><span>Infographic or posters</span></a>
+            <ul>
+              <li>
+                <a href="#poster-designing-for-users-of-screen-readers"><span>Poster: Designing for users of screen readers</span></a>
+              </li>
+            </ul>
+          </li>
+        </ul>
       </li>
       <li>
         <a href="#common-mistakes"><span>Common mistakes</span></a>
+        <ul>
+          <li>
+            <a href="#screenshots"><span>Screenshots</span></a>
+          </li>
+        </ul>
       </li>
       <li>
-        <a href="#useful-resources"><span>Useful resources</span></a>
+        <a href="#related-success-criteria"><span>Related success criteria</span></a>
       </li>
     </ul>
   </li>
@@ -115,23 +142,63 @@
         <div class="app-pane__content toc-open-disabled" aria-label="Content">
           <main id="content" class="technical-documentation">
             <h1 id="1-4-5-images-of-text-aa">1.4.5 Images of Text (AA)</h1>
-<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/images-of-text.html">Understanding 1.4.5 Images of Text (AA)</a></p>
-<p>Text must not be presented as part of an image because it cannot be resized, and it deteriorates in quality when magnified. This means that everyone is able to read and access information presented in text.</p>
-<h2 id="requirements-what-to-do">Requirements / What to do?</h2>
+<h2 id="what-wcag-says">What WCAG says</h2>
+
+<blockquote>
+<p>&ldquo;If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text&rdquo; (with exceptions)</p>
+</blockquote>
+<p><a href="https://www.w3.org/WAI/WCAG22/Understanding/images-of-text.html">Understanding 1.4.5 Images of Text</a></p>
+<h2 id="what-this-means">What this means</h2>
+<p>Text should be used to provide information instead of images of text.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>When text is part of an image it can lose quality when magnified or resized, making it hard to read. Also some people using assistive technology may not be able to read text in an image.</p>
+<h2 id="how-to-check">How to check</h2>
+<p>If there is an image that contains meaningful text, make sure the same text is near the image unless:</p>
 
 <ul>
-<li>  Text is not presented as part of an image;</li>
-<li>  Text is presented using plain text and styled with CSS.</li>
+<li>the image is a logo</li>
+<li>the text is customisable</li>
+<li>it is essential to present text a particular way - for example, a diagram</li>
 </ul>
+<p>If you are unsure whether something is an image of text, visit: <a href="https://github.com/alphagov/guide-to-wcag/wiki/1.4.5">How to test in detail for 1.4.5 Images of Text</a></p>
+<h2 id="good-example">Good example</h2>
+<h3 id="infographic-or-posters">Infographic or posters</h3>
+<p>The following example is one of the accessibility posters created by the Home Office. Since the poster is an image, the text before it repeats the content so it is available to more users. This means it can be resized or read by a screen reader and still provides the option to view the poster.</p>
+<h4 id="poster-designing-for-users-of-screen-readers">Poster: Designing for users of screen readers</h4>
+<p>Do&hellip;</p>
+
+<ul>
+<li>describe images and provide transcripts for video</li>
+<li>follow a linear, logical layout</li>
+<li>structure content using HTML5</li>
+<li>build for keyboard use only</li>
+<li>write descriptive links and headings - for example, &ldquo;Contact us&rdquo;</li>
+</ul>
+<p>Don&rsquo;t&hellip;</p>
+
+<ul>
+<li>only show information in an image or video</li>
+<li>spread content all over a page</li>
+<li>rely on text size and placement for structure</li>
+<li>force mouse or screen use</li>
+<li>write uninformative links and headings - for example, &ldquo;Click here&rdquo;</li>
+</ul>
+<p><a href="https://ukhomeoffice.github.io/accessibility-posters/">View the Home Office accessibility posters</a></p>
+<p><img src="../images/145/145-pass-poster-with-text.png" alt="Designing for users of screen readers poster" /></p>
 <h2 id="common-mistakes">Common mistakes</h2>
+<h3 id="screenshots">Screenshots</h3>
+<p>Screenshots are a common use of images of text, they are usually used in instruction guides or to &lsquo;reference&rsquo; information on another system or website. While they can be decorative, they often contain important information.</p>
+<p>In this case, the text in the image cannot be enlarged, changed or read by assistive technology. The best solution for this is to provide the text or the link to the source/website. When this can&rsquo;t be done or the image is needed as part of a user guide, both text and image can be supplied.</p>
+
+<figure>
+  <img src="../images/145/145-fail-text-as-image-only.png" alt="A screenshot with text about how users find information on the web from GOV.UK" />
+</figure>
+<h2 id="related-success-criteria">Related success criteria</h2>
 
 <ul>
-<li>  Images contain text.</li>
-</ul>
-<h2 id="useful-resources">Useful resources</h2>
-
-<ul>
-<li>  TBC.</li>
+<li><a href="1.1.1.html">1.1.1 Non-text Content</a> covers images having a text alternative.</li>
+<li><a href="1.4.3.html">1.4.3 Contrast (Minimum)</a> requires that text in images has sufficient contrast to the background.</li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/images-of-text-no-exception">1.4.9 Images of Text (No Exception)</a> is a more strict AAA guideline with more restrictions.</li>
 </ul>
 
             
