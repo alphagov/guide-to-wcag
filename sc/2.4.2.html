@@ -95,13 +95,41 @@
     <a href="#2-4-2-page-titled-a"><span>2.4.2 Page Titled (A)</span></a>
     <ul>
       <li>
-        <a href="#requirements-what-to-do"><span>Requirements / What to do?</span></a>
+        <a href="#what-wcag-says"><span>What WCAG says:</span></a>
+      </li>
+      <li>
+        <a href="#what-this-means"><span>What this means</span></a>
+      </li>
+      <li>
+        <a href="#why-it-matters"><span>Why it matters</span></a>
+      </li>
+      <li>
+        <a href="#how-to-check"><span>How to check</span></a>
+      </li>
+      <li>
+        <a href="#good-example"><span>Good example</span></a>
+        <ul>
+          <li>
+            <a href="#page-title-provides-information-and-context"><span>Page title provides information and context</span></a>
+          </li>
+        </ul>
       </li>
       <li>
         <a href="#common-mistakes"><span>Common mistakes</span></a>
+        <ul>
+          <li>
+            <a href="#title-is-missing-or-not-descriptive"><span>Title is missing or not descriptive</span></a>
+          </li>
+          <li>
+            <a href="#title-is-not-unique-across-related-pages"><span>Title is not unique across related pages</span></a>
+          </li>
+          <li>
+            <a href="#document-has-no-title"><span>Document has no title</span></a>
+          </li>
+        </ul>
       </li>
       <li>
-        <a href="#useful-resources"><span>Useful resources</span></a>
+        <a href="#related-success-criteria"><span>Related success criteria</span></a>
       </li>
     </ul>
   </li>
@@ -115,26 +143,73 @@
         <div class="app-pane__content toc-open-disabled" aria-label="Content">
           <main id="content" class="technical-documentation">
             <h1 id="2-4-2-page-titled-a">2.4.2 Page Titled (A)</h1>
-<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/page-titled.html">Understanding 2.4.2 Page Titled (A)</a></p>
-<p>Each page must have a unique title that indicates its topic or purpose. This ensures that people with cognitive disabilities can quickly orientate themselves within the service and identify the purpose of the page without interpreting its entire contents.</p>
-<h2 id="requirements-what-to-do">Requirements / What to do?</h2>
+<p>Pages need to have descriptive titles.</p>
+<h2 id="what-wcag-says">What WCAG says:</h2>
+
+<blockquote>
+<p>Web pages have titles that describe topic or purpose.</p>
+</blockquote>
+<p><a href="https://www.w3.org/WAI/WCAG22/Understanding/page-titled">Understanding 2.4.2 Page Titled</a></p>
+<h2 id="what-this-means">What this means</h2>
+<p>Web pages, including documents accessed through a browser, need to have a title which describes what the page is about.</p>
+<p>On a web page, the title comes from the <code>&lt;title&gt;</code> element in the page&rsquo;s code. It is usually visible within the browser tab.</p>
+<p>In a document, the title is part of the file&rsquo;s properties.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>Having a descriptive title is particularly important to screen reader users, as the title is the first thing that&rsquo;s read out when a user visits a page.</p>
+<p>Descriptive titles benefit everyone, as they appear in various places in a browser, including:</p>
 
 <ul>
-<li>  Each page has a title that is unique within the service;</li>
-<li>  Each page has a title that indicates its topic or purpose.</li>
+<li>tabs</li>
+<li>search results</li>
+<li>bookmarks</li>
+<li>history</li>
+</ul>
+<h2 id="how-to-check">How to check</h2>
+<p>On the web, either hover over the current browser tab, or search for the <code>&lt;title&gt;</code> element in the page&rsquo;s code.</p>
+<p>Within documents, look for the title in the file&rsquo;s properties - this is accessed from the File menu in tools such as Word and Acrobat.</p>
+<p>Check that there is a descriptive title which makes it clear to a user what the page is about, when viewed out of context. In practice this also means that each page&rsquo;s title needs to be unique.</p>
+<p>In most cases, the title should also be similar to the main heading on the page, however they may differ slightly. For example, the title might also include the name of the website, or might exclude personal information that is in the main page heading.</p>
+<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/2.4.2">How to test in detail for 2.4.2 Page Titled</a></p>
+<h2 id="good-example">Good example</h2>
+<h3 id="page-title-provides-information-and-context">Page title provides information and context</h3>
+
+<figure>
+    <img src="../images/242/242-pass-title-in-tab.png" alt="A GOV.UK page on Money and Tax in a browser, with the tab text highlighted. The tab reads &quot;Money and tax - GOV.UK&quot;" />
+</figure>
+<p>A page has a title of <a href="https://www.gov.uk/browse/tax">Money and tax - GOV.UK</a>. From this title alone, it is clear what the page covers and which website it is on.</p>
+<p>The title is helpful because it:</p>
+
+<ul>
+<li>correctly tells the user that the page is about money and tax</li>
+<li>&ldquo;front loads&rdquo; the most relevant part of the content - that it relates to money and tax
+is consistent with the main heading</li>
+<li>also includes the website name (GOV.UK) for context</li>
 </ul>
 <h2 id="common-mistakes">Common mistakes</h2>
+<h3 id="title-is-missing-or-not-descriptive">Title is missing or not descriptive</h3>
+<p>A page&rsquo;s title might be empty, incomplete or incorrect, for example:</p>
 
 <ul>
-<li>  The page title is not unique within the service;</li>
-<li>  The page title does not indicate its topic or purpose;</li>
-<li>  The title does not indicate the page is part of a service on Gov.UK;</li>
-<li>  The page title does not change because the service is a Single Page Application (SPA).</li>
+<li>A webpage with no title will simply show the web address in the browser tab, which is unlikely to be descriptive.</li>
+<li>A homepage might simply have a title of &ldquo;Home&rdquo; without mentioning the website it is the homepage of.</li>
+<li>A page to enter your billing address on example.com might have a title of “Delivery address - example.com”, which mentions the wrong address.</li>
 </ul>
-<h2 id="useful-resources">Useful resources</h2>
+<h3 id="title-is-not-unique-across-related-pages">Title is not unique across related pages</h3>
+<p>On a set of related pages, when page titles are not unique it can make it hard for users to know where they are, or navigate between pages. Examples include:</p>
 
 <ul>
-<li>  <a href="https://www.nomensa.com/blog/2013/how-to-write-better-page-titles">How to write better page titles</a></li>
+<li>Search results across multiple pages. The title needs to include something that makes the page unique, for example &ldquo;page 2 of 10&rdquo; or &ldquo;results starting with A&rdquo;.</li>
+<li>Steps throughout a process or service. Titles need to identify the main purpose of the page (for example, &ldquo;Enter your name&rdquo;) as well as the service they are using.</li>
+</ul>
+<h3 id="document-has-no-title">Document has no title</h3>
+<p>When a document, such as a PDF file, has no title in its properties, the browser will usually read its filename instead. This is often not descriptive - for example &ldquo;upload_001.pdf&rdquo;.</p>
+<p>While “friendly” filenames can help with understanding, a document&rsquo;s properties must also contain a descriptive title to ensure that people can understand what a document is about regardless of the technology they&rsquo;re using.</p>
+<h2 id="related-success-criteria">Related success criteria</h2>
+
+<ul>
+<li><a href="2.4.4.html">2.4.4 Link Purpose (in Context)</a> requires that links have text which makes sense in context.</li>
+<li><a href="2.4.5.html">2.4.5 Multiple Ways</a> requires there to be at least two ways of finding a page. If one of those methods is search, then accurate page titles are important to help meet this.</li>
+<li><a href="2.4.6.html">2.4.6 Headings and Labels</a> requires that headings within pages, and component labels are descriptive.</li>
 </ul>
 
             
