@@ -1,0 +1,73 @@
+---
+title: 3.2.6 Consistent Help (A)
+---
+
+# <%= current_page.data.title %>
+
+Show help options in a consistent place across pages.
+
+## What WCAG says:
+
+> "If a web page contains any of the following help mechanisms, and those mechanisms are repeated on multiple web pages within a set of web pages, they occur in the same order relative to other page content, unless a change is initiated by the user:
+>
+> * Human contact details;
+> * Human contact mechanism;
+> * Self-help option;
+> * A fully automated contact mechanism."
+>
+> (with additional notes)
+
+[Understanding 3.2.6 Consistent Help](https://www.w3.org/WAI/WCAG22/Understanding/consistent-help)
+
+## What this means
+
+Help options need to appear in the same position across web pages, whenever they appear repeatedly.
+
+For example, if a contact email address appears in a page footer after the "cookies" link, it needs to do so on all other pages where the address appears.
+
+## Why it matters
+
+Having support mechanisms in a consistent place within the page order helps everybody, including people with cognitive impairments, to easily locate them.
+
+## How to check
+
+Look for any repeated help mechanisms across web pages, such as contact details, chat tools or links to support pages. Then check that they appear in the same place on each page, relative to other page content.
+
+[How to test in detail for 3.2.6 Consistent Help](https://github.com/alphagov/guide-to-wcag/wiki/3.2.6)
+
+## Good example
+
+### Help and Contact links are in the same relative order
+
+In the footer of the main pages on GOV.UK, the Help and Contact links always appear in the same order among other links.
+
+<figure>
+    <%= image_tag "../images/326/326-pass-footer-links.png", { :alt => 'Links reading Help, Privacy, Cookies, Accessibility statement, Contact, and Terms and conditions.' } %>
+</figure>
+
+## Common mistakes
+
+### Chat link appears in an inconsistent position
+
+A homepage has a prominent link below the main heading:
+
+<div style="background: #f3f2f1; padding: 15px; margin: 15px;">
+  <h4>Homepage</h4>
+  <p><a href="#">Chat to us</a> today!</p>
+</div>
+ 
+On other pages (but not the homepage), the "Chat to us" link only appears in the page footer.
+
+<div style="background: #f3f2f1; padding: 15px; margin: 15px;">
+  <h4>Footer menu</h4>
+  <p><a href="#">Chat to us</a> <a href="#">Privacy</a> <a href="#">Cookies</a></p>
+</div>
+ 
+On every page that the "Chat to us" link appears, it needs to be in the same relative position (either below the main heading, or at the start of the footer).
+
+## Related success criteria
+
+Consistent Help is at level A but overlaps closely with the following level AA criteria:
+
+* [3.2.3 Consistent Navigation](3.2.3.html) requires that repeated navigational elements (such as menu links) appear in the same relative order.
+* [3.2.4 Consistent Identification](3.2.4.html) requires that repeated functionality has consistent labels. For example, the same link should not be labelled "Help" on one page and "Support" on another.
