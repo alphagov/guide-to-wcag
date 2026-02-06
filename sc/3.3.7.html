@@ -7,24 +7,24 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
-    <title>3.3.8 Accessible Authentication (Minimum) (AA) - A guide to WCAG</title>
+    <title>3.3.7 Redundant Entry (A) - A guide to WCAG</title>
 
     <link href="../stylesheets/manifest.css" rel="stylesheet" />
 
-    <link rel="canonical" href="/sc/3.3.8.html">
+    <link rel="canonical" href="/sc/3.3.7.html">
       <link rel="icon" sizes="48x48" href="/images/favicon.ico">
       <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
 
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:image" content="/images/opengraph-image.png" />
-      <meta name="twitter:title" content="3.3.8 Accessible Authentication (Minimum) (AA) - A guide to WCAG" />
-      <meta name="twitter:url" content="/sc/3.3.8.html" />
+      <meta name="twitter:title" content="3.3.7 Redundant Entry (A) - A guide to WCAG" />
+      <meta name="twitter:url" content="/sc/3.3.7.html" />
 
       <meta property="og:image" content="/images/opengraph-image.png" />
       <meta property="og:site_name" content="A guide to WCAG" />
-      <meta property="og:title" content="3.3.8 Accessible Authentication (Minimum) (AA)" />
+      <meta property="og:title" content="3.3.7 Redundant Entry (A)" />
       <meta property="og:type" content="object" />
-      <meta property="og:url" content="/sc/3.3.8.html" />
+      <meta property="og:url" content="/sc/3.3.7.html" />
 
     
   </head>
@@ -92,7 +92,7 @@
               <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
                       <ul>
   <li>
-    <a href="#3-3-8-accessible-authentication-minimum-aa"><span>3.3.8 Accessible Authentication (Minimum) (AA)</span></a>
+    <a href="#3-3-7-redundant-entry-a"><span>3.3.7 Redundant Entry (A)</span></a>
     <ul>
       <li>
         <a href="#what-wcag-says"><span>What WCAG says:</span></a>
@@ -110,7 +110,7 @@
         <a href="#good-example"><span>Good example</span></a>
         <ul>
           <li>
-            <a href="#authentication-code-can-be-pasted"><span>Authentication code can be pasted</span></a>
+            <a href="#previously-entered-postcode-can-be-selected"><span>Previously-entered postcode can be selected</span></a>
           </li>
         </ul>
       </li>
@@ -118,18 +118,12 @@
         <a href="#common-mistakes"><span>Common mistakes</span></a>
         <ul>
           <li>
-            <a href="#test-relies-on-transcribing-a-number"><span>Test relies on transcribing a number</span></a>
-          </li>
-          <li>
-            <a href="#test-relies-on-doing-maths-to-add-two-numbers"><span>Test relies on doing maths to add two numbers</span></a>
+            <a href="#user-has-to-re-enter-their-reference-number"><span>User has to re-enter their reference number</span></a>
           </li>
         </ul>
       </li>
       <li>
         <a href="#related-success-criteria"><span>Related success criteria</span></a>
-      </li>
-      <li>
-        <a href="#useful-resources"><span>Useful resources</span></a>
       </li>
     </ul>
   </li>
@@ -142,76 +136,63 @@
 
         <div class="app-pane__content toc-open-disabled" aria-label="Content">
           <main id="content" class="technical-documentation">
-            <h1 id="3-3-8-accessible-authentication-minimum-aa">3.3.8 Accessible Authentication (Minimum) (AA)</h1>
-<p>Make it as easy as possible to sign in with less mental effort. Don&rsquo;t make people remember, solve or transcribe something. This is because some people with cognitive impairments cannot easily solve puzzles, remember passwords or retype one-time passcodes.</p>
+            <h1 id="3-3-7-redundant-entry-a">3.3.7 Redundant Entry (A)</h1>
+<p>Help people avoid having to re-enter information.</p>
 <h2 id="what-wcag-says">What WCAG says:</h2>
 
 <blockquote>
-<p>“A cognitive function test (such as remembering a password or solving a puzzle) is not required for any step in an authentication process…” (with exceptions)</p>
+<p>&ldquo;Information previously entered by or provided to the user that is required to be entered again in the same process is either:</p>
+
+<ul>
+<li>auto-populated, or</li>
+<li>available for the user to select.&rdquo;</li>
+</ul>
+<p>(with exceptions)</p>
 </blockquote>
-<p><a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-minimum">Understanding 3.3.8 Accessible Authentication (Minimum)</a></p>
+<p><a href="https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry">Understanding 3.3.7 Redundant Entry</a></p>
 <h2 id="what-this-means">What this means</h2>
-<p>Any sign in process must not rely on a test, including:</p>
-
-<ul>
-<li>remembering text, such as a password or numerical code</li>
-<li>copying or transcribing text from one place to another</li>
-<li>a test based on numbers or words</li>
-<li>solving a puzzle</li>
-</ul>
+<p>Users do not have to manually re-enter information they have already provided, or information the service already knows, during the same process.</p>
+<p>This needs to apply unless there&rsquo;s a vital reason for them to re-enter information, such as security.</p>
 <h2 id="why-it-matters">Why it matters</h2>
-<p>If a sign in process includes steps which make it unnecessarily difficult, it can exclude some people with cognitive impairments, such as dyslexia, dyscalculia or brain injury.</p>
+<p>People do not have to use unnecessary effort to re-enter information. This can benefit people with cognitive impairments such as memory difficulties or limited concentration. It can also benefit people with motor impairments who use assistive technology to type information, as it reduces the amount of typing required.</p>
 <h2 id="how-to-check">How to check</h2>
-<p>Check that there is at least one way to sign in that doesn&rsquo;t rely on a test - for example following a link in an email, or scanning a face or fingerprint.</p>
-<p>It&rsquo;s OK if any of the following are true:</p>
+<p>This applies whenever a user is asked for information that they&rsquo;ve either already entered (like their home address), or that has been provided to them (like a reference number).</p>
+<p>Check that that information is either automatically filled in or selectable in a way that does not rely on the browser&rsquo;s autocomplete functionality.</p>
+<p>Any filled-in information also needs to stay populated on a page when:</p>
 
 <ul>
-<li>the user can paste or auto-fill a password or authentication code into an input field - as that doesn&rsquo;t rely on memory</li>
-<li>a test involves recognising physical objects</li>
-<li>a test involves identifying images, audio or video that the user has already provided</li>
-<li>help is provided to complete a test - such as hints</li>
+<li>the user navigates to a different page in the process and back again, or</li>
+<li>the form generates an error</li>
 </ul>
-<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/3.3.8">How to test in detail for 3.3.8 Accessible Authentication</a></p>
+<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/3.3.7">How to test in detail for 3.3.7 Redundant Entry</a></p>
 <h2 id="good-example">Good example</h2>
-<h3 id="authentication-code-can-be-pasted">Authentication code can be pasted</h3>
-<p>When the user opens an app, they’re sent a 6 digit code by text - they must enter this code to sign in.</p>
-<p>The input field allows the user to paste the code from their clipboard. The code can also be autofilled using the “From Messages” prompt. This removes any need to remember the code.</p>
+<h3 id="previously-entered-postcode-can-be-selected">Previously-entered postcode can be selected</h3>
+<p>In this example, a user has already entered their home postcode as a delivery address. When they need to provide a billing postcode, their home postcode is made available for them to select, meaning it doesn&rsquo;t have to be re-entered.</p>
 
 <figure>
-    <img src="../images/338/338-pass-paste-code.png" alt="A field to enter a security code on an iPhone, with a Paste option visible and a &quot;From Messages&quot; prompt." />
+    <img src="../images/337/337-pass-choose-postcode.png" alt="Billing postcode form with a text field and checkbox to select the previously entered postcode." />
 </figure>
 <h2 id="common-mistakes">Common mistakes</h2>
-<h3 id="test-relies-on-transcribing-a-number">Test relies on transcribing a number</h3>
-<p>When a security mechanism asks you to listen to a number and write it into a field, this requires you to remember the number. It also discriminates against anyone who cannot hear it.</p>
-<p>To pass Accessible Authentication, there could be an alternative method also available that does not require you to memorise a number.</p>
+<h3 id="user-has-to-re-enter-their-reference-number">User has to re-enter their reference number</h3>
+<p>In this example, a service is asking a user for a reference number that was already provided to them earlier in the process. They are then asked to re-enter that reference number. However, as the service already has the number, it should not be asked for again, or should be shown on screen for the user to confirm it.</p>
 
 <figure>
-    <img src="../images/338/338-fail-transcribe-numbers.png" alt="A prompt &quot;Type the numbers you hear&quot; including a play button and input field." />
-</figure>
-<h3 id="test-relies-on-doing-maths-to-add-two-numbers">Test relies on doing maths to add two numbers</h3>
-<p>When a security mechanism asks you to solve a sum or puzzle, it can make it difficult for people with cognitive disabilities to log in.</p>
-<p>This example asks “What is nineteen plus eighty-four”. As well as solving the sum, it is unclear whether the answer should be written as a number or as a word.</p>
-<p>This could be improved by replacing the question with an object recognition test.</p>
-
-<figure>
-    <img src="../images/338/338-fail-maths-puzzle.png" alt="Form field with question &quot;What is nineteen plus eighty-four?&quot;" />
+    <img src="../images/337/337-fail-reference-number.png" alt="Reference number field, containing a number, with hint text saying it was given to them in step 3b." />
 </figure>
 <h2 id="related-success-criteria">Related success criteria</h2>
 
 <ul>
-<li><a href="3.3.7.html">3.3.7 Redundant Entry</a> aims to make it easier for users to re-enter information as part of a service.</li>
-<li>To achieve AAA compliance and meet <a href="https://www.w3.org/WAI/WCAG22/Understanding/accessible-authentication-enhanced">3.3.9 Accessible Authentication (Enhanced)</a>, you need to meet the AA criterion without relying on users recognising objects or content they&rsquo;ve already provided.</li>
+<li><a href="3.3.4.html">3.3.4 Error Prevention (Legal, Financial, Data)</a> helps users to avoid errors by allowing them to confirm or correct information they have previously entered.</li>
+<li><a href="3.3.8.html">3.3.8 Accessible Authentication</a> helps users to log in without having to re-type a password or code.</li>
 </ul>
-<h2 id="useful-resources">Useful resources</h2>
-<p><a href="https://www.youtube.com/watch?v=9h5aLCS3wJQ">Video: Inspecting WCAG 2.2: accessible authentication</a> (by the GOV.UK Design System)</p>
 
             
           </main>
 
           <aside>
               <ul class="contribution-banner">
-                <li><a href="https://github.com/alphagov/guide-to-wcag/blob/master/source/sc/3.3.8.html.md.erb">View source</a></li>
-                <li><a href="https://github.com/alphagov/guide-to-wcag/issues/new?body=Problem+with+%273.3.8+Accessible+Authentication+%28Minimum%29+%28AA%29%27+%28%2Fsc%2F3.3.8.html%29&amp;labels=bug&amp;title=Re%3A+%273.3.8+Accessible+Authentication+%28Minimum%29+%28AA%29%27">Report problem</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag/blob/master/source/sc/3.3.7.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag/issues/new?body=Problem+with+%273.3.7+Redundant+Entry+%28A%29%27+%28%2Fsc%2F3.3.7.html%29&amp;labels=bug&amp;title=Re%3A+%273.3.7+Redundant+Entry+%28A%29%27">Report problem</a></li>
                 <li><a href="https://github.com/alphagov/guide-to-wcag">GitHub Repo</a></li>
               </ul>
           </aside>
