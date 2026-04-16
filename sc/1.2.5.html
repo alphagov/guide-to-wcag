@@ -95,10 +95,35 @@
     <a href="#1-2-5-audio-description-prerecorded-aa"><span>1.2.5 Audio Description (Prerecorded) (AA)</span></a>
     <ul>
       <li>
-        <a href="#requirements-what-to-do"><span>Requirements / What to do?</span></a>
+        <a href="#what-wcag-says"><span>What WCAG says:</span></a>
+      </li>
+      <li>
+        <a href="#what-this-means"><span>What this means</span></a>
+      </li>
+      <li>
+        <a href="#why-it-matters"><span>Why it matters</span></a>
+      </li>
+      <li>
+        <a href="#how-to-check"><span>How to check</span></a>
+      </li>
+      <li>
+        <a href="#good-example"><span>Good example</span></a>
+        <ul>
+          <li>
+            <a href="#presenter-describes-visuals-in-a-presentation"><span>Presenter describes visuals in a presentation</span></a>
+          </li>
+        </ul>
       </li>
       <li>
         <a href="#common-mistakes"><span>Common mistakes</span></a>
+        <ul>
+          <li>
+            <a href="#visual-information-is-not-described"><span>Visual information is not described</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#related-success-criteria"><span>Related success criteria</span></a>
       </li>
       <li>
         <a href="#useful-resources"><span>Useful resources</span></a>
@@ -115,24 +140,60 @@
         <div class="app-pane__content toc-open-disabled" aria-label="Content">
           <main id="content" class="technical-documentation">
             <h1 id="1-2-5-audio-description-prerecorded-aa">1.2.5 Audio Description (Prerecorded) (AA)</h1>
-<p><a href="https://www.w3.org/WAI/WCAG21/Understanding/audio-description-prerecorded.html">Understanding 1.2.5 Audio Description (Prerecorded) (AA)</a></p>
-<p>Video content like instructional videos must have audio description. This ensures that information communicated visually in the video is available to people who cannot see it.</p>
-<h2 id="requirements-what-to-do">Requirements / What to do?</h2>
+<p>Provide an audio description for meaningful visual content in videos.</p>
+<h2 id="what-wcag-says">What WCAG says:</h2>
+
+<blockquote>
+<p>Audio description is provided for all prerecorded video content in synchronized media.</p>
+</blockquote>
+<p><a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-description-prerecorded.html">Understanding 1.2.5 Audio Description (Prerecorded)</a></p>
+<h2 id="what-this-means">What this means</h2>
+<p>Any prerecorded videos with audio need to have an accurate audio equivalent for any meaningful visuals.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>Clear audio descriptions are vital to help blind or visually impaired people to perceive visual information.</p>
+<h2 id="how-to-check">How to check</h2>
+<p>In videos where both the audio and video are meaningful, look out for information that is only presented visually. Examples include:</p>
 
 <ul>
-<li>  Video that includes important visual information has audio description;</li>
+<li>any text displayed in the video, such as an introduction to a section or a speaker&rsquo;s name</li>
+<li>an animation describing a process</li>
+<li>a close-up of a painting</li>
+<li>someone&rsquo;s facial expression which affects the meaning of what they are saying</li>
+<li>clips illustrating the experience of a tourist destination</li>
 </ul>
+<p>Check that any meaningful visuals have an accurate audio description.</p>
+<p>When visual information is already conveyed through speech in the video - for example, a weather forecaster describing a pattern of cloud - then a separate audio description is not necessary for these parts.</p>
+<p>It is also recommended for videos to have transcripts as these help deafblind people access videos. This is a requirement at level AAA.</p>
+<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/1.2.x">How to test in detail for 1.2.x Time-Based Media</a> (including 1.2.5 Audio Description (Prerecorded)</p>
+<h2 id="good-example">Good example</h2>
+<h3 id="presenter-describes-visuals-in-a-presentation">Presenter describes visuals in a presentation</h3>
+<p>This example is taken from a presentation showing a website component on a slide. The caption shows that the presenter is describing the visible image, saying &ldquo;this is a focus indicator on GOV.UK with the crown being highlighted with an orange background&rdquo;.</p>
+<p>As the presenter has described the visuals within the presentation, there is no need to add a separate audio description.</p>
+<p><img src="../images/125/125-pass-described-image.png" alt="A slide explaining how tabbing through a page shows a focus indicator on GOV.UK, with captions describing the visuals." /></p>
 <h2 id="common-mistakes">Common mistakes</h2>
+<h3 id="visual-information-is-not-described">Visual information is not described</h3>
+<p>Videos often have visual information which has not been given an audio description.</p>
+<p>In this fake example of a video on a tourist website, the caption &ldquo;Visit Exampleshire… the friendly county&rdquo; would need to be read as part of the video or provided in a separate audio description file. Depending on the intent of the video, it may also be relevant to describe the coat of arms.</p>
+<p><img src="../images/125/125-fail-caption-with-no-audio-description.png" alt="A still from a fake tourist video, reading &quot;Visit Exampleshire… the friendly county&quot; with a coat of arms including a dog, cat, flowers, decorated shield and the slogan &quot;Ay Up&quot;." /></p>
+<h2 id="related-success-criteria">Related success criteria</h2>
+<p>This success criterion is closely related to several others:</p>
 
 <ul>
-<li>  A video includes important visual information but does not have audio description;</li>
-<li>  The audio description does not describe important information communicated visually in the video;</li>
-<li>  The audio description is not synchronised to complement the audio content of the video.</li>
+<li><a href="1.2.1.html">1.2.1 Audio-only and Video-only (Prerecorded) (A)</a> applies to videos without audio - in this case, either a transcript or audio description are sufficient.</li>
+<li><a href="1.2.2.html">1.2.2 Captions (Prerecorded) (A)</a> and <a href="1.2.4.html">1.2.4 Captions (Live) (AA)</a> require that all videos with audio have captions.</li>
+<li><a href="1.2.3.html">1.2.3 Audio Description or Media Alternative (Prerecorded) (A)</a> allows for there to be a transcript instead of an audio description when only meeting WCAG level A. However, at level AA, criterion 1.2.3 is meaningless because this criterion (1.2.5) says that there must be an audio description.</li>
+</ul>
+<p>It is also worth being aware of the following AAA criteria:</p>
+
+<ul>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/extended-audio-description-prerecorded">1.2.7 Extended audio description (Prerecorded) (AAA)</a> covers videos which pause to fit in a full audio description, when the gaps in the audio are too small to fit in a full description.</li>
+<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/media-alternative-prerecorded">1.2.8 Media Alternative (Prerecorded) (AAA)</a> adds the need for videos with audio to have a transcript.</li>
 </ul>
 <h2 id="useful-resources">Useful resources</h2>
 
 <ul>
-<li>  <a href="https://www.nomensa.com/blog/2010/what-is-audio-description">What is audio description?</a></li>
+<li><a href="https://www.communications.gov.uk/guidance/accessible-communications/adding-an-audio-description-to-your-videos/">Adding an audio description to your videos - Government Communication Service</a></li>
+<li><a href="https://www.w3.org/WAI/media/av/description/">Description of visual information guidance on Web Accessibility Initiative (WAI) by World Wide Web Consortium (W3C)</a></li>
 </ul>
 
             
