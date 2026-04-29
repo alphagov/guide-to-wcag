@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>2.5.7 Dragging Movements (AA) - A guide to WCAG</title>
+
+    <link href="../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="/sc/2.5.7.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="/images/opengraph-image.png" />
+      <meta name="twitter:title" content="2.5.7 Dragging Movements (AA) - A guide to WCAG" />
+      <meta name="twitter:url" content="/sc/2.5.7.html" />
+
+      <meta property="og:image" content="/images/opengraph-image.png" />
+      <meta property="og:site_name" content="A guide to WCAG" />
+      <meta property="og:title" content="2.5.7 Dragging Movements (AA)" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="/sc/2.5.7.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="../index.html" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          A guide to WCAG
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <nav class="govuk-header__navigation govuk-header__navigation--end" aria-label="Menu">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" hidden>Menu</button>
+        <ul id="navigation" class="govuk-header__navigation-list">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../index.html">Overview</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../all.html">All success criteria</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../content.html">Content</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../design.html">Design</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../code.html">Code</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../checklist.html">Checklist</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../community.html">Community</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#2-5-7-dragging-movements-aa"><span>2.5.7 Dragging Movements (AA)</span></a>
+    <ul>
+      <li>
+        <a href="#what-wcag-says"><span>What WCAG says:</span></a>
+      </li>
+      <li>
+        <a href="#what-this-means"><span>What this means</span></a>
+      </li>
+      <li>
+        <a href="#why-it-matters"><span>Why it matters</span></a>
+      </li>
+      <li>
+        <a href="#how-to-check"><span>How to check</span></a>
+      </li>
+      <li>
+        <a href="#good-examples"><span>Good examples</span></a>
+        <ul>
+          <li>
+            <a href="#uploading-a-file"><span>Uploading a file</span></a>
+          </li>
+          <li>
+            <a href="#reordering-items-with-arrows"><span>Reordering items with arrows</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#common-mistakes"><span>Common mistakes</span></a>
+        <ul>
+          <li>
+            <a href="#reordering-items-with-drag-and-drop"><span>Reordering items with drag and drop</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#related-success-criteria"><span>Related success criteria</span></a>
+      </li>
+      <li>
+        <a href="#useful-resources"><span>Useful resources</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="technical-documentation">
+            <h1 id="2-5-7-dragging-movements-aa">2.5.7 Dragging Movements (AA)</h1>
+<p>Don&rsquo;t rely on the user having to drag something on their screen to complete a task.</p>
+<h2 id="what-wcag-says">What WCAG says:</h2>
+
+<blockquote>
+<p>All functionality that uses a dragging movement for operation can be achieved by a single pointer without dragging, unless dragging is essential or the functionality is determined by the user agent and not modified by the author.</p>
+</blockquote>
+<p><a href="https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html">Understanding 2.5.8 Dragging Movements</a></p>
+<h2 id="what-this-means">What this means</h2>
+<p>Don&rsquo;t make users have to drag something across the screen to complete a task, without offering them another way of doing it. Dragging movements include things like drag and drop or sliders.</p>
+<p>You can still offer actions which involve dragging, but you must offer another way for the user to do the action with a pointer (such as a mouse, stylus or touch contact).</p>
+<p>This rule applies to any content in your website or app that you create. It doesn&rsquo;t apply to things that are built into the user&rsquo;s device or handled by their browser or assistive technology, such as scrolling the page or swiping between links.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>Some people cannot use a mouse to drag items. They may use a device to help them, which can make dragging harder, such as:</p>
+
+<ul>
+<li>a trackball</li>
+<li>a head pointer</li>
+<li>voice control </li>
+</ul>
+<p>To drag something, the user has to do four different things:</p>
+
+<ul>
+<li>tap or click a start point </li>
+<li>press and hold</li>
+<li>move their pointer</li>
+<li>release the pointer in the right place</li>
+</ul>
+<p>Not everyone can press and hold while also moving their pointer.</p>
+<p>By giving another way to complete the task, users with mobility impairments who use a pointer can also complete the task.</p>
+<h2 id="how-to-check">How to check</h2>
+<p>Look for anything that uses dragging movements - such as:</p>
+
+<ul>
+<li>drag and drop</li>
+<li>drag sorting</li>
+<li>sliders </li>
+<li>carousels - a selection of slides or options that allow users to move backwards and forwards </li>
+</ul>
+<p>Where you find a dragging movement, check that it can also be done with a single pointer input, for example:</p>
+
+<ul>
+<li>drag and drop can also be done by point and click</li>
+<li>drag sorting can also be done with up and down buttons, or position number inputs</li>
+<li>sliders can be moved by clicking the track, or with left and right buttons</li>
+<li>carousels can include previous and next buttons, or slide number inputs.</li>
+</ul>
+<p>Ignore any dragging movements that are:</p>
+
+<ul>
+<li>provided by the browser or operating system</li>
+<li>essential to the user&rsquo;s task (such as a mobility test)</li>
+<li>part of a pointer gesture, where the user either has to follow a path or touch a device in more than one place - these fall under <a href="2.5.1.html">2.5.1 Pointer Gestures (A)</a> instead</li>
+</ul>
+<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/2.5.7">How to test in detail for 2.5.7 Dragging Movements</a></p>
+<h2 id="good-examples">Good examples</h2>
+<h3 id="uploading-a-file">Uploading a file</h3>
+<p>In the GOV.UK Design System, the <a href="https://design-system.service.gov.uk/components/file-upload/">file upload component</a> offers users two ways to upload a file.</p>
+<p>To upload a file, the user can either:</p>
+
+<ul>
+<li>drag and drop a file into the file upload input area - this is a dragging movement</li>
+<li>select the &lsquo;Choose file&rsquo; button - this could be done with a pointer</li>
+</ul>
+<p><img src="../images/257/257-pass-design-system.png" alt="A prompt to &quot;upload a file&quot; including a &quot;Choose File&quot; button." /></p>
+<h3 id="reordering-items-with-arrows">Reordering items with arrows</h3>
+<p>In the Met Office Weather Forecast App, users can either:</p>
+
+<ul>
+<li>drag their saved locations up and down on the screen to reorder them</li>
+<li>tap the up and down arrows next to the locations</li>
+</ul>
+<p><img src="../images/257/257-pass-reorder-alternative.png" alt="A stack of boxes in an app containing forecasts and locations. Each box includes a draggable icon as well as an up and down arrow." /></p>
+<h2 id="common-mistakes">Common mistakes</h2>
+<h3 id="reordering-items-with-drag-and-drop">Reordering items with drag and drop</h3>
+<p>In this example, the only way to move the locations in a weather app is to drag and drop them into a new position. If the user cannot complete a dragging movement, they will not be able to reorder the locations.</p>
+<p><img src="../images/257/257-fail-drag-locations.png" alt="A stack of boxes in an app containing UK locations. Each box includes a draggable icon and delete button, but no other controls." /></p>
+<p>This could be fixed by adding clickable up and down arrows next to each location so the user could move them without dragging.</p>
+<h2 id="related-success-criteria">Related success criteria</h2>
+<p>Dragging Movements relates to other criteria which help users navigate content in different ways.</p>
+
+<ul>
+<li><a href="2.1.1.html">2.1.1 Keyboard (A)</a> - all functionality must also work with a keyboard (a keyboard alternative is not a way to pass Dragging Movements, because an alternative to dragging must be available using a pointer)</li>
+<li><a href="2.5.1.html">2.5.1 Pointer Gestures (A)</a> - you must let users operate touchscreens with simple, one finger gestures.</li>
+</ul>
+<h2 id="useful-resources">Useful resources</h2>
+
+<ul>
+<li>Video: <a href="https://www.youtube.com/watch?v=8YxvkKgq95g">WCAG 2.2 - Dragging Movements - 2.5.7 - Accessible alternatives (Silktide)</a></li>
+</ul>
+
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/alphagov/guide-to-wcag/blob/master/source/sc/2.5.7.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag/issues/new?body=Problem+with+%272.5.7+Dragging+Movements+%28AA%29%27+%28%2Fsc%2F2.5.7.html%29&amp;labels=bug&amp;title=Re%3A+%272.5.7+Dragging+Movements+%28AA%29%27">Report problem</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="../accessibility.html">Accessibility statement</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../javascripts/application.js"></script>
+  </body>
+</html>
