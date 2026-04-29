@@ -1,0 +1,107 @@
+---
+title: 2.5.7 Dragging Movements (AA)
+---
+
+# <%= current_page.data.title %>
+
+Don't rely on the user having to drag something on their screen to complete a task.
+
+## What WCAG says:
+
+> All functionality that uses a dragging movement for operation can be achieved by a single pointer without dragging, unless dragging is essential or the functionality is determined by the user agent and not modified by the author.
+
+[Understanding 2.5.8 Dragging Movements](https://www.w3.org/WAI/WCAG22/Understanding/dragging-movements.html)
+
+## What this means
+
+Don't make users have to drag something across the screen to complete a task, without offering them another way of doing it. Dragging movements include things like drag and drop or sliders.
+
+You can still offer actions which involve dragging, but you must offer another way for the user to do the action with a pointer (such as a mouse, stylus or touch contact).
+
+This rule applies to any content in your website or app that you create. It doesn't apply to things that are built into the user's device or handled by their browser or assistive technology, such as scrolling the page or swiping between links.
+
+## Why it matters
+
+Some people cannot use a mouse to drag items. They may use a device to help them, which can make dragging harder, such as:
+
+* a trackball
+* a head pointer
+* voice control 
+
+To drag something, the user has to do four different things:
+
+* tap or click a start point 
+* press and hold
+* move their pointer
+* release the pointer in the right place
+
+Not everyone can press and hold while also moving their pointer.
+
+By giving another way to complete the task, users with mobility impairments who use a pointer can also complete the task.
+
+## How to check
+
+Look for anything that uses dragging movements - such as:
+
+* drag and drop
+* drag sorting
+* sliders 
+* carousels - a selection of slides or options that allow users to move backwards and forwards 
+
+Where you find a dragging movement, check that it can also be done with a single pointer input, for example:
+
+* drag and drop can also be done by point and click
+* drag sorting can also be done with up and down buttons, or position number inputs
+* sliders can be moved by clicking the track, or with left and right buttons
+* carousels can include previous and next buttons, or slide number inputs.
+
+Ignore any dragging movements that are:
+
+* provided by the browser or operating system
+* essential to the user's task (such as a mobility test)
+* part of a pointer gesture, where the user either has to follow a path or touch a device in more than one place - these fall under [2.5.1 Pointer Gestures (A)](2.5.1.html) instead
+
+[How to test in detail for 2.5.7 Dragging Movements](https://github.com/alphagov/guide-to-wcag/wiki/2.5.7)
+
+## Good examples
+
+### Uploading a file 
+
+In the GOV.UK Design System, the [file upload component](https://design-system.service.gov.uk/components/file-upload/) offers users two ways to upload a file.
+
+To upload a file, the user can either:
+
+* drag and drop a file into the file upload input area - this is a dragging movement
+* select the 'Choose file' button - this could be done with a pointer
+
+<%= image_tag "../images/257/257-pass-design-system.png", { :alt => 'A prompt to "upload a file" including a "Choose File" button.' } %>
+
+### Reordering items with arrows
+
+In the Met Office Weather Forecast App, users can either:
+
+* drag their saved locations up and down on the screen to reorder them
+* tap the up and down arrows next to the locations
+
+<%= image_tag "../images/257/257-pass-reorder-alternative.png", { :alt => 'A stack of boxes in an app containing forecasts and locations. Each box includes a draggable icon as well as an up and down arrow.' } %>
+
+## Common mistakes
+
+### Reordering items with drag and drop
+
+In this example, the only way to move the locations in a weather app is to drag and drop them into a new position. If the user cannot complete a dragging movement, they will not be able to reorder the locations.
+
+<%= image_tag "../images/257/257-fail-drag-locations.png", { :alt => 'A stack of boxes in an app containing UK locations. Each box includes a draggable icon and delete button, but no other controls.' } %>
+
+This could be fixed by adding clickable up and down arrows next to each location so the user could move them without dragging.
+
+## Related success criteria
+
+Dragging Movements relates to other criteria which help users navigate content in different ways.
+
+* [2.1.1 Keyboard (A)](2.1.1.html) - all functionality must also work with a keyboard (a keyboard alternative is not a way to pass Dragging Movements, because an alternative to dragging must be available using a pointer)
+* [2.5.1 Pointer Gestures (A)](2.5.1.html) - you must let users operate touchscreens with simple, one finger gestures.
+
+## Useful resources
+
+* Video: [WCAG 2.2 - Dragging Movements - 2.5.7 - Accessible alternatives (Silktide)](https://www.youtube.com/watch?v=8YxvkKgq95g)
