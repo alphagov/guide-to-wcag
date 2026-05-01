@@ -1,0 +1,9 @@
+<%# Extends the default template with some custom code %>
+
+<% wrap_layout :layout do %>
+  <%= yield %>
+  <% if current_page.data.updated %>
+    <h2>Last updated</h2>
+    <p>This page was last updated in <%= format_short_date current_page.data.updated %>.</p>
+  <% end %>
+<% end %>
