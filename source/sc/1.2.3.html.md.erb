@@ -1,25 +1,40 @@
 ---
-title: 1.2.3 Audio Description or Media Alternative (A)
-updated: 2018-07
+title: 1.2.3 Audio Description or Media Alternative (Prerecorded) (A)
+updated: 2026-09
 ---
 
 # <%= current_page.data.title %>
 
-Check the official guidance for [Understanding <%= current_page.data.title %>](https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded.html)
+Provide an audio description or transcript for meaningful visual content in videos.
 
-Video content like instructional videos must have audio description, unless it already has a text alternative. This ensures that information communicated visually in the video is available to people who cannot see it.
+## What WCAG says:
 
-## Requirements / What to do?
+> An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labelled as such. 
 
-*   Video content is audio described, or has a text alternative that describes the visual content of the video.
+Check the official guidance for [Understanding 1.2.3 Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/audio-description-or-media-alternative-prerecorded) 
 
-## Common mistakes
+## What this means
 
-*   The video does not have audio description or a text alternative;
-*   The audio description does not describe important information communicated visually in the video;
-*   The text alternative does not describe important information communicated visually in the video;
-*   The audio description is not synchronised to complement the audio content of the video.
+Any prerecorded videos with audio need to have an accurate audio equivalent or transcript for any meaningful visuals. This applies except when the video is a clearly-marked alternative to text already on the page.
 
-## Useful resources
+## Why it matters
 
-*   [What is audio description?](https://www.nomensa.com/blog/2010/what-is-audio-description)
+Clear audio descriptions or transcripts help blind or visually impaired people to perceive visual information. 
+
+Transcripts are particularly important to help deafblind people access content. 
+
+## How to check 
+
+<%= partial 'partials/audio-description-visual-info' %>
+
+To pass this criterion, check that any meaningful visuals have an accurate audio description or a transcript. 
+
+However, having a transcript without an audio description only allows the content to pass at level A. An audio description is needed to pass [1.2.5 Audio Description (Prerecorded) (AA)](1.2.5.html). 
+
+An automatically-generated transcript is likely to contain inaccuracies and only cover spoken content (not visual information). Transcripts would need to include visual information and be checked for accuracy to pass.
+
+A transcript is not necessary when the media is clearly marked as an alternative to text already on the page. 
+
+Read more about audio descriptions in [1.2.5 Audio Description (Prerecorded) (AA)](1.2.5.html).
+
+[How to test in detail for 1.2.x Time-Based Media](https://github.com/alphagov/guide-to-wcag/wiki/1.2.x) (including 1.2.3 Audio Description or Media Alternative (Prerecorded))
