@@ -1,20 +1,85 @@
 ---
 title: 2.2.2 Pause, Stop, Hide (A)
-updated: 2018-07
+updated: 2026-10
 ---
 
 # <%= current_page.data.title %>
 
-Check the official guidance for [Understanding <%= current_page.data.title %>](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html)
+## What WCAG says:
 
-When content moves (is animated, blinks or scrolls) automatically for more than five seconds, or when content automatically updates on the page, it must be possible for users to pause, stop or hide it. This ensures that people with cognitive disabilities that affect focus and concentration, are not distracted by movement.
+> For moving, blinking, scrolling, or auto-updating information, all of the following are true:
+> 
+> ### Moving, blinking, scrolling
+> 
+> For any moving, blinking or scrolling information that (1) starts automatically, (2) lasts more than five seconds, and (3) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it unless the movement, blinking, or scrolling is part of an activity where it is essential; and
+> 
+> ### Auto-updating
+> 
+> For any auto-updating information that (1) starts automatically and (2) is presented in parallel with other content, there is a mechanism for the user to pause, stop, or hide it or to control the frequency of the update unless the auto-updating is part of an activity where it is essential.
 
-## Requirements / What to do?
+Check the official guidance for [Understanding 2.2.2 Pause, Stop, Hide](https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide.html)
 
-*   A mechanism is available that lets users pause, stop or hide the moving or updating content;
-*   Content does not move (animate, blink or scroll) for more than five seconds;
-*   Content does not update automatically.
+## What this means 
+
+When any content on the same page as other content starts moving or updating automatically, such as autoplaying videos or animations, there must be a way to either:
+
+* pause and resume it
+* stop it
+* hide it
+
+except when either:
+
+* the movement lasts no longer than 5 seconds
+* the movement is “essential” - for example, a loading bar
+* the frequency of automatically updating content can be changed
+
+## Why it matters 
+
+Automatic movement can be distracting, particularly for some neurodivergent people.
+
+## How to check 
+
+Check that moving content can be paused, stopped or hidden in an accessible way – unless it meets any of the exceptions described earlier.
+
+It must still be possible to read or interact with other content on the page without the content moving again.
+
+[How to test in detail for 2.2.2 Pause Stop Hide](https://github.com/alphagov/guide-to-wcag/wiki/2.2.2)
 
 ## Common mistakes
 
-*   Content moves for more than five seconds but there is no mechanism for a user to pause, stop or hide it.
+### Autoplaying video without a pause button
+
+A tourist website has a video at the top of the Home page. This plays automatically when the page loads and has no means to pause it.
+
+<%= image_tag "../images/222/222-fail-video-no-pause.png", { :alt => 'Video still of someone surfing but no pause button' } %>
+
+### Animation which pauses on hover
+
+The following video has a pause mechanism, but it only works by hovering over it. This fails Pause, Stop, Hide because the user is unable to scroll to and read the rest of the page without being distracted by the video. It is also not keyboard accessible.
+
+<%= image_tag "../images/222/222-fail-video-pause-on-hover.png", { :alt => 'Video still with a “Hover to pause” button. Video shows a starry sky over the sea and caption "Look at the stars"' } %>
+
+## Good example
+
+### Video with accessible pause button
+
+While the best practice would be not to include autoplaying video at all, this example from a tourism website passes the success criterion.
+
+Like the previous examples, this video plays when the homepage loads. However, it includes a pause button which is accessible, for example:
+
+* it works with a keyboard
+* it has an accessible name
+* the button presents its name, role and value to assistive technology
+* the pause icon has sufficient contrast
+* the text contrast is sufficient
+
+<%= image_tag "../images/222/222-pass-video-pause.png", { :alt => 'Video still with a clearly marked “Pause Video” button. The video shows a castle by a river.' } %>
+
+<%= partial 'partials/non-interference' %>
+
+## Related success criteria 
+
+* [1.4.2 Audio Control (A)](1.4.2.html) is another non-interference criterion which requires that autoplaying audio can be controlled or stopped.
+* [2.3.1 Three Flashes or Below Threshold (A)](2.3.1.html) is another non-interference criterion which requires that videos do not flash more than 3 times per second, unless it is below a particular threshold.
+* [2.2.1 Timing Adjustable (A)](2.2.1.html) relates to content with time limits – it requires that non-essential time limits can be turned off or adjusted.
+
