@@ -1,0 +1,334 @@
+# Testing on mobile applications
+
+This page gives an overview of how to test mobile apps for accessibility compared to websites.
+
+## Setting up a mobile device for testing
+
+This section gives an overview of different settings used in mobile app testing.
+
+### Screen readers  
+
+iOS uses the VoiceOver screen reader:
+
+* To turn on VoiceOver, go to Settings \> Accessibility.
+* If enabled, the default shortcut is to triple-press either the side button or home button (depending on the iPhone model).
+* [iOS VoiceOver documentation](https://support.apple.com/en-gb/guide/iphone/iph3e2e415f/ios)
+* [Setting the VoiceOver language](https://support.apple.com/en-gb/guide/iphone/iphfa3d32c50/ios)  
+
+Android uses the TalkBack screen reader:
+
+* To turn on TalkBack, go to Settings \> Accessibility \> TalkBack.
+* The default shortcut is to hold both volume keys for 3 seconds.
+* [Android TalkBack documentation](https://support.google.com/accessibility/android/topic/3529932?hl=en-GB&ref_topic=9078845)
+* [Setting the TalkBack language](https://support.google.com/accessibility/android/answer/6283655#change_your_talkback_spoken_language)  
+
+VoiceOver and TalkBack work in different ways but have the following in common:
+
+* Reading out an object when it is single-tapped
+* Activating an object when it is then double-tapped
+* Swiping left and right to read sequentially through a page
+* Using a menu (called the rotor in VoiceOver and reading controls in TalkBack) to select which type of object to navigate, such as headings, then swiping up or down to navigate through them. Be aware that several options will not be available in mobile apps. The [VoiceOver rotor documentation](https://support.apple.com/en-us/HT204783) goes into more detail on this for iOS.  
+
+### Keyboard  
+
+* Use an external keyboard to connect to your device via Bluetooth.
+* To use an external keyboard on iOS, you also need to enable full keyboard access by going to Settings \> Accessibility \> Keyboard \> Full keyboard access.
+* Use Tab and Shift+Tab to navigate between controls
+* Use Space or Enter to activate controls
+* Depending on the app, arrow keys might scroll or navigate between controls.
+
+### Language settings  
+
+In order to test language support within web views, you need to add appropriate languages to your device using the following instructions:  
+
+* [instructions for iOS](https://support.apple.com/en-gb/guide/iphone/iphfa3d32c50/ios) - however, [VoiceOver does not support Welsh](https://support.apple.com/en-us/HT206175)
+* [instructions for TalkBack](https://support.google.com/accessibility/android/answer/6283655#change_your_talkback_spoken_language)
+
+## Differences between websites and mobile apps  
+
+This section highlights where there are differences in the approach for testing against Web Content Accessibility Guidelines (WCAG) 2.2 AA success criteria between websites and mobile apps. Where the approach is different, there is more information on the relevant success criterion page.
+
+<table>
+<tbody align="left">
+<tr>
+  <th scope="col">Success criterion</th>
+  <th scope="col">Different for mobile?</th>
+  <th scope="col">Summary of difference</th>
+</tr>
+<tr>
+  <th scope="row"><a href="1.1.1#mobile-app-testing">1.1.1 Non-text content</a></th>
+  <td>Yes</td>
+  <td>Use a screen reader</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.2.x#mobile-app-testing">1.2.1 Audio-only and video-only (prerecorded)</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.2.x#mobile-app-testing">1.2.2 Captions (prerecorded)</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.2.x#mobile-app-testing">1.2.3 Audio description or media alternative (prerecorded)</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.2.x#mobile-app-testing">1.2.4 Captions (live)</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.2.x#mobile-app-testing">1.2.5 Audio Description (prerecorded)</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.3.1#mobile-app-testing">1.3.1 Info and relationships</a></th>
+  <td>Yes</td>
+  <td>Use a screen reader</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.3.2#mobile-app-testing">1.3.2 Meaningful sequence</a></th>
+  <td>Yes</td>
+  <td>Use a screen reader</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.3.3#mobile-app-testing">1.3.3 Sensory characteristics</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.3.4#mobile-app-testing">1.3.4 Orientation</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.3.5#mobile-app-testing">1.3.5 Identify input purpose</a></th>
+  <td>Yes</td>
+  <td>Use auto-fill on the device</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.4.1#mobile-app-testing">1.4.1 Use of colour</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.4.2#mobile-app-testing">1.4.2 Audio control</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.4.3#mobile-app-testing">1.4.3 Contrast (minimum)</a></th>
+  <td>Yes</td>
+  <td>Use screenshots</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.4.4#mobile-app-testing">1.4.4 Resize text</a></th>
+  <td>Yes</td>
+  <td>Change the operating system text size</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.4.5#mobile-app-testing">1.4.5 Images of text</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.4.10#mobile-app-testing">1.4.10 Reflow</a></th>
+  <td>Yes</td>
+  <td>Unclear how to test</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.4.11#mobile-app-testing">1.4.11 Non-text contrast</a></th>
+  <td>Yes</td>
+  <td>Use screenshots</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.4.12#mobile-app-testing">1.4.12 Text spacing</a></th>
+  <td>Yes</td>
+  <td>Unclear how to test</td>
+</tr>
+<tr>
+  <th scope="row"><a href="1.4.13#mobile-app-testing">1.4.13 Content on hover or focus</a></th>
+  <td>Yes</td>
+  <td>See page</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.1.1#mobile-app-testing">2.1.1 Keyboard</a></th>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.1.2#mobile-app-testing">2.1.2 No keyboard trap</a></th>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.1.4#mobile-app-testing">2.1.4 Character key shortcuts</a></th>
+  <td>Yes</td>
+  <td>Use an external keyboard</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.2.1#mobile-app-testing">2.2.1 Timing adjustable</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.2.2#mobile-app-testing">2.2.2 Pause, stop, hide</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.3.1#mobile-app-testing">2.3.1 Three flashes or below threshold</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.4.1#mobile-app-testing">2.4.1 Bypass blocks</a></th>
+  <td>Yes</td>
+  <td>Use an external keyboard</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.4.2#mobile-app-testing">2.4.2 Page titled</a></th>
+  <td>Yes</td>
+  <td>Use judgement</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.4.3#mobile-app-testing">2.4.3 Focus order</a></th>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.4.4#mobile-app-testing">2.4.4 Link purpose (in context)</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.4.5#mobile-app-testing">2.4.5 Multiple ways</a></th>
+  <td>Yes</td>
+  <td>Use judgement</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.4.6#mobile-app-testing">2.4.6 Headings and labels</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.4.7#mobile-app-testing">2.4.7 Focus visible</a></th>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.4.11#mobile-app-testing">2.4.11 Focus not obscured (minimum)</a></th>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.5.1#mobile-app-testing">2.5.1 Pointer gestures</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.5.2#mobile-app-testing">2.5.2 Pointer cancellation</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.5.3#mobile-app-testing">2.5.3 Label in name</a></th>
+  <td>Yes</td>
+  <td>Use a screen reader</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.5.4#mobile-app-testing">2.5.4 Motion actuation</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.5.7#mobile-app-testing">2.5.7 Dragging movements</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="2.5.8#mobile-app-testing">2.5.8 Target size (minimum)</a></th>
+  <td>Yes</td>
+  <td>Use checker or check manually</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.1.1#mobile-app-testing">3.1.1 Language of page</a></th>
+  <td>Yes</td>
+  <td>Unclear how to test</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.1.2#mobile-app-testing">3.1.2 Language of parts</a></th>
+  <td>Yes</td>
+  <td>Unclear how to test</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.2.1#mobile-app-testing">3.2.1 On focus</a></th>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.2.2#mobile-app-testing">3.2.2 On input</a></th>
+  <td>Partially</td>
+  <td>Use an external keyboard</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.2.3#mobile-app-testing">3.2.3 Consistent navigation</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.2.4#mobile-app-testing">3.2.4 Consistent identification</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.2.6#mobile-app-testing">3.2.6 Consistent help</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.3.1#mobile-app-testing">3.3.1 Error identification</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.3.2#mobile-app-testing">3.3.2 Labels or instructions</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.3.3#mobile-app-testing">3.3.3 Error suggestion</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.3.4#mobile-app-testing">3.3.4 Error prevention (legal, financial, data)</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.3.7#mobile-app-testing">3.3.7 Redundant entry</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="3.3.8#mobile-app-testing">3.3.8 Accessible authentication (minimum)</a></th>
+  <td>No</td>
+  <td>N/A</td>
+</tr>
+<tr>
+  <th scope="row"><a href="4.1.2#mobile-app-testing">4.1.2 Name, role, value</a></th>
+  <td>Yes</td>
+  <td>Use a screen reader</td>
+</tr>
+<tr>
+  <th scope="row"><a href="4.1.3#mobile-app-testing">4.1.3 Status messages</a></th>
+  <td>Yes</td>
+  <td>Use a screen reader</td>
+</tr>
+</tbody>
+</table>

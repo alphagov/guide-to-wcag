@@ -1,0 +1,11 @@
+# What is "a set of web pages"?
+
+[WCAG defines a "set of web pages"](https://www.w3.org/TR/WCAG22/#dfn-set-of-web-pages) as a "collection of web pages that share a common purpose and that are created by the same author, group or organization."
+
+This is a very broad and subjective definition which can be difficult to interpret.
+
+One interpretation is that a "set of web pages" includes all web pages that look like they belong together to the average user. They might have the same look and feel, for example header and footer, font or colour scheme. Pages on different subdomains or domains usually count as a different website unless they look and feel the same.
+
+For example, [api.gov.uk](https://api.gov.uk/) could be considered separate from the main [www.gov.uk](https://www.gov.uk/) website because it exists on a different subdomain and has a different, specific purpose to the [www.gov.uk](https://www.gov.uk/) website. The pages within [api.gov.uk](https://api.gov.uk/) could be considered a "set of web pages" because they live on the same subdomain and have a similar look and feel.
+
+You can read discussions and other interpretations on [issue 1077](https://github.com/w3c/wcag/issues/1077) and [issue 1367](https://github.com/w3c/wcag/issues/1367) on W3C's GitHub.
