@@ -4,7 +4,7 @@
 
 > All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.
 >
-> * **Controls, Input:** If non-text content is a control or accepts user input, then it has a name that describes its purpose. (Refer to [Success Criterion 4.1.2](4.1.2) for additional requirements for controls and content that accepts user input.)
+> * **Controls, Input:** If non-text content is a control or accepts user input, then it has a name that describes its purpose. (Refer to [Success Criterion 4.1.2](4.1.2.html) for additional requirements for controls and content that accepts user input.)
 >
 > * **Time-Based Media:** If non-text content is time-based media, then text alternatives at least provide descriptive identification of the non-text content. (Refer to Guideline 1.2 for additional requirements for media.)
 >
@@ -30,7 +30,7 @@ This applies if the page includes:
 Alternative text is any text used to explain content that isn't made up of words, like images, as not everyone can see them. When this section refers to ‘alternative text’, it doesn’t necessarily mean the text in the `alt` attribute but any of these methods:
 
 * text that’s close to the image
-* an [accessible name](accessible-names) (like text in the `alt` attribute or an `aria-label`)
+* an [accessible name](accessible-names.html) (like text in the `alt` attribute or an `aria-label`)
 * other methods (like `longdesc` or a link to a description)
 
 
@@ -88,7 +88,7 @@ For decorative images:
 * `img` images must still have an `alt` attribute and it must be empty (`alt=""`)
 * you can use `aria-hidden="true"` for any other type of image
 
-You should also check objects that have been inserted or embedded on a page. This might include video-only or audio-only content, animations, graphs or diagrams. This type of content should have a fallback text that identifies what it is and describes it. That alternative text ultimately needs to be in text form. For example, when a video doesn't load, you could have a fallback image that has alternative text. Although diagrams and graphs are excluded from [1.4.5 Images of Text](1.4.5), they still need an alternative under 1.1.1.
+You should also check objects that have been inserted or embedded on a page. This might include video-only or audio-only content, animations, graphs or diagrams. This type of content should have a fallback text that identifies what it is and describes it. That alternative text ultimately needs to be in text form. For example, when a video doesn't load, you could have a fallback image that has alternative text. Although diagrams and graphs are excluded from [1.4.5 Images of Text](1.4.5.html), they still need an alternative under 1.1.1.
 
 If multiple images have been grouped to compose a larger image, it's fine to have just one alternative text describing the larger image and the other `alt` parameters can be empty.
 

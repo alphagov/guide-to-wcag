@@ -12,19 +12,19 @@ When there are interactive elements.
 
 Check:
 
-* all interactive components (such as links, form elements and tabs) have an [accessible name](accessible-names)
+* all interactive components (such as links, form elements and tabs) have an [accessible name](accessible-names.html)
 * all frames and iframes have a `title` - in the [Web Developer extension](https://chrispederick.com/work/web-developer/), go to 'Information \> Display title attributes'
 
 ## Check semantics (role, value)
 
 It should be clear to assistive technology users what an interactive component is doing.
 
-Check whether interactive components use their [native semantic elements](semantics-and-specs#semantics) - these elements will usually be accessible. Divs and spans are never natively semantic for interactive elements. Having HTML knowledge will help you check this.
+Check whether interactive components use their [native semantic elements](semantics-and-specs.html#semantics) - these elements will usually be accessible. Divs and spans are never natively semantic for interactive elements. Having HTML knowledge will help you check this.
 
 If interactive components do not use their native semantic elements, check:
 
 * semantics have been added using ARIA
-* ARIA is used correctly (according to the [spec](semantics-and-specs#specifications))
+* ARIA is used correctly (according to the [spec](semantics-and-specs.html#specifications))
 * ARIA has the appropriate effect on the element's role, value or both
 
 When interacting with a component, check any values are changed appropriately. For example in an accordion, either the text toggles "show/hide", or the code changes the value of `aria-expanded`. Otherwise, check if context or explanatory text make it clear what happens.
