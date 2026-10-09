@@ -1,18 +1,59 @@
 ---
 title: 2.3.1 Three Flashes or Below Threshold (A)
-updated: 2018-07
+updated: 2026-10
 ---
 
 # <%= current_page.data.title %>
 
-Check the official guidance for [Understanding <%= current_page.data.title %>](https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html)
+Avoid any content which flashes more than 3 times a second.
 
-A page must not contain content that flashes more than three times a second. This ensures that people with conditions like photosensitive Epilepsy are protected from harmful seizures.
+## What WCAG says:
 
-## Requirements / What to do?
+> Web pages do not contain anything that flashes more than three times in any one second period, or the flash is below the general flash and red flash thresholds.
 
-*   Content does not flash more than three times a second.
+Check the official guidance for [Understanding 2.3.1 Three Flashes or Below Threshold](https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html)
+
+## What this means 
+
+A page must not contain content that flashes more than 3 times a second, unless the flashes take up a small enough section of the screen area.
+
+## Why it matters
+
+Intense flashes can cause some users to have harmful seizures if they have conditions like photosensitive epilepsy.
+
+## How to check
+
+Check if anything flashes more than 3 times per second. If in doubt, fail it.
+
+Warning users of the flashing content in advance is not enough to pass.
+
+[How to test in detail for 2.3.1 Three Flashes or Below Threshold](https://github.com/alphagov/guide-to-wcag/wiki/2.3.1)
 
 ## Common mistakes
 
-*   Content flashes at more than three times a second.
+### Flashing colours in content 
+
+For example, a promotional video contains rapidly flashing colours to get attention from users. The colours take up the whole screen and flash 5 times per second.
+
+This would fail as it could cause seizures.
+
+It can be fixed by reducing the flashing colours to 3 or less per second, or by removing the flashing colours completely.
+
+## Good example
+
+### Slow changes in colour
+
+For example, a promotional video shows a few different colours. One colour is shown per second.
+
+This would pass. It should not cause seizures. 
+
+<%= partial 'partials/non-interference' %>
+
+## Related success criteria
+
+* [1.4.2 Audio Control (A)](https://alphagov.github.io/guide-to-wcag/sc/1.4.2.html) is another non-interference criterion which requires that autoplaying audio can be controlled or stopped.
+* [2.2.2 Pause, Stop, Hide (A)](https://alphagov.github.io/guide-to-wcag/sc/2.2.2.html) is another non-interference criterion which requires a way to stop content that updates frequently, blinks or scrolls automatically.
+
+## Useful resources 
+
+Read the [guidance on photosensitive epilepsy from Epilepsy Action](https://www.epilepsy.org.uk/info/seizure-triggers/photosensitive-epilepsy).
