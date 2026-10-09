@@ -1,0 +1,204 @@
+
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>About semantics and specs - A guide to WCAG</title>
+
+    <link href="../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="/testing/semantics-and-specs.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="/images/opengraph-image.png" />
+      <meta name="twitter:title" content="About semantics and specs - A guide to WCAG" />
+      <meta name="twitter:url" content="/testing/semantics-and-specs.html" />
+
+      <meta property="og:image" content="/images/opengraph-image.png" />
+      <meta property="og:site_name" content="A guide to WCAG" />
+      <meta property="og:title" content="About semantics and specs" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="/testing/semantics-and-specs.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="../index.html" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          A guide to WCAG
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <nav class="govuk-header__navigation govuk-header__navigation--end" aria-label="Menu">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" hidden>Menu</button>
+        <ul id="navigation" class="govuk-header__navigation-list">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../index.html">Overview</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../all.html">All success criteria</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../content.html">Content</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../design.html">Design</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../code.html">Code</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../checklist.html">Checklist</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../community.html">Community</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#about-semantics-and-specs"><span>About semantics and specs</span></a>
+    <ul>
+      <li>
+        <a href="#specifications"><span>Specifications</span></a>
+      </li>
+      <li>
+        <a href="#semantics"><span>Semantics</span></a>
+      </li>
+      <li>
+        <a href="#helpful-resources"><span>Helpful resources</span></a>
+      </li>
+      <li>
+        <a href="#"><span>Last updated</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="technical-documentation">
+              <h1 id="about-semantics-and-specs">About semantics and specs</h1>
+<h2 id="specifications">Specifications</h2>
+<p>If code is written to specification (such as specs for HTML or ARIA) and assistive technology interprets it incorrectly, then this is technically not a WCAG fail, but worth highlighting in an audit because it&rsquo;s still an accessibility issue.</p>
+<p>If code is not written to spec but assistive technology interprets it correctly, then this can technically be considered a fail as it may be a problem for other untested assistive technologies or for future updates of the tested assistive technologies. But writing code different from the spec can be better for users, depending on the circumstances, and failing it could be counterproductive.</p>
+<h2 id="semantics">Semantics</h2>
+<p>Semantics provide meaning. Most HTML elements have a specific meaning. Giving them a visually or behaviourally different meaning is confusing for assistive technology users. For example, a button should be correctly coded as a button and a heading as a heading.</p>
+<p>Native semantic elements that are interactive include:</p>
+
+<ul>
+<li>links (<code>a</code>, <code>area</code>, <code>summary</code>)</li>
+<li>form elements (<code>input</code>, <code>select</code>, <code>datalist</code>, <code>textarea</code>, <code>button</code>)</li>
+<li>media - this includes interactive elements which are provided by the browser (<code>video</code>, <code>audio</code>)</li>
+</ul>
+<h2 id="helpful-resources">Helpful resources</h2>
+
+<ul>
+<li><a href="https://alphagov.github.io/a11y-dev-workshop/">Developer Accessibility Workshop</a></li>
+</ul>
+
+    <h2>Last updated</h2>
+    <p>This page was last updated in June 2022.</p>
+
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/alphagov/guide-to-wcag/blob/master/source/testing/semantics-and-specs.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag/issues/new?body=Problem+with+%27About+semantics+and+specs%27+%28%2Ftesting%2Fsemantics-and-specs.html%29&amp;labels=bug&amp;title=Re%3A+%27About+semantics+and+specs%27">Report problem</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="../accessibility.html">Accessibility statement</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../javascripts/application.js"></script>
+  </body>
+</html>

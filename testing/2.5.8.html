@@ -1,0 +1,329 @@
+
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>How to test for 2.5.8 Target Size (Minimum) - A guide to WCAG</title>
+
+    <link href="../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="/testing/2.5.8.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="/images/opengraph-image.png" />
+      <meta name="twitter:title" content="How to test for 2.5.8 Target Size (Minimum) - A guide to WCAG" />
+      <meta name="twitter:url" content="/testing/2.5.8.html" />
+
+      <meta property="og:image" content="/images/opengraph-image.png" />
+      <meta property="og:site_name" content="A guide to WCAG" />
+      <meta property="og:title" content="How to test for 2.5.8 Target Size (Minimum)" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="/testing/2.5.8.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="../index.html" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          A guide to WCAG
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <nav class="govuk-header__navigation govuk-header__navigation--end" aria-label="Menu">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" hidden>Menu</button>
+        <ul id="navigation" class="govuk-header__navigation-list">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../index.html">Overview</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../all.html">All success criteria</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../content.html">Content</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../design.html">Design</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../code.html">Code</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../checklist.html">Checklist</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../community.html">Community</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#how-to-test-for-2-5-8-target-size-minimum"><span>How to test for 2.5.8 Target Size (Minimum)</span></a>
+    <ul>
+      <li>
+        <a href="#wcag-says"><span>WCAG says:</span></a>
+      </li>
+      <li>
+        <a href="#when-this-is-applicable"><span>When this is applicable</span></a>
+      </li>
+      <li>
+        <a href="#check-target-size-and-spacing"><span>Check target size and spacing</span></a>
+        <ul>
+          <li>
+            <a href="#check-with-bookmarklets"><span>Check with bookmarklets</span></a>
+          </li>
+          <li>
+            <a href="#other-ways-to-check"><span>Other ways to check</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#exceptions"><span>Exceptions</span></a>
+      </li>
+      <li>
+        <a href="#best-practice"><span>Best practice</span></a>
+      </li>
+      <li>
+        <a href="#mobile-app-testing"><span>Mobile app testing</span></a>
+        <ul>
+          <li>
+            <a href="#automatically-detect-sizes-on-android"><span>Automatically detect sizes on Android</span></a>
+          </li>
+          <li>
+            <a href="#check-sizes-manually-with-other-software"><span>Check sizes manually with other software</span></a>
+          </li>
+          <li>
+            <a href="#measure-the-physical-screen"><span>Measure the physical screen</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#example-pagination-components-tested-against-success-criteria-2-5-8"><span>Example pagination components tested against Success Criteria 2.5.8</span></a>
+        <ul>
+          <li>
+            <a href="#passes-level-aaa-with-android-recommended-48px-touch-targets"><span>Passes Level AAA with Android recommended 48px touch targets</span></a>
+          </li>
+          <li>
+            <a href="#passes-level-aaa-with-apple-recommended-44px-touch-targets"><span>Passes Level AAA with Apple recommended 44px touch targets</span></a>
+          </li>
+          <li>
+            <a href="#passes-level-aa-with-24px-touch-targets"><span>Passes Level AA with 24px touch targets</span></a>
+          </li>
+          <li>
+            <a href="#passes-level-aa-with-adjacent-24px-touch-targets"><span>Passes Level AA with adjacent 24px touch targets</span></a>
+          </li>
+          <li>
+            <a href="#passes-level-aa-with-18px-touch-targets"><span>Passes Level AA with 18px touch targets</span></a>
+          </li>
+          <li>
+            <a href="#an-example-design-that-fails-level-aa"><span>An example design that fails Level AA</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"><span>Last updated</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="technical-documentation">
+              <h1 id="how-to-test-for-2-5-8-target-size-minimum">How to test for 2.5.8 Target Size (Minimum)</h1>
+<h2 id="wcag-says"><a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum">WCAG says</a>:</h2>
+
+<blockquote>
+<p>The size of the target for pointer inputs is at least 24 by 24 CSS pixels, except where:</p>
+
+<ul>
+<li><strong>Spacing:</strong> Undersized targets (those less than 24 by 24 CSS pixels) are positioned so that if a 24 CSS pixel diameter circle is centered on the bounding box of each, the circles do not intersect another target or the circle for another undersized target;</li>
+<li><strong>Equivalent:</strong> The function can be achieved through a different control on the same page that meets this criterion;</li>
+<li><strong>Inline:</strong> The target is in a sentence or its size is otherwise constrained by the line-height of non-target text;</li>
+<li><strong>User agent control:</strong> The size of the target is determined by the user agent and is not modified by the author;</li>
+<li><strong>Essential:</strong> A particular presentation of the target is essential or is legally required for the information being conveyed.</li>
+</ul>
+</blockquote>
+<h2 id="when-this-is-applicable">When this is applicable</h2>
+<p>When there are interactive elements (targets) that can be used with a pointer.</p>
+<p>If content is hidden but can be shown (for example within a menu), you will need to make sure to include it in your testing.</p>
+<h2 id="check-target-size-and-spacing">Check target size and spacing</h2>
+<p>Check targets are at least 24 pixels wide and 24 pixels high.</p>
+<p>For any smaller targets, check that the centres of all targets are at least 24 pixels away from each other.</p>
+<p>If the space between smaller targets is not obvious, a way to check precisely is to:</p>
+
+<ol>
+<li>draw rectangles just big enough to contain each element</li>
+<li>draw 24 pixel diameter circles at the centres of those rectangles</li>
+<li>check that there is no overlap between those circles<br></li>
+</ol>
+<p>You can also try the following methods.</p>
+<h3 id="check-with-bookmarklets">Check with bookmarklets</h3>
+<p>The <a href="https://cdpn.io/pen/debug/YzdwWZw">Target Size Bookmarklet from Steve Faulkner</a> helps to quickly identify visually whether a component is likely to overlap with another component. It shows a green circle with a darker green border for any targets that are at least 24 by 24 pixels, and a purple circle for any smaller targets. Where any circles overlap, and none of the exemptions apply, the success criterion fails.</p>
+<p>An alternative that does not rely on colour to communicate results is the <a href="https://adrianroselli.com/2022/05/24x24-pixel-cursor-bookmarklet.html">24x24 circle cursor bookmarklet from Adrian Roselli</a>. This method is more manual.</p>
+<h3 id="other-ways-to-check">Other ways to check</h3>
+
+<ul>
+<li>Use the select tool in your browser&rsquo;s inspector to help identify the dimensions and spacing of each element. For example, in Chrome, this is the arrow icon at the top of the DevTools window.</li>
+<li>Measure the spacing by taking a screenshot at 100% zoom and checking the distance between the centre of adjacent components in an image editing application.</li>
+<li>A further alternative is the <a href="https://chrispederick.com/work/web-developer/">Web Developer toolbar</a>, which includes a ruler and other tools: open the toolbar and select Miscellaneous &gt; Display Ruler.</li>
+</ul>
+<h2 id="exceptions">Exceptions</h2>
+<p>It&rsquo;s not a fail if:</p>
+
+<ul>
+<li>there&rsquo;s an equivalent control elsewhere which meets this criterion</li>
+<li>two areas overlap but carry out the same function - they should be considered as the same target and pass this criterion (for example, a checkbox and its label would count as a single target)</li>
+<li>the target is within text (not counting punctuation)</li>
+<li>the target size is set by the browser</li>
+<li>the target size is essential, for example interactive data points in a graph</li>
+<li>there is a single input where the value changes depending on how you interact with it, like a gradient colour picker or slider (<code>&lt;input type=&quot;range&quot;&gt;</code>)<br></li>
+</ul>
+<h2 id="best-practice">Best practice</h2>
+
+<ul>
+<li>Each target should be at least 24 pixels wide and 24 pixels high, regardless of spacing.</li>
+<li>Increase the target to at least 44 pixels wide and 44 pixels high to pass level AAA; see <a href="https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced">W3C&rsquo;s &lsquo;Understanding 2.5.5 Target Size (Enhanced) (Level AAA)</a>&rsquo;</li>
+<li>Increase the target to at least 48 pixels wide and 48 pixels high to pass <a href="https://support.google.com/accessibility/android/answer/7101858?hl=en-GB#">Android&rsquo;s Touch target size guidelines</a>.<br></li>
+</ul>
+<h2 id="mobile-app-testing">Mobile app testing</h2>
+<p>There are different ways you can test target size on mobile apps.</p>
+<h3 id="automatically-detect-sizes-on-android">Automatically detect sizes on Android</h3>
+<p>On Android, target sizes can be tested using the <a href="https://support.google.com/accessibility/android/answer/6376570?hl=en-GB">accessibility scanner</a>, which detects elements below 48x48 pixels (dp). If an element&rsquo;s size is smaller than this then it will mention the dimensions.</p>
+<h3 id="check-sizes-manually-with-other-software">Check sizes manually with other software</h3>
+<p>If you need to check sizes manually, you can also:</p>
+
+<ul>
+<li>take screenshots and review the images on a desktop, using an image editing application </li>
+<li>use accessibility inspector tools such as <a href="https://developer.apple.com/xcode/">Xcode</a> or <a href="https://developer.android.com/studio">Android Studio</a> - 24 CSS pixels is roughly the same as the equivalent device units (24pt on iOS and 24dp on Android)<br></li>
+</ul>
+<p>Be careful when using screenshots: pixel density varies on mobile devices, so the number of pixels in a screenshot may not match the number of pixels on screen.</p>
+<p>You will need to take into account the pixel density in order to match the number of pixels on screen with the number of device pixels. Look up the dimensions of your device to work out the ratio you need to zoom to. For Apple devices you can refer to the <a href="https://developer.apple.com/design/human-interface-guidelines/layout">Apple Layout Guidelines</a>.</p>
+<h3 id="measure-the-physical-screen">Measure the physical screen</h3>
+<p>If the target size cannot be detected using software then the physical screen can be measured as follows:</p>
+
+<ul>
+<li>based on <a href="https://support.google.com/accessibility/android/answer/7101858?hl=en-GB#">Android&rsquo;s Touch target size guidelines</a>, 24 pixels is around 4.5mm, regardless of screen size</li>
+<li>on an iPhone 11, 24pt is around 3.75mm - if you&rsquo;re using a different iOS device, you will need to use <a href="https://developer.apple.com/design/human-interface-guidelines/foundations/layout/">Apple&rsquo;s Layout Guidelines</a> to work out how many pixels there are per centimetre</li>
+</ul>
+<h2 id="example-pagination-components-tested-against-success-criteria-2-5-8">Example pagination components tested against Success Criteria 2.5.8</h2>
+<h3 id="passes-level-aaa-with-android-recommended-48px-touch-targets">Passes Level AAA with Android recommended 48px touch targets</h3>
+<p><a href="2.5.8-example-pass-48px.svg" rel="noopener noreferrer"><img src="2.5.8-example-pass-48px.svg" alt="An example pagination component comprising 6 large touch targets to move between pages" /></a></p>
+<h3 id="passes-level-aaa-with-apple-recommended-44px-touch-targets">Passes Level AAA with Apple recommended 44px touch targets</h3>
+<p><a href="2.5.8-example-pass-44px.svg" rel="noopener noreferrer"><img src="2.5.8-example-pass-44px.svg" alt="The same component comprising 6 slightly smaller but still large touch targets" /></a></p>
+<h3 id="passes-level-aa-with-24px-touch-targets">Passes Level AA with 24px touch targets</h3>
+<p><a href="2.5.8-example-pass-24px.svg" rel="noopener noreferrer"><img src="2.5.8-example-pass-24px.svg" alt="The same component comprising 6 medium size touch targets with space between each target" /></a></p>
+<h3 id="passes-level-aa-with-adjacent-24px-touch-targets">Passes Level AA with adjacent 24px touch targets</h3>
+<p>No horizontal separation between targets is required in this Success Criteria</p>
+<p><a href="2.5.8-example-pass-24px-adjacent.svg" rel="noopener noreferrer"><img src="2.5.8-example-pass-24px-adjacent.svg" alt="The same component comprising 6 medium size touch targets without space between each target. Targets are in an alternating colour to show the region they cover" /></a></p>
+<h3 id="passes-level-aa-with-18px-touch-targets">Passes Level AA with 18px touch targets</h3>
+<p>As each target is in 24px of space horizontally and vertically, this design conforms with the Success Criteria</p>
+<p><a href="2.5.8-example-pass-18px-but-24px-space.svg" rel="noopener noreferrer"><img src="2.5.8-example-pass-18px-but-24px-space.svg" alt="The same component with small touch targets. Red rings demarcate 24px of space, showing each target is separated from the next by the minimum space required in the success criteria" /></a></p>
+<h3 id="an-example-design-that-fails-level-aa">An example design that fails Level AA</h3>
+<p>Links require at least 24px separation vertically and horizontally unless they are part of text.</p>
+<p><a href="2.5.8-example-fail.svg" rel="noopener noreferrer"><img src="2.5.8-example-fail.svg" alt="A redesigned component with very small touch targets. Red rings demarcate 24px of space, showing each target is not separated enough from the next link, meaning the links in the component fail the success criteria" /></a></p>
+
+    <h2>Last updated</h2>
+    <p>This page was last updated in November 2024.</p>
+
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/alphagov/guide-to-wcag/blob/master/source/testing/2.5.8.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag/issues/new?body=Problem+with+%27How+to+test+for+2.5.8+Target+Size+%28Minimum%29%27+%28%2Ftesting%2F2.5.8.html%29&amp;labels=bug&amp;title=Re%3A+%27How+to+test+for+2.5.8+Target+Size+%28Minimum%29%27">Report problem</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="../accessibility.html">Accessibility statement</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../javascripts/application.js"></script>
+  </body>
+</html>

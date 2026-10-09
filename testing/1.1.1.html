@@ -1,0 +1,335 @@
+
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>How to test for 1.1.1 Non-text Content - A guide to WCAG</title>
+
+    <link href="../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="/testing/1.1.1.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="/images/opengraph-image.png" />
+      <meta name="twitter:title" content="How to test for 1.1.1 Non-text Content - A guide to WCAG" />
+      <meta name="twitter:url" content="/testing/1.1.1.html" />
+
+      <meta property="og:image" content="/images/opengraph-image.png" />
+      <meta property="og:site_name" content="A guide to WCAG" />
+      <meta property="og:title" content="How to test for 1.1.1 Non-text Content" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="/testing/1.1.1.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="../index.html" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          A guide to WCAG
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <nav class="govuk-header__navigation govuk-header__navigation--end" aria-label="Menu">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" hidden>Menu</button>
+        <ul id="navigation" class="govuk-header__navigation-list">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../index.html">Overview</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../all.html">All success criteria</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../content.html">Content</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../design.html">Design</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../code.html">Code</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../checklist.html">Checklist</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../community.html">Community</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#how-to-test-for-1-1-1-non-text-content"><span>How to test for 1.1.1 Non-text Content</span></a>
+    <ul>
+      <li>
+        <a href="#wcag-says"><span>WCAG says:</span></a>
+      </li>
+      <li>
+        <a href="#when-this-is-applicable"><span>When this is applicable</span></a>
+      </li>
+      <li>
+        <a href="#what-is-alternative-text"><span>What is alternative text?</span></a>
+      </li>
+      <li>
+        <a href="#check-images"><span>Check images</span></a>
+        <ul>
+          <li>
+            <a href="#lt-img-gt-elements"><span><img> elements</span></a>
+          </li>
+          <li>
+            <a href="#background-images"><span>Background images</span></a>
+          </li>
+          <li>
+            <a href="#font-icons"><span>Font icons</span></a>
+          </li>
+          <li>
+            <a href="#emojis-and-symbols"><span>Emojis and symbols</span></a>
+          </li>
+          <li>
+            <a href="#lt-svg-gt-elements"><span><svg> elements</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#what-the-alternatives-should-be"><span>What the alternatives should be</span></a>
+      </li>
+      <li>
+        <a href="#helpful-resources"><span>Helpful resources</span></a>
+      </li>
+      <li>
+        <a href="#exceptions"><span>Exceptions</span></a>
+      </li>
+      <li>
+        <a href="#best-practice"><span>Best practice</span></a>
+      </li>
+      <li>
+        <a href="#other-ways-to-test"><span>Other ways to test</span></a>
+      </li>
+      <li>
+        <a href="#mobile-app-testing"><span>Mobile app testing</span></a>
+      </li>
+      <li>
+        <a href="#"><span>Last updated</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="technical-documentation">
+              <h1 id="how-to-test-for-1-1-1-non-text-content">How to test for 1.1.1 Non-text Content</h1>
+<h2 id="wcag-says"><a href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content">WCAG says</a>:</h2>
+
+<blockquote>
+<p>All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.</p>
+
+<ul>
+<li><p><strong>Controls, Input:</strong> If non-text content is a control or accepts user input, then it has a name that describes its purpose. (Refer to <a href="4.1.2.html">Success Criterion 4.1.2</a> for additional requirements for controls and content that accepts user input.)</p></li>
+<li><p><strong>Time-Based Media:</strong> If non-text content is time-based media, then text alternatives at least provide descriptive identification of the non-text content. (Refer to Guideline 1.2 for additional requirements for media.)</p></li>
+<li><p><strong>Test:</strong> If non-text content is a test or exercise that would be invalid if presented in text, then text alternatives at least provide descriptive identification of the non-text content.</p></li>
+<li><p><strong>Sensory:</strong> If non-text content is primarily intended to create a specific sensory experience, then text alternatives at least provide descriptive identification of the non-text content.</p></li>
+<li><p><strong>CAPTCHA:</strong> If the purpose of non-text content is to confirm that content is being accessed by a person rather than a computer, then text alternatives that identify and describe the purpose of the non-text content are provided, and alternative forms of CAPTCHA using output modes for different types of sensory perception are provided to accommodate different disabilities.</p></li>
+<li><p><strong>Decoration, Formatting, Invisible:</strong> If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented in a way that it can be ignored by assistive technology.</p></li>
+</ul>
+</blockquote>
+<h2 id="when-this-is-applicable">When this is applicable</h2>
+<p>This applies if the page includes:</p>
+
+<ul>
+<li>images or symbols in any form, including SVGs, background images or icon fonts</li>
+<li>video, audio or multimedia objects</li>
+<li>animation</li>
+<li>CAPTCHAs</li>
+</ul>
+<h2 id="what-is-alternative-text">What is alternative text?</h2>
+<p>Alternative text is any text used to explain content that isn&rsquo;t made up of words, like images, as not everyone can see them. When this section refers to ‘alternative text’, it doesn’t necessarily mean the text in the <code>alt</code> attribute but any of these methods:</p>
+
+<ul>
+<li>text that’s close to the image</li>
+<li>an <a href="accessible-names.html">accessible name</a> (like text in the <code>alt</code> attribute or an <code>aria-label</code>)</li>
+<li>other methods (like <code>longdesc</code> or a link to a description)</li>
+</ul>
+<h2 id="check-images">Check images</h2>
+<p>Use the browser&rsquo;s inspector or a screen reader to check all types of images.</p>
+<p>Check:</p>
+
+<ul>
+<li>images have alternative text</li>
+<li>alternative text is appropriate - if an image is meaningful the alt text should describe its purpose, otherwise it should be marked up as decorative</li>
+</ul>
+<h3 id="lt-img-gt-elements"><code>&lt;img&gt;</code> elements</h3>
+<p>To check <code>alt</code> text on <code>img</code> images, use the <a href="https://chrispederick.com/work/web-developer/">Web Developer extension</a> and go to &lsquo;Images &gt; Display Alt Attributes&rsquo;. <code>img</code> elements must always have an <code>alt</code> attribute whether it is adding the alternative text or it is empty.</p>
+<h3 id="background-images">Background images</h3>
+<p>A background image is an image that is not in the content (HTML) but the CSS.</p>
+<h3 id="font-icons">Font icons</h3>
+<p>Some fonts contain icons such as symbols and glyphs. These can be added directly into HTML or inserted using CSS. Some screen readers will ignore them and some will read them out as something unrelated. As such, check the character for the icon is hidden from screen readers.</p>
+<h3 id="emojis-and-symbols">Emojis and symbols</h3>
+<p>Emojis and symbols already have inherent alternative text. But that might not be what is the most appropriate.</p>
+<h3 id="lt-svg-gt-elements"><code>&lt;svg&gt;</code> elements</h3>
+<p>SVGs should either have:</p>
+
+<ul>
+<li>alternative text in <code>title</code> or <code>desc</code> element or in <code>aria-label</code> - if the <code>title</code> element is used, the <code>svg</code> element has an <code>aria-labelledby</code> referencing the title</li>
+<li><code>aria-hidden=&quot;true&quot;</code> or <code>role=&quot;presentation&quot;</code> if it&rsquo;s decorative</li>
+</ul>
+<h2 id="what-the-alternatives-should-be">What the alternatives should be</h2>
+<p>Generally, if the image has meaning, describe its purpose. If it&rsquo;s not meaningful, make sure it&rsquo;s marked up as decorative.</p>
+<p>For interactive images or images as controls:</p>
+
+<ul>
+<li>alternative text of an image in a link should describe the target</li>
+<li>alternative text of an image in a button should describe the action</li>
+<li>alternative text of image maps should describe the target or action</li>
+<li>if both the contents of the image and the target or action are equally important, the alternative text should describe both</li>
+</ul>
+<p>For images containing text, check:</p>
+
+<ul>
+<li>the alternative text includes the same text as the text on the image</li>
+<li>symbols are not described but replaced with their meaning</li>
+<li>CAPTCHAs describe the purpose and point to an alternative way to solve it using different senses</li>
+</ul>
+<p>For decorative images:</p>
+
+<ul>
+<li><code>img</code> images must still have an <code>alt</code> attribute and it must be empty (<code>alt=&quot;&quot;</code>)</li>
+<li>you can use <code>aria-hidden=&quot;true&quot;</code> for any other type of image</li>
+</ul>
+<p>You should also check objects that have been inserted or embedded on a page. This might include video-only or audio-only content, animations, graphs or diagrams. This type of content should have a fallback text that identifies what it is and describes it. That alternative text ultimately needs to be in text form. For example, when a video doesn&rsquo;t load, you could have a fallback image that has alternative text. Although diagrams and graphs are excluded from <a href="1.4.5.html">1.4.5 Images of Text</a>, they still need an alternative under 1.1.1.</p>
+<p>If multiple images have been grouped to compose a larger image, it&rsquo;s fine to have just one alternative text describing the larger image and the other <code>alt</code> parameters can be empty.</p>
+<h2 id="helpful-resources">Helpful resources</h2>
+
+<ul>
+<li>Good summary: <a href="https://www.w3.org/WAI/tutorials/images/decision-tree/">W3C&rsquo;s alt decision tree</a></li>
+<li>Anika&rsquo;s talk: <a href="https://www.youtube.com/watch?v=-UsI3Ev7MlI&amp;list=PL5tovFCB3CsDAfBhyDTem0u6Loae61fMG&amp;index=2">Alternative text: there&rsquo;s more to it than meets the eye</a></li>
+</ul>
+<h2 id="exceptions">Exceptions</h2>
+
+<ul>
+<li>If non-text content is part of a test or exercise and alternative text would render the test irrelevant - however, CAPTCHAs must still provide an accessible alternative.</li>
+<li>If words cannot describe a sensory experience, non-text content should be identified and have a brief description.</li>
+</ul>
+<h2 id="best-practice">Best practice</h2>
+
+<ul>
+<li>Alternative text should be clear and short.</li>
+<li>If an image within a link or button is unclear to everyone, it&rsquo;s bad usability.</li>
+<li>If any alternative text is visible, there should be no visually hidden alternative text that duplicates it.</li>
+<li>If an image and text are within the same link or button, avoid repeating the link or button text in the image’s alternative text. Instead, mark the image as decorative or provide a description of the image if it’s essential.</li>
+<li>If image and text are adjacent and both link to the same destination (for example a thumbnail image and article title), hide the image and its link for screen readers, and remove the link from the tabbing order.</li>
+<li>If the alternative text is long, it shouldn&rsquo;t be added using attributes - for example, complex diagrams should not be described in the <code>alt</code> text but somewhere else on the page (the alt text should say what and where it is described, using words or programmatically).</li>
+</ul>
+<h2 id="other-ways-to-test">Other ways to test</h2>
+
+<ul>
+<li>Check if there are any background images by changing colours in Firefox (background images will disappear).</li>
+<li>Check alt text by looking at the HTML source code and searching for: <code>&lt;img</code>, <code>type=&quot;image&quot;</code>, <code>&lt;area</code>; look for <code>background(-image)</code>, <code>content</code> within CSS.</li>
+<li>Use the <a href="https://chrispederick.com/work/web-developer/">Web Developer extension</a> and go to &lsquo;Disable All Styles and Images &gt; Hide Images&rsquo; to reveal what other types of &ldquo;images&rdquo; there are - for example, it will leave background images or font icons or objects (be aware that results can be inconsistent as it also removes some background images).</li>
+</ul>
+<h2 id="mobile-app-testing">Mobile app testing</h2>
+<p>Use a screen reader to check text alternatives for images and other non-text content.</p>
+
+    <h2>Last updated</h2>
+    <p>This page was last updated in March 2025.</p>
+
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/alphagov/guide-to-wcag/blob/master/source/testing/1.1.1.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag/issues/new?body=Problem+with+%27How+to+test+for+1.1.1+Non-text+Content%27+%28%2Ftesting%2F1.1.1.html%29&amp;labels=bug&amp;title=Re%3A+%27How+to+test+for+1.1.1+Non-text+Content%27">Report problem</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="../accessibility.html">Accessibility statement</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../javascripts/application.js"></script>
+  </body>
+</html>

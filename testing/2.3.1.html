@@ -1,0 +1,241 @@
+
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>How to test for 2.3.1 Three Flashes or Below Threshold - A guide to WCAG</title>
+
+    <link href="../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="/testing/2.3.1.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="/images/opengraph-image.png" />
+      <meta name="twitter:title" content="How to test for 2.3.1 Three Flashes or Below Threshold - A guide to WCAG" />
+      <meta name="twitter:url" content="/testing/2.3.1.html" />
+
+      <meta property="og:image" content="/images/opengraph-image.png" />
+      <meta property="og:site_name" content="A guide to WCAG" />
+      <meta property="og:title" content="How to test for 2.3.1 Three Flashes or Below Threshold" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="/testing/2.3.1.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="../index.html" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          A guide to WCAG
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <nav class="govuk-header__navigation govuk-header__navigation--end" aria-label="Menu">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" hidden>Menu</button>
+        <ul id="navigation" class="govuk-header__navigation-list">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../index.html">Overview</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../all.html">All success criteria</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../content.html">Content</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../design.html">Design</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../code.html">Code</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../checklist.html">Checklist</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../community.html">Community</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#how-to-test-for-2-3-1-three-flashes-or-below-threshold"><span>How to test for 2.3.1 Three Flashes or Below Threshold</span></a>
+    <ul>
+      <li>
+        <a href="#wcag-says"><span>WCAG says:</span></a>
+      </li>
+      <li>
+        <a href="#when-this-is-applicable"><span>When this is applicable</span></a>
+      </li>
+      <li>
+        <a href="#check-flashing"><span>Check flashing</span></a>
+      </li>
+      <li>
+        <a href="#best-practice"><span>Best practice</span></a>
+      </li>
+      <li>
+        <a href="#other-ways-to-test"><span>Other ways to test</span></a>
+        <ul>
+          <li>
+            <a href="#use-tools"><span>Use tools</span></a>
+          </li>
+          <li>
+            <a href="#ask-the-supplier"><span>Ask the supplier</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#potential-critical-fail"><span>Potential critical fail</span></a>
+      </li>
+      <li>
+        <a href="#mobile-app-testing"><span>Mobile app testing</span></a>
+      </li>
+      <li>
+        <a href="#"><span>Last updated</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="technical-documentation">
+              <h1 id="how-to-test-for-2-3-1-three-flashes-or-below-threshold">How to test for 2.3.1 Three Flashes or Below Threshold</h1>
+<h2 id="wcag-says"><a href="https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold">WCAG says</a>:</h2>
+
+<blockquote>
+<p>Web pages do not contain anything that flashes more than three times in any one second period, or the flash is below the general flash and red flash thresholds.</p>
+</blockquote>
+<h2 id="when-this-is-applicable">When this is applicable</h2>
+<p>Always</p>
+<h2 id="check-flashing">Check flashing</h2>
+<p>Check if anything flashes more than 3 times per second. This is very difficult to test, so you might rely on making assumptions rather than testing it properly.</p>
+<p>Just looking at the page can give you an indication if something is flickering, but it can be inadequate especially if the flickering is close to the threshold.</p>
+<p>If in doubt, err on the side of caution and fail it (include the caveat that you haven&rsquo;t properly tested it) because this can potentially be life-threatening. Warning users of the flashing content in advance is not enough to pass this success criterion.</p>
+<p>You can also consider checking through anything listed under &ldquo;other ways to test&rdquo; below.</p>
+<h2 id="best-practice">Best practice</h2>
+<p>It&rsquo;s not just flashing content which can cause seizures. Static images can cause seizures as well.</p>
+<p>Mozilla has <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Seizure_disorders">documentation on web accessibility for seizure disorders</a>. It includes a <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/Seizure_disorders#patterns_and_parallax">section on patterns and parallax</a> with a list of things to look out for in static images, for example an unchanging dark and light pattern containing 8 or more lines.</p>
+<p>Ofcom have further information on potentially harmful patterns in their <a href="https://www.ofcom.org.uk/tv-radio-and-on-demand/broadcast-standards/section-two-harm-offence">guide on Harm and Offence</a> (see Annex 1 in the guidance notes).</p>
+<p>It&rsquo;s best to not use any flickering content at all. If it is used, it should be switched off by default and be controllable by the user (which should be checked under <a href="2.2.2.html">2.2.2 Pause, Stop, Hide</a>).</p>
+<h2 id="other-ways-to-test">Other ways to test</h2>
+<h3 id="use-tools">Use tools</h3>
+<p>There are tools that can test flickering frequencies. However, these are often not practical to use in an accessibility test as they either cost money, are old, or need special file formats.</p>
+
+<ul>
+<li><a href="https://www.hardingtest.com/">Harding Test</a> - paid service</li>
+<li><a href="https://www.hardingfpa.com/">HardingFPA</a> - paid service</li>
+<li><a href="https://www.onlineflashtest.com/">OnlineFlashTest.com</a> - paid service, requires specific file formats</li>
+<li><a href="https://trace.umd.edu/peat">Trace Center&rsquo;s Photosensitive Epilepsy Analysis Tool (PEAT)</a> - free, old, requires specific file formats, Windows only</li>
+</ul>
+<p>If you see a potentially noncompliant video, you might consider making a business case for buying one of those services.</p>
+<h3 id="ask-the-supplier">Ask the supplier</h3>
+<p>If a video or animation looks like it might be a fail, consider asking the supplier if they have tested it and whether they have a certificate that shows the result of the test.</p>
+<h2 id="potential-critical-fail">Potential critical fail</h2>
+<p>If this Success Criteria fails it means the whole page fails because there is something interfering with the other content in a way which makes it inaccessible to some people. That includes if third-party content causes this to fail, even if it is otherwise excluded from the audit. See <a href="https://www.w3.org/TR/WCAG22/#cc5">Non-Interference</a>.</p>
+<h2 id="mobile-app-testing">Mobile app testing</h2>
+<p>No difference</p>
+
+    <h2>Last updated</h2>
+    <p>This page was last updated in February 2026.</p>
+
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/alphagov/guide-to-wcag/blob/master/source/testing/2.3.1.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag/issues/new?body=Problem+with+%27How+to+test+for+2.3.1+Three+Flashes+or+Below+Threshold%27+%28%2Ftesting%2F2.3.1.html%29&amp;labels=bug&amp;title=Re%3A+%27How+to+test+for+2.3.1+Three+Flashes+or+Below+Threshold%27">Report problem</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="../accessibility.html">Accessibility statement</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../javascripts/application.js"></script>
+  </body>
+</html>

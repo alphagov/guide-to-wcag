@@ -1,0 +1,273 @@
+
+<!doctype html>
+<html lang="en" class="govuk-template no-js">
+  <head>
+    
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>How to test for 4.1.2 Name, Role, Value - A guide to WCAG</title>
+
+    <link href="../stylesheets/manifest.css" rel="stylesheet" />
+
+    <link rel="canonical" href="/testing/4.1.2.html">
+      <link rel="icon" sizes="48x48" href="/images/favicon.ico">
+      <link rel="icon" sizes="any" href="/images/favicon.svg" type="image/svg+xml">
+
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image" content="/images/opengraph-image.png" />
+      <meta name="twitter:title" content="How to test for 4.1.2 Name, Role, Value - A guide to WCAG" />
+      <meta name="twitter:url" content="/testing/4.1.2.html" />
+
+      <meta property="og:image" content="/images/opengraph-image.png" />
+      <meta property="og:site_name" content="A guide to WCAG" />
+      <meta property="og:title" content="How to test for 4.1.2 Name, Role, Value" />
+      <meta property="og:type" content="object" />
+      <meta property="og:url" content="/testing/4.1.2.html" />
+
+    
+  </head>
+
+  <body class="govuk-template__body">
+    <script>document.body.className += ' js-enabled' + ('noModule' in HTMLScriptElement.prototype ? ' govuk-frontend-supported' : '');</script>
+
+    <div class="app-pane">
+      <div class="app-pane__header toc-open-disabled">
+        <a href="#content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+
+        <header class="govuk-header app-header" role="banner" data-module="govuk-header">
+  <div class="govuk-header__container govuk-header__container--full-width">
+    <div class="govuk-header__logo">
+      <a href="../index.html" class="govuk-header__link govuk-header__link--homepage">
+        <span class="govuk-header__product-name">
+          A guide to WCAG
+        </span>
+      </a>
+    </div>
+    <div class="govuk-header__content">
+      <nav class="govuk-header__navigation govuk-header__navigation--end" aria-label="Menu">
+        <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" hidden>Menu</button>
+        <ul id="navigation" class="govuk-header__navigation-list">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../index.html">Overview</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../all.html">All success criteria</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../content.html">Content</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../design.html">Design</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../code.html">Code</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../checklist.html">Checklist</a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="../community.html">Community</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>
+
+      </div>
+
+        <div id="toc-heading" class="toc-show fixedsticky">
+          <button type="button" class="toc-show__label js-toc-show" aria-controls="toc">
+            Table of contents <span class="toc-show__icon"></span>
+          </button>
+        </div>
+
+      <div class="app-pane__body" data-module="in-page-navigation">
+          <div class="app-pane__toc">
+            <div class="toc" data-module="table-of-contents" tabindex="-1">
+              
+              <button type="button" class="toc__close js-toc-close" aria-controls="toc" aria-label="Hide table of contents"></button>
+              <nav id="toc" class="js-toc-list toc__list" aria-labelledby="toc-heading">
+                      <ul>
+  <li>
+    <a href="#how-to-test-for-4-1-2-name-role-value"><span>How to test for 4.1.2 Name, Role, Value</span></a>
+    <ul>
+      <li>
+        <a href="#wcag-says"><span>WCAG says:</span></a>
+      </li>
+      <li>
+        <a href="#when-this-is-applicable"><span>When this is applicable</span></a>
+      </li>
+      <li>
+        <a href="#check-accessible-name"><span>Check accessible name</span></a>
+      </li>
+      <li>
+        <a href="#check-semantics-role-value"><span>Check semantics (role, value)</span></a>
+      </li>
+      <li>
+        <a href="#check-dynamically-hidden-things"><span>Check dynamically hidden things</span></a>
+      </li>
+      <li>
+        <a href="#other-ways-to-check"><span>Other ways to check</span></a>
+      </li>
+      <li>
+        <a href="#best-practice"><span>Best practice</span></a>
+        <ul>
+          <li>
+            <a href="#examples"><span>Examples</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#mobile-app-testing"><span>Mobile app testing</span></a>
+      </li>
+      <li>
+        <a href="#"><span>Last updated</span></a>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+
+              </nav>
+            </div>
+          </div>
+
+        <div class="app-pane__content toc-open-disabled" aria-label="Content">
+          <main id="content" class="technical-documentation">
+              <h1 id="how-to-test-for-4-1-2-name-role-value">How to test for 4.1.2 Name, Role, Value</h1>
+<h2 id="wcag-says"><a href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value">WCAG says</a>:</h2>
+
+<blockquote>
+<p>For all user interface components (including but not limited to: form elements, links and components generated by scripts), the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.</p>
+</blockquote>
+<h2 id="when-this-is-applicable">When this is applicable</h2>
+<p>When there are interactive elements.</p>
+<h2 id="check-accessible-name">Check accessible name</h2>
+<p>Check:</p>
+
+<ul>
+<li>all interactive components (such as links, form elements and tabs) have an <a href="accessible-names.html">accessible name</a></li>
+<li>all frames and iframes have a <code>title</code> - in the <a href="https://chrispederick.com/work/web-developer/">Web Developer extension</a>, go to &lsquo;Information &gt; Display title attributes&rsquo;</li>
+</ul>
+<h2 id="check-semantics-role-value">Check semantics (role, value)</h2>
+<p>It should be clear to assistive technology users what an interactive component is doing.</p>
+<p>Check whether interactive components use their <a href="semantics-and-specs.html#semantics">native semantic elements</a> - these elements will usually be accessible. Divs and spans are never natively semantic for interactive elements. Having HTML knowledge will help you check this.</p>
+<p>If interactive components do not use their native semantic elements, check:</p>
+
+<ul>
+<li>semantics have been added using ARIA</li>
+<li>ARIA is used correctly (according to the <a href="semantics-and-specs.html#specifications">spec</a>)</li>
+<li>ARIA has the appropriate effect on the element&rsquo;s role, value or both</li>
+</ul>
+<p>When interacting with a component, check any values are changed appropriately. For example in an accordion, either the text toggles &ldquo;show/hide&rdquo;, or the code changes the value of <code>aria-expanded</code>. Otherwise, check if context or explanatory text make it clear what happens.</p>
+<p>You can use:</p>
+
+<ul>
+<li>a screen reader (ideally NVDA)</li>
+<li><a href="https://pauljadam.com/bookmarklets/aria.html">ARIA bookmarklet</a></li>
+<li><a href="http://whatsock.com/training/matrices/visual-aria.htm">Visual ARIA bookmarklet</a></li>
+<li><a href="https://thepaciellogroup.github.io/WAI-ARIA-Usage/WAI-ARIA_usage.html">WAI-ARIA usage bookmarklet</a></li>
+<li>the code inspector and refer to <a href="https://www.w3.org/TR/wai-aria-1.1/">ARIA spec</a> and <a href="https://www.w3.org/TR/html-aria/">HTML in ARIA</a></li>
+<li>some testing tools will tell if something is wrong with ARIA (like <a href="https://www.deque.com/axe/browser-extensions/">axe</a>)</li>
+<li><a href="https://wave.webaim.org/extension/">WAVE</a> visually shows some of ARIA</li>
+</ul>
+<h2 id="check-dynamically-hidden-things">Check dynamically hidden things</h2>
+<p>If anything is hidden visually, it should also be hidden programmatically.</p>
+<p>For example:</p>
+
+<ul>
+<li>if error messages for form inputs are visually hidden but screen reader users can still read them and/or keyboard-only users can still tab to them, this would be a fail</li>
+<li>content that is hidden because it&rsquo;s in a different tab (or accordion) section and is shown later should also be hidden from assistive technology until it&rsquo;s revealed</li>
+</ul>
+<p>Check this for both screen readers and keyboard-only. Alternatively, check the code has something like <code>display: none</code>, <code>aria-hidden</code> or <code>hidden</code>.</p>
+<h2 id="other-ways-to-check">Other ways to check</h2>
+<p>You can also check which semantics elements have by:</p>
+
+<ul>
+<li>checking the accessibility tree in the browser inspector</li>
+<li>searching for <code>aria</code> and <code>role</code> in the code - either search using the dev tools or use the <a href="https://chrome.google.com/webstore/detail/view-rendered-source/ejgngohbdedoabanmclafpkoogegdpob?hl=en">View Rendered Source extension</a> (do not just use &lsquo;view source&rsquo;)</li>
+<li>checking if links have a valid <code>href</code> (not using a target of <code>#</code> or <code>javascript:</code>) - if they do not, it&rsquo;s a sign they are used as buttons or other interactive elements and not links and should have respective semantics (use <a href="https://chrispederick.com/work/web-developer/">Web Developer extension</a> to list all <code>href</code>s of links by going to &lsquo;Information &gt; View Link Information&rsquo;)</li>
+</ul>
+<h2 id="best-practice">Best practice</h2>
+<p>It&rsquo;s good to produce valid HTML and ARIA, but not always necessary to pass WCAG (as long as it doesn&rsquo;t break anything else).</p>
+<p>It&rsquo;s best to use native elements although it&rsquo;s possible to use ARIA to make something semantic.</p>
+<p>If there are typos in the code (for example, <code>aria-hidden=&quot;treu&quot;</code> or <code>aria-hiden=&quot;true&quot;</code>) this may or may not be a fail depending on the context and whether that typo leads to names, roles or values not being programmatically determinable.</p>
+<h3 id="examples">Examples</h3>
+<div class="highlight"><pre class="highlight plaintext" tabindex="0"><code>&lt;label for="col"&gt;Favourite colour&lt;/label&gt;
+&lt;input type="text" id="col" aria-lable="Favourite colour" /&gt;
+</code></pre></div><p>This would pass because the <code>aria-label</code> (with <code>aria-lable</code> misspelled) is not necessary here.</p>
+<div class="highlight"><pre class="highlight plaintext" tabindex="0"><code>&lt;label&gt;Favourite colour&lt;/label&gt;
+&lt;input type="text" aria-lable="Favourite colour" /&gt;
+</code></pre></div><p>This would fail because there is nothing else labelling the input.</p>
+<h2 id="mobile-app-testing">Mobile app testing</h2>
+<p>For each interactive component, use a screen reader to check that it has an accessible name, is detected as the correct role and communicates its status correctly (if applicable).</p>
+
+    <h2>Last updated</h2>
+    <p>This page was last updated in October 2024.</p>
+
+            
+          </main>
+
+          <aside>
+              <ul class="contribution-banner">
+                <li><a href="https://github.com/alphagov/guide-to-wcag/blob/master/source/testing/4.1.2.html.md.erb">View source</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag/issues/new?body=Problem+with+%27How+to+test+for+4.1.2+Name%2C+Role%2C+Value%27+%28%2Ftesting%2F4.1.2.html%29&amp;labels=bug&amp;title=Re%3A+%27How+to+test+for+4.1.2+Name%2C+Role%2C+Value%27">Report problem</a></li>
+                <li><a href="https://github.com/alphagov/guide-to-wcag">GitHub Repo</a></li>
+              </ul>
+          </aside>
+
+          <footer class="govuk-footer app-footer" role="contentinfo">
+  <div class="govuk-footer__meta">
+    <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+
+        <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="../accessibility.html">Accessibility statement</a>
+            </li>
+        </ul>
+
+      <svg
+        aria-hidden="true"
+        focusable="false"
+        class="govuk-footer__licence-logo"
+        xmlns="http://www.w3.org/2000/svg"
+        viewbox="0 0 483.2 195.7"
+        height="17"
+        width="41"
+      >
+        <path
+          fill="currentColor"
+          d="M421.5 142.8V.1l-50.7 32.3v161.1h112.4v-50.7zm-122.3-9.6A47.12 47.12 0 0 1 221 97.8c0-26 21.1-47.1 47.1-47.1 16.7 0 31.4 8.7 39.7 21.8l42.7-27.2A97.63 97.63 0 0 0 268.1 0c-36.5 0-68.3 20.1-85.1 49.7A98 98 0 0 0 97.8 0C43.9 0 0 43.9 0 97.8s43.9 97.8 97.8 97.8c36.5 0 68.3-20.1 85.1-49.7a97.76 97.76 0 0 0 149.6 25.4l19.4 22.2h3v-87.8h-80l24.3 27.5zM97.8 145c-26 0-47.1-21.1-47.1-47.1s21.1-47.1 47.1-47.1 47.2 21 47.2 47S123.8 145 97.8 145"
+        />
+      </svg>
+      <span class="govuk-footer__licence-description">
+        All content is available under the
+        <a
+          class="govuk-footer__link"
+          href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/"
+          rel="license"
+        >Open Government Licence v3.0</a>, except where otherwise stated
+      </span>
+    </div>
+    <div class="govuk-footer__meta-item">
+      <a
+        class="govuk-footer__link govuk-footer__copyright-logo"
+        href="https://www.nationalarchives.gov.uk/information-management/re-using-public-sector-information/uk-government-licensing-framework/crown-copyright/"
+      >© Crown copyright</a>
+    </div>
+  </div>
+</footer>
+
+        </div>
+      </div>
+    </div>
+
+    
+    <script src="../javascripts/govuk_frontend.js" type="module"></script>
+    <script src="../javascripts/application.js"></script>
+  </body>
+</html>
