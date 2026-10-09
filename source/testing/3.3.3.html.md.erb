@@ -1,0 +1,31 @@
+---
+title: How to test for 3.3.3 Error Suggestion
+updated: 2024-10
+---
+
+# <%= current_page.data.title %>
+
+## [WCAG says](https://www.w3.org/WAI/WCAG22/Understanding/error-suggestion):
+
+> If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content.
+
+## When this is applicable
+
+If there is a form that produces error messages.
+
+## Check error messages
+
+Cause an error to happen on a form, for example by submitting it with empty mandatory fields, setting a date far into the future or past or omitting an @ symbol in an email field. If there are no error messages, these checks are not applicable.
+
+Check:
+
+* error messages have clear and helpful instructions on what the problem is and how to fix it, for example, "Your date of birth cannot be in the future. Please select a date in the past."
+
+## Exceptions
+
+* if it's difficult to know automatically there is an error or how to correct it
+* if error suggestions could compromise security, for example on a failed login attempt
+
+## Mobile app testing
+
+No difference

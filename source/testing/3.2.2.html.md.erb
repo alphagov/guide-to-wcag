@@ -1,0 +1,35 @@
+---
+title: How to test for 3.2.2 On Input
+updated: 2024-10
+---
+
+# <%= current_page.data.title %>
+
+## [WCAG says](https://www.w3.org/WAI/WCAG22/Understanding/on-input):
+
+> Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component.
+
+## When this is applicable
+
+When there are interactive elements (form elements or other interactive objects that change something on the page, but no standard links or buttons).
+
+## Check interactive elements
+
+Check twice, once with [keyboard only](keyboard.html) and once with a mouse or trackpad.
+
+Select and fill all interactive elements (except buttons and links).
+
+Check that context does not change unexpectedly, in particular:
+
+* that changes of content are not excessive and don't change the meaning of the page - changes of (bits of) content are fine if they happen underneath the triggering element
+* the focus or scroll area does not move unexpectedly
+* a form does not get submitted
+* new windows or tabs are not opened unexpectedly
+
+These behaviours can be acceptable as long as users are advised in text before the triggering element.
+
+You will often need to make a judgement call based on the whole context of a page.
+
+## Mobile app testing
+
+Use an external keyboard.

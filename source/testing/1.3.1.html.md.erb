@@ -1,0 +1,224 @@
+---
+title: How to test for 1.3.1 Info and Relationships
+updated: 2024-10
+---
+
+# <%= current_page.data.title %>
+
+## [WCAG says](https://www.w3.org/WAI/WCAG22/Understanding/info-and-relationships):
+
+> Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.
+
+## When this is applicable
+
+Always.
+
+## General checks
+
+Check this Success Criteria by either:
+
+* disabling styles
+* using bookmarklets
+* using the [Web Developer extension](https://chrispederick.com/work/web-developer/)
+* using other browser extensions
+* using the code inspector
+* using a screen reader (ideally NVDA)
+* using an accessibility checker
+
+Identify what elements appear to be, based on their visual appearance and how they behave when you interact with them.
+
+Then check:
+
+* the element is coded consistently with what you expected from the visual cues and behaviour - for example, an item that looks like a heading, link, table, list or button should also be that in the code
+* if the element has been changed by an ARIA role
+  * if the incorrect HTML element was used, check ARIA has changed the semantics to be correct
+  * if the correct HTML was used, check ARIA has not changed the semantics to be incorrect
+* HTML elements are used [semantically](semantics-and-specs.html#semantics) and for what their [spec](semantics-and-specs.html#specifications) says they should be used for
+
+The same applies in reverse, so if something is coded as one semantic thing but looks like another, it's usually a fail. For example, if there is an `h2` in the code, but the text is styled like a paragraph, this would be a fail because what looks like a paragraph isn't a paragraph in the code.
+
+To understand the design it might be helpful to compare elements to others of the same type throughout the website (like for like). Having HTML knowledge will help you check this.
+
+A lot of 1.3.1 is very subjective, so you might want to work with an accessibility specialist where possible.
+
+The following sections go through more specific areas to check. These are not exhaustive. There are more potential meaningful [HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+
+### Best practice
+
+Although using ARIA might pass this Success Criterion, it is not recommended to use it if there is a semantic HTML element that does the same thing.
+
+## Check headings
+
+Use the [Headings bookmarklet](https://accessibility-bookmarklets.org/install.html), [headingsMap extension](https://github.com/dzc34/headingsMap), [WAVE extension](https://wave.webaim.org/extension/) or a screen reader (for example, NVDA's elements list) to identify headings in the code. Do a visual check of the page to identify headings in the design.
+
+Check:
+
+* everything that looks like a heading is coded like one using `h1` to `h6` or `legend` or `caption` - it's also valid if headings use `role=heading` and `aria-level`
+* something that looks like a heading is not coded like one if it serves a different function - for example, big bold numbers for metrics on a dashboard (they could be highlighted with a `strong` instead)
+* everything that's coded like a heading looks like one, for example big and bold or otherwise visually distinctive - it can be useful to compare to styling of other headings within the set of pages you're testing
+* headings that look more important are higher in the hierarchy - heading levels do not necessarily need to look the same
+
+### Best practice for headings
+
+* everything that's a heading in the code should function as a heading, by providing structure to the page - they do not need to look like the others
+* the hierarchy of headings should be correct (`h1`to `h6` applied appropriately)
+* use only one `h1`
+* Avoid using `role=heading` and `aria-level` as this is bad for those using user styles
+
+## Check lists
+
+A list is related pieces of information grouped together, written consecutively, so they are clearly associated with each other and easy to read.
+
+In HTML, the different types of lists are:
+
+* unordered lists (`ul`)
+* ordered lists (`ol`)
+* description lists (`dl`)
+* menu lists (`menu`)
+
+You can tell something is a list if it has items that:
+
+* are visually grouped
+* differentiate single items from each other
+* contain only those standalone items - a sentence containing items separated by commas doesn't count
+* are often on new lines but they don't need to be - for example, items might be arranged horizontally on a menu toolbar
+
+Use the [Lists bookmarklet](https://accessibility-bookmarklets.org/install.html) or [WAVE](https://wave.webaim.org/extension/) to show all the lists on a page. Do a visual check of the page to identify lists in the design.
+
+Check:
+
+* everything that looks like a list is coded like one
+* everything that is coded like a list looks like one
+
+If a list uses an inappropriate or suboptimal list type to present information, this would not necessarily fail WCAG if the experience is the same for all users, regardless of if they are using assistive technology or not. For example, if a `ul` looks like an ordered list because numbers have been manually added using text, this is not ideal but it passes because you get the same information visually and programmatically.
+
+Keep in mind:
+
+* if the list looks like one single list, it should be one single list
+* a collection of items doesn't need to be a list - for example, navigation components such as breadcrumbs, pagination or site maps are often coded as lists, although they do not need to be
+* a single item could be considered a list so would not necessarily fail
+* it's also acceptable to use ARIA attributes such as `role=list` and `role=listitem` to mark up lists
+* items don't need to be on separate lines as long as you can still distinguish between one item and another, for example by separating them with spacing or styling
+* screen readers often don't interpret lists as what they are when they have list styling (such as bullets or numbers) removed
+
+### Ordered and unordered lists
+
+An ordered list is where sequential labelling is used either because the order of the items is important or to make referring to items easier. Numbers, letters and roman numerals are commonly used for ordered lists.
+
+Unordered lists often have bullets, but do not necessarily need them.
+
+If something is in a particular order (such as alphabetical) and doesn't have numbers (or anything else that visually shows it's ordered), it doesn't need to be in an `ol`.
+
+Ordering can be implied by using an unordered list with text to explain the order, for example, a title stating "Towns (in alphabetical order):" or a list item starting "Step 1:". However, if it is an `ol`, it would not necessarily fail.
+
+### Description lists
+
+Description lists are made up of key-value groups (one or more keys and one or more values). A description list could look like a table, a list with two different list types or another format that distinguishes between the keys and values and makes the relationships between them clear.
+
+As an example, a description list might look as follows. This is only an illustration of how a description list might look, rather than an actual `dl`.
+
+Name: Larry  
+Title: Chief Mouser to the Cabinet Office  
+Born: 2007  
+Residence: 10 Downing Street  
+Likes: Tuna, sleeping  
+
+### Nested lists
+
+Nested lists are usually indented. They can have other different styling that makes it clear it's nested, for example by using headings in between sublists.
+
+Check:
+
+* lists that look like they're nested are marked up appropriately
+
+## Check tables
+
+Use the [Tables bookmarklet](https://pauljadam.com/bookmarklets/tables.html) or [WAVE](https://wave.webaim.org/extension/) to visualise the code behind tables. Do a visual check of the page to identify tables in the design.
+
+The relationship between each cell and their row and/or column header must be programmatically clear.
+
+Check:
+
+* tables use native HTML table elements - using divs is acceptable as long as they use ARIA (such as `role=table|tablerow|...`) or if they make sense when read linearly
+* there are table headers (either `th` or `td` with [equivalent ARIA roles](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Roles/table_role)), unless:
+  * the context of table cells is clear by itself
+  * the structure of the table is clear
+  * the table makes sense if read linearly (left to right, top to bottom)
+* complex tables use `headers` and `id`, or `scope` - examples of features that might point to a table being complex:
+  * tables which need more than one row header or column header
+  * tables which have merged cells
+  * rows or columns not matching the header cells, for example a row spanning across all columns with annotations
+* table cells that are styled to look like table headers are marked up as table headers - it can be useful to compare to styling of other table headers on the website
+* there are no invisible empty rows or columns, for example ones styled to look like spacing
+* tables used for layout purposes use `role=presentation|none` and do not use semantic elements like `th`, `caption`, `summary`, `headers`
+
+Keep in mind:
+
+* table headers don't need to look emphasised if it's obvious they are headers, for example if they are in the first row or column
+* simple tables don't need to use `headers` and `id`, or `scope` but if they do, they need to be used correctly
+
+W3C has a [tables tutorial](https://www.w3.org/WAI/tutorials/tables/) with more information.
+
+### Best practice for tables
+
+Tables should:
+
+* have no empty cells - cells containing no data should be identified with text, for example "n/a" or "none"
+* not have any normal rows or columns before the header row or header column
+* not be nested (a table within a table)
+* not be made with `div`s and ARIA
+
+## Check form labels
+
+Use code inspector, [WAVE](https://wave.webaim.org/extension/), [axe](https://www.deque.com/axe/browser-extensions/) or a screen reader (ideally NVDA). Do a visual check of the page to identify form labels in the design.
+
+Check:
+
+* form fields with a visible label have correctly referenced `label`s as you interact with the form - it's acceptable to use other ways to reference a label like `aria-labelledby` or `placeholder`
+* any dropdowns with visual groups within the options use `optgroup`
+
+### Labelling required form fields
+
+If a form has required form fields, these should be indicated in such a way that all users can understand which fields are required (or which are optional, or both).
+
+Forms that use an asterisk (\*) to mark required fields pass this Success Criterion if either:
+
+* the form explains this relationship in text, for example 'required fields are marked with \*'
+* the required field is marked with an asterisk and has an attribute marking it as required - this is because the attribute makes it programmatically determinable
+* the field is marked with an asterisk but there is no explanatory text or attribute in the code - while not ideal, this would not necessarily fail WCAG if the experience is the same for all users, regardless of if they are using assistive technology
+
+Fields do not need to identify their required status in the same way to all users, they just need to provide equivalent information. For example, if only optional fields are labelled with text, and required fields are announced only to screen reader users, this would still pass. This is because visually, users can figure out which fields are required (those not marked as optional) and screen reader users can figure out which fields are optional (those not announced as required).
+
+Whereas if there are no visual indicators that a field is required but required fields are announced to screen readers, this would fail because screen reader users get a different experience to other users.
+
+### Best practice for form labels
+
+* Groups of form fields that don't have visual labels should still be labelled with `legend` (in a `fieldset`) or headings etc
+* Invisible labels (only using `title` or ARIA or visibly hiding a label) should be avoided but can be fine especially if their meaning is otherwise visibly clear - for example a search field that has no label but has a search button would make its purpose clear
+* Labels and legends should be short and avoid repeating content
+* Asterisks should not be the only indicator that a field is required
+* Notes that are important for filling in a field should be added with `aria-describedby`
+
+## Check other structured content
+
+Look through the code using the dev tools or use the [View Rendered Source extension](https://chrome.google.com/webstore/detail/view-rendered-source/ejgngohbdedoabanmclafpkoogegdpob?hl=en) (do not just use 'view source').
+
+Check:
+
+* text is marked up using appropriate semantic elements, for example:
+  * `p` for paragraphs
+  * `strong`, `em`, `b`, `i`, `mark` for emphasised text
+  * `blockquote` (or `q` if it's inline) for quotes
+* typographical characters are not used to add formatting, for example dashes to create a divider or a 'bullet' character to create a list item
+* [CSS pseudo elements](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements) are not used to add non-decorative content, because some assistive technologies might not pick it up - although it could be programmatically determinable, WCAG lists it as a fail
+* anything that looks like a header or footer is marked up as one (as `header` or `footer` or with `role=banner` or `role=contentinfo`) and/or has a hidden or visible heading that identifies it
+
+### Best practice for other structured content
+
+* Avoid using `b` and `i` for emphasis
+* Avoid using `br` for spacing or layout purposes
+* When using a header and/or footer, there should also be a `main` - having a `nav` is also helpful unless it's used too often
+
+## Mobile app testing
+
+Use a screen reader to check that structured content is conveyed consistently with how it appears visually.

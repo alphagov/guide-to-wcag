@@ -1,0 +1,65 @@
+---
+title: How to test for 3.3.7 Redundant Entry
+updated: 2024-10
+---
+
+# <%= current_page.data.title %>
+
+## [WCAG says](https://www.w3.org/WAI/WCAG22/Understanding/redundant-entry):
+
+> Information previously entered by or provided to the user that is required to be entered again in the same process is either:
+> 
+> * auto-populated, or
+> * available for the user to select.
+> 
+> Except when:
+> 
+> * re-entering the information is essential;  
+> * the information is required to ensure the security of the content, or  
+> * previously entered information is no longer valid.  
+
+## When this is applicable
+
+If there are processes which use the same information more than once.
+
+## Check places where a user re-enters information
+
+Whenever information needs to be re-entered by a user, check that it is autopopulated or selectable.  
+
+Examples are:
+
+* a user needs to enter a delivery address and billing address for a purchase
+* a form submission fails and needs to be resubmitted
+* a reference number provided to the user is required later in a process  
+
+This criterion can apply across multiple domains, for example when a transaction starts on one site but payment is collected on another.  
+
+It is not sufficient to rely on browser autocomplete functionality to pass this criterion.  
+
+Allowable methods to select previously used information include:
+
+* selection from a menu
+* showing previously entered text which can be copied and pasted
+* ticking a checkbox to re-populate information (for example, "my billing address is the same as my shipping address")
+
+## Exceptions
+
+It's not a fail if:
+
+* it's essential to re-enter information, for example in a memory game
+* security measures are needed, such as repeating a password
+* previously used information is no longer valid
+* the repeated information is entered in a different way, for example via a web form and a document upload
+* the same information is required for processes which are completed independently
+* the user navigates away from their task and the information is entered across multiple sessions
+
+## Best practice
+
+* Information should be autopopulated or selectable between separate but related processes (for example, creating an account and signing up for newsletters using the same email address).
+* Information should be autopopulated or selectable between user sessions (for example, if a user can save and resume a long form).
+* When a form submission fails, keep the information that was previously populated.
+* [Use the recognised autocomplete attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete) where applicable so users can re-use information previously entered into their browser - this is essential to pass [1.3.5 Identify Input Purpose](1.3.5.html).
+
+## Mobile app testing
+
+No difference

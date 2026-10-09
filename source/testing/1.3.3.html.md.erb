@@ -1,0 +1,28 @@
+---
+title: How to test for 1.3.3 Sensory Characteristics
+updated: 2024-10
+---
+
+# <%= current_page.data.title %>
+
+## [WCAG says](https://www.w3.org/WAI/WCAG22/Understanding/sensory-characteristics):
+
+> Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound.
+
+## When this is applicable
+
+Always.
+
+## Check content
+
+Read the whole content, including content within iframes. This is easier on short pages. On long pages it helps to extract all unique words using tools like [Word List Maker](https://design215.com/toolbox/wordlist.php) or [Unique Word Extractor](https://tools.fromdev.com/unique-word-extractor.html) and check that list instead.
+
+If a word for a sensory characteristic appears, and it is important for understanding or operating something, check manually in the original text that nothing relies on shape, colour, size, visual location, orientation or sound alone. For example, instructions like "See the link on the right" or "Click the green button" would fail.
+
+## Exceptions
+
+The words 'above' or 'below' are fine in most cases, if those words also reflect the reading order.
+
+## Mobile app testing
+
+No difference

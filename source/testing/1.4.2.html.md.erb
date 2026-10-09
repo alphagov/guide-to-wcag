@@ -1,0 +1,38 @@
+---
+title: How to test for 1.4.2 Audio Control
+updated: 2026-02
+---
+
+# <%= current_page.data.title %>
+
+## [WCAG says](https://www.w3.org/WAI/WCAG22/Understanding/audio-control):
+
+> If any audio on a Web page plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a mechanism is available to control audio volume independently from the overall system volume level.
+
+## When this is applicable
+
+If audio is playing automatically.
+
+## Check for longer sounds
+
+Make sure your volume is not muted, then reload the page.
+
+If there is any sound for longer than 3 seconds, check there is an accessible way to either:
+
+* pause and resume it
+* stop it
+* change and mute its volume independently of the system’s volume
+
+## Best practice
+
+* Auto-playing audio should be avoided.
+* Avoid using sounds that might be distracting, especially if they could negatively impact the ability to stop the audio.
+* The mechanism to stop the sound or change its volume should ideally be either at the top of the page or easily reachable.
+
+## Potential critical fail
+
+If this Success Criteria fails it means the whole page fails because there is something interfering with the other content in a way which makes it inaccessible to some people. That includes if third-party content causes this to fail, even if it is otherwise excluded from the audit. See [Non-Interference](https://www.w3.org/TR/WCAG22/#cc5).
+
+## Mobile app testing
+
+No difference

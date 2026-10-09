@@ -1,0 +1,36 @@
+---
+title: How to test for 3.3.1 Error Identification
+updated: 2024-10
+---
+
+# <%= current_page.data.title %>
+
+## [WCAG says](https://www.w3.org/WAI/WCAG22/Understanding/error-identification):
+
+> If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text.
+
+## When this is applicable
+
+If there is a form that produces error messages.
+
+## Check error messages
+
+Cause an error to happen on a form, for example by submitting it with empty mandatory fields. If there are no error messages, these checks are not applicable.
+
+When encountering an error, check:
+
+* erroring form fields are identified with visible text, for example through an error summary at the start of the page, label text changes or alerts - native browser error messages are acceptable
+* highlighting fields visually is not the only means to identify errors
+
+## Best practice
+
+* Error messages should be programmatically connected to the form fields, for example using `aria-labelledby`, `aria-describedby` or similar
+* The `title` of the page should change to show there is an error
+* Any entered text should be retained (except for security-related information like passwords or CAPTCHA)
+* Error messages should disappear after fixing errors
+* If multiple errors are detected when a form is submitted, show them all at the same time
+* Avoid using native browser error messages
+
+## Mobile app testing
+
+No difference

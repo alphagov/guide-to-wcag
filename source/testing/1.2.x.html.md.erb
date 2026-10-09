@@ -1,0 +1,134 @@
+---
+title: How to test for 1.2.x Time-based Media
+updated: 2025-08
+---
+
+# <%= current_page.data.title %>
+
+## [WCAG says](https://www.w3.org/WAI/WCAG22/Understanding/time-based-media):
+
+### 1.2.1 Audio-only and Video-only (Prerecorded)
+
+> For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such:
+>
+> * **Prerecorded Audio-only:** An alternative for time-based media is provided that presents equivalent information for prerecorded audio-only content.
+>
+> * **Prerecorded Video-only:** Either an alternative for time-based media or an audio track is provided that presents equivalent information for prerecorded video-only content.
+
+### 1.2.2 Captions (Prerecorded)
+
+> Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.
+
+### 1.2.4 Captions (Live)
+
+> Captions are provided for all live audio content in synchronized media.
+
+### <del>1.2.3 Audio Description or Media Alternative (Prerecorded)</del>
+
+> <del>An alternative for time-based media or audio description of the prerecorded video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such.</del>
+
+(If you check for 1.2.5 (AA), you don't need to check for 1.2.3 (A) as it's overridden by it.)
+
+### 1.2.5 Audio Description (Prerecorded)
+
+> Audio description is provided for all prerecorded video content in synchronized media.
+
+## When this is applicable
+
+If there is embedded audio or video containing meaningful sound, visuals, or both.
+
+## General principles
+
+Videos and audio need alternatives for people who cannot see or hear them.
+
+### Videos with audio  
+
+For prerecorded synchronised media (videos with audio), check:
+
+* meaningful audio has captions to meet 1.2.2 Captions (Prerecorded), and
+* meaningful visuals have an audio description to meet 1.2.5 Audio Description (Prerecorded), unless the existing audio already conveys all of the important visual information  
+
+For live videos with audio, check:
+
+* there are captions to meet 1.2.4 Captions (Live)  
+
+It is not considered to be synchronised media when the timing between the audio and the video is not relevant. When this is the case, only the meaningful part of the media would need an alternative.  
+
+Captions are not required when prerecorded media is clearly marked as an alternative to text already on the website. However, the media must not include more information than is in the text.
+
+### Audio-only or video-only content  
+
+For audio-only content, check:
+
+* there is a transcript to meet 1.2.1 Audio-only and Video-only (Prerecorded)  
+
+For video-only content, check:
+
+* that it has either a transcript or an audio description to meet 1.2.1 Audio-only and Video-only (Prerecorded)  
+
+Transcripts, audio descriptions or captions are not required when prerecorded media is clearly marked as an alternative to text already on the website. However, the media must not include more information than is in the text.
+
+## Check the media alternatives  
+
+Watch and listen to the media to check if the alternatives convey the same information. It does not need to be exactly the same.  
+
+It is fine to spot check parts of the media if it is impractical to review the content in full.  
+
+For captions, check:
+
+* that it's clear who is currently speaking and that a change in speakers is clearly identified, for example, displaying the speaker's name, role or another consistent identifier when a different person begins speaking
+  * be careful when using colour as this might fail other success criteria
+* captions are either shown by default or can be enabled
+* captions include not only spoken dialogue but other sound that is important to understand the meaning  
+
+Audio descriptions can be:
+
+* part of the original sound
+* a separate sound track or video  
+
+Transcripts must:
+
+* include all important visual and audio information, such as what is being said and what is happening
+* follow the same order as in the video
+* include an alternative for any interactive content in the media, for example subscription buttons and polls   
+
+You can use this [interactive tool](https://output.jsbin.com/beworoh) and [W3C guidance on media alternatives](https://www.w3.org/WAI/media/av/planning/#pre-recorded) as another reference for what alternatives are required.
+
+## Exceptions  
+
+It's not a fail if:  
+
+* the visuals or sound serve as an alternative to text already on the page, and this is clearly stated - but the media must not include more information than is in the text
+* the meaning of visuals or sound cannot be put into words  
+
+## Examples
+
+### Examples of videos with audio  
+
+* A drama with some dialogue usually needs an audio description because of something happening on the screen, or someone's facial expressions will be meaningful.
+* A news report with full commentary doesn't need an audio description, because the commentary is already an audio description.
+
+### Examples of video-only content  
+
+Video only content includes visuals with non-meaningful sound or music in the background. Examples:  
+
+* A silent film needs an audio description or transcript.
+* A film showcasing paintings which are hard to describe in words - in this case they should only identify what the video is about and give a brief description of the visuals.
+* Strictly speaking, a video in sign language, with no other audio, needs a transcript or audio description for people who do not understand (or cannot see) sign language. However, content creators should not be discouraged from creating content in sign language.
+
+### Examples of audio-only content  
+
+Audio-only content includes videos without meaningful visuals. The following examples all need a transcript:  
+
+* podcasts
+* videos of songs where the visual is a still photo of the album cover
+* a video about a city with a voiceover, but the images are not directly related to what is being said - this will only need an alternative for the voiceover
+
+## Best practice
+
+* Place alternatives next to or close to the media they relate to. 
+* Include a transcript for videos with audio, in addition to audio description and captions.
+
+## Mobile app testing
+
+No difference

@@ -1,0 +1,75 @@
+---
+title: How to test for 1.4.4 Resize text
+updated: 2024-10
+---
+
+# <%= current_page.data.title %>
+
+## [WCAG says](https://www.w3.org/WAI/WCAG22/Understanding/resize-text):
+
+> Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.
+
+## When this is applicable
+
+When there is text.
+
+## Check zooming in and resizing text
+
+Use browser zoom:
+
+* resize the window to 1280x1024 by using the [Web Developer extension](https://chrispederick.com/work/web-developer/) and go to 'Resize \> 1280x1024' (use 'Edit Resize Dimensions' to set it up the first time)
+* zoom in to 200%
+* reload the page
+
+Check:
+
+* all text is bigger (it does not need to be exactly 200%)
+* text inside form fields is bigger - write text into any empty fields
+* all text is still visible and readable without overlapping or cutting off - if something is cut off or overlapping by a few pixels but is still readable, it's fine
+* there is no loss of content - that does not just mean the content is gone, it can also mean the text is very difficult or impossible to read, for example when white text on a dark background is overlapping onto a white background
+* there is no loss of functionality -  if the functionality looks different or behaves differently that's fine as long as the same things can be achieved
+
+If any of those checks fail with browser zoom, check again with text resizing:
+
+* ensure that the page is zoomed to 100%
+* increase the font size to 200% (having set 'Zoom Text only' in Firefox)
+* reload the page
+
+If neither browser zoom nor text resizing passes these checks, but the website has a resizing widget, use the widget to increase the text to 200% and run the checks again. Also check that text size can be decreased again to its initial size. If it works, it passes as a [conforming alternate version](https://www.w3.org/TR/WCAG22/#dfn-conforming-alternate-versions).
+
+## Exceptions
+
+* captions
+* images of text - for resizing the text, it's still a fail if the image gets cut off
+
+## Other ways to check
+
+Change default text size in Chrome (go to 'Settings \> Appearance \> Font size') and check text increases and everything is still readable.
+
+Check with OS settings set to big text.
+
+## Best practice
+
+* if a resizing widget is offered by the website, it should be clearly visible at the top
+* the page should still retain its aesthetic appearance when zoomed in or text is resized
+* when text gets bigger, other content should get bigger too, for example, icons
+
+## Mobile app testing
+
+Adjust text size to around 200% and restart the app for changes to take effect.  
+
+On iOS:
+
+* Go to Settings \> Accessibility \> Display and Text Size \> Larger Text \> Larger Accessibility Sizes and enable the setting.
+* The closest to 200% zoom is the 9th of the 12 size settings. This is referred to as size AX2 in [Apple's typography documentation](https://developer.apple.com/design/human-interface-guidelines/foundations/typography/).
+* To reset the text settings, turn off larger sizes and switch to the 3rd of the original 7 size settings.  
+
+On Android:
+
+* Go to Settings \> Accessibility \> Display size and text. (The location of the setting might vary across different phone models and Android versions.)
+* On a Pixel phone, the largest setting is the closest you can get to 200% zoom. [Android font size documentation](https://support.google.com/accessibility/android/answer/11183305?hl=en-GB#fontsize)
+* [Android 14+ will support text resizing up to 200%](https://developer.android.com/about/versions/14/features#accessibility).  
+
+If the app, or embedded webpage within an app does not resize with the main operating system settings, check if there is an alternative way of enlarging text.  
+
+For example on an embedded web page on an iOS device, there is a 'Format options' button marked with a small and large letter A: "ᴀA".
