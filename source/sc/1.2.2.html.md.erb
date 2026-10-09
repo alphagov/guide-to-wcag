@@ -1,26 +1,102 @@
 ---
 title: 1.2.2 Captions (Prerecorded) (A)
-updated: 2018-07
+updated: 2026-10
 ---
 
 # <%= current_page.data.title %>
 
-Check the official guidance for [Understanding <%= current_page.data.title %>](https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded.html)
+Prerecorded videos with audio need to have accurate captions.
 
-Video content like instructional videos, promotions and interviews, must have captions that are synchronised with the audio content of the video. This ensures that the information communicated by the audio part of the video is available to people who cannot hear it.
+## What WCAG says:
 
-## Requirements / What to do?
+> Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such.
 
-*   All video content has captions that are synchronised with the audio content of the video;
-*   Captions include all the spoken dialogue and important sound effects from the audio part of the video.
+Check the official guidance for [Understanding 1.2.2 Captions (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded)
+
+## What this means
+
+Prerecorded videos with audio must have captions. Captions are not needed if the video is a clearly labelled alternative to text already on the page.
+
+## Why it matters
+
+Captions allow users to access all the information in a video even if they are deaf or have hearing loss.
+
+## How to check
+
+Decide if videos are either:
+- alternatives to text already on the page – captions are not needed for these videos, but check it’s clearly labelled as an alternative
+- sources of unique information not covered anywhere else on the page – these videos need captions
+
+Check that captions are either on by default or can be enabled.
+
+Watch and listen to the videos with captions on and check that the captions convey the same information as the audio. For example, they should:
+
+- include what was said
+- include other sounds that are important to understand the meaning of the video, like sound effects
+- be synchronised with the audio
+- make it clear who is currently speaking and that a change in speakers is clearly identified – for example, displaying the speaker's name, role or another consistent identifier when a different person begins speaking
+  -p ass the [1.4.3 Contrast (Minimum)](https://alphagov.github.io/guide-to-wcag/sc/1.4.3.html) criterion for colour contrast
+
+The captions do not need to be exactly the same as the audio.
+
+It is fine to spot check parts of the video if it is impractical to review it in full.
+
+[How to test in detail for 1.2.x Time-based Media](https://github.com/alphagov/guide-to-wcag/wiki/1.2.x) (including 1.2.2 Captions (Prerecorded))
 
 ## Common mistakes
 
-*   The video does not have synchronised captions;
-*   The video has captions but they do not include all the spoken dialogue and important sound effects from the audio content of the video;
-*   The video has captions but they are not synchronised with the audio content of the video.
+###  No captions for a video
+
+For example, an instructional video explains how to sign in to a service. The video has audio but no captions. The audio has information that’s not in the text on the page.
+
+This would fail as it means users who are deaf or have hearing loss cannot access all the information on the page.
+
+It can be fixed by adding captions that convey the same information as the audio.
+
+### Incomplete captions for a video
+
+For example, an interview with a panel of experts has captions. However, the captions do not make it clear when different people are speaking and do not explain other sounds like applause from the audience.
+
+This would fail as it means users who are deaf or have hearing loss do not know who is speaking and when the audience applauds. That means they cannot access all the information in the video.
+
+It can be fixed by adding captions that explain who’s talking and when the audience is applauding.
+
+### Not labelling video alternatives to text
+
+For example, a video tells users how to submit a form and does not have captions. The video is an alternative to the text on the page and does not contain any additional information. There’s nothing on the page to explain this.
+
+This would fail as it means users who are deaf or have hearing loss would be unable to tell there’s no additional information in the video. They may be concerned they’re missing out on important details.
+
+It can be fixed by clearly labelling the video as an alternative to the text.
+
+## Good example
+
+### Captions cover all the information
+
+For example, an instructional video explains how to sign in to a service. The audio has information that’s not in the text on the page.
+
+The video has captions that include:
+
+- the voiceover
+- important sound effects, like ‘dings’ when the right option is selected
+- important music cues, like upbeat music when the user has signed in
+
+This would pass as all users are able to access the information in the video, even if they are deaf or have hearing loss.
+
+## Related success criteria
+
+This success criterion is closely related to several others:
+
+- [1.2.1 Audio-only and Video-only (Prerecorded) (A)](https://alphagov.github.io/guide-to-wcag/sc/1.2.1.html) applies to videos without audio or audio without videos – in this case, either a transcript or audio description are sufficient
+- [1.2.4 Captions (Live) (AA)](https://alphagov.github.io/guide-to-wcag/sc/1.2.4.html) applies to live broadcast videos and requires them to have captions
+- [1.2.5 Audio Description (Prerecorded) (AA)](https://alphagov.github.io/guide-to-wcag/sc/1.2.5.html) requires audio descriptions for meaningful visual content in prerecorded videos
+
+It is also worth being aware of the following AAA criteria - links go to the official guidance:
+
+- [Understanding Sign Language (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/sign-language-prerecorded) covers providing sign language in prerecorded videos
+- [Understanding Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG22/Understanding/media-alternative-prerecorded) covers providing transcripts for prerecorded videos
 
 ## Useful resources
 
-*   [What are captions?](https://www.nomensa.com/blog/2010/what-are-captions)
-*   [Sounding out the web: accessibility for Deaf and hard of hearing people (Part 2)](https://www.paciellogroup.com/blog/2017/03/sounding-out-the-web-accessibility-for-deaf-and-hard-of-hearing-people-part-2/)
+- [Guidance on creating captions from the W3C Web Accessibility Initiative](https://www.w3.org/WAI/media/av/captions/)
+- [Guidelines for writing captions from the Described and Captured Media Program](https://dcmp.org/learn/captioningkey)
