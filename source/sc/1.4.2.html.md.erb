@@ -1,19 +1,72 @@
 ---
 title: 1.4.2 Audio Control (A)
-updated: 2018-07
+updated: 2026-10
 ---
 
 # <%= current_page.data.title %>
 
-Check the official guidance for [Understanding <%= current_page.data.title %>](https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html)
+## What WCAG says:
 
-When audio or video plays automatically on a page, it should last for less than three seconds or there must be a way to pause/stop it. This ensures that people who listen to content with a screen reader can do so without it being drowned out by the audio/video.
+> If any audio on a Web page plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a mechanism is available to control audio volume independently from the overall system volume level.
 
-## Requirements / What to do?
+Check the official guidance for [Understanding 1.4.2 Audio Control](https://www.w3.org/WAI/WCAG22/Understanding/audio-control)
 
-*   Audio or video content that plays automatically lasts for three seconds or less;
-*   Audio or video that plays automatically and lasts for more than three seconds, can be paused and/or stopped.
+## What this means
+
+A page must not play audio content automatically for more than 3 seconds unless there’s a way to stop the audio or reduce the volume. This must be independent of the system volume.
+
+## Why it matters
+
+People who use screen readers need to be able to navigate by listening. Audio that starts automatically could prevent them from navigating a page. It’s also distracting, particularly for some neurodivergent people.
+
+## How to check
+
+Make sure your volume is not muted, then reload the page.
+
+If there is any sound for longer than 3 seconds, check there is an accessible way to either:
+- pause and resume it
+- stop it
+- change and mute its volume independently of the system’s volume
+
+[How to test in detail for 1.4.2 Success Criterion] (https://github.com/alphagov/guide-to-wcag/wiki/1.4.2)
 
 ## Common mistakes
 
-*   Audio or video plays automatically for more than three seconds, but cannot be paused or stopped by the user.
+### Audio content plays for 30 seconds
+
+For example, a festival website plays background music on the homepage for a short period to encourage people to check out the lineup.
+
+This would fail as someone using a screen reader would not be able to listen to their screen reader voice to navigate around the page to discover the lineup.
+
+Adding audio controls at the top of the page so they're easy to find would help fix this.
+
+## Good example(s)
+
+### Predictable controls
+
+Like the bad example, the audio content plays when the festival page loads. However, on this page there are audio controls which:
+- are at the top of the page
+- can be used solely with a keyboard (no mouse)
+- can be used with conventional keyboard commands
+
+### A way to pause or stop audio
+
+When someone’s keyboard focus is on the audio controls, the spacebar stops the audio.
+
+### A way to control the audio volume
+
+When someone’s keyboard focus is on the volume controls, the arrow keys control volume.
+
+These are accessible options which would pass because a screen reader user would be able to intuitively navigate to the audio controls to pause or stop the audio or adjust the volume.
+
+## Non-interference
+
+This is one of four special criteria which all content on a page needs to meet, even if it is normally out of scope of an audit (such as adverts or other third-party content). These are referred to as “non-interference” criteria because content must not interfere with the rest of the page. The official standard has [more detail about non-interference](https://www.w3.org/TR/WCAG22/#cc5).
+
+## Related success criteria
+
+[2.1.2 No Keyboard Trap](https://alphagov.github.io/guide-to-wcag/sc/2.1.2.html) is a non-interference criterion which requires a way for someone using a keyboard to navigate a page to be able to navigate away from components.
+
+[2.2.2 Pause, Stop, Hide (A)](https://alphagov.github.io/guide-to-wcag/sc/2.2.2.html) is a non-interference criterion which requires a way to stop content that updates frequently, blinks or scrolls automatically.
+
+[2.3.1 Three Flashes or Below Threshold](https://alphagov.github.io/guide-to-wcag/sc/2.3.1.html) is a non-interference criterion in which a page must not contain content that flashes more than three times a second.
