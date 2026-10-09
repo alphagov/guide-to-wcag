@@ -1,24 +1,60 @@
 ---
 title: 1.2.4 Captions (Live) (AA)
-updated: 2018-07
+updated: 2026-10
 ---
 
 # <%= current_page.data.title %>
 
-Check the official guidance for [Understanding <%= current_page.data.title %>](https://www.w3.org/WAI/WCAG22/Understanding/captions-live.html)
+g
+## What WCAG says:
 
-Live broadcast video must have captions that are synchronised with the audio content of the video. This ensures that the information communicated by the audio part of the video is available to people who cannot hear it.
+>Captions are provided for all live audio content in synchronized media.
 
-## Requirements / What to do?
+Check the official guidance for [Understanding 1.2.4 Captions (Live)](https://www.w3.org/WAI/WCAG22/Understanding/captions-live.html)
 
-*   All live video content has captions that are synchronised with the audio content of the video.
+## What this means
 
-## Common mistakes
+Live broadcast videos with audio must have captions.
 
-*   The live video does not have synchronised captions;
-*   The live video has captions but they are not synchronised with the audio content of the video.
+## Why it matters
 
-## Useful resources
+Captions allow users to access all the information in a video even if they are deaf or have hearing loss.
 
-*   [What are captions?](https://www.nomensa.com/blog/2010/what-are-captions)
-*   [Sounding out the web: accessibility for Deaf and hard of hearing people (Part 2](https://www.paciellogroup.com/blog/2017/03/sounding-out-the-web-accessibility-for-deaf-and-hard-of-hearing-people-part-2/)
+## How to  check
+
+Before the live broadcast, check that the broadcasting tool you’re using has live captioning available.
+
+The captions should:
+- include what’s being said
+- include other sounds that are important to understand the meaning of the video, like sound effects
+- be synchronised with the audio
+- make it's clear who is currently speaking and that a change in speakers is clearly identified – for example, displaying the speaker's name, role or another consistent identifier when a different person begins speaking
+- pass the [1.4.3 Contrast (Minimum)](https://alphagov.github.io/guide-to-wcag/sc/1.4.3.html) criterion for colour contrast
+
+The captions do not need to be exactly the same as the audio.
+
+[How to test in detail for 1.2.x Time-based Media](https://github.com/alphagov/guide-to-wcag/wiki/1.2.x) (including 1.2.4 Captions (Live))
+
+## Common mistake
+
+### No captions on a live broadcast
+
+A panel discussion is being livestreamed. There are no live captions on the live stream.
+
+This would fail as it means users who are deaf or have hearing loss cannot access the information in the live stream.
+
+It can be fixed by using a live captioning tool alongside the live stream.
+
+## Good example
+
+### Captions included on a live broadcast
+
+A panel discussion is being livestreamed. There are live captions that explain what people are saying, when different people are speaking and when there’s applause from the audience.
+
+This would pass as it means users who are deaf or have hearing loss can access all the information in the live stream.
+
+## Related success criteria
+
+This success criterion is closely related to [1.2.2 Captions (Prerecorded) (A)](https://alphagov.github.io/guide-to-wcag/sc/1.2.2.html). This explains the need for prerecorded videos to have captions.
+
+It is also worth being aware of this AAA criterion that’s explained in official guidance: [Understanding 1.2.9 Audio-only (Live)](https://www.w3.org/WAI/WCAG22/Understanding/audio-only-live), which covers providing text-based alternatives to live audio.
