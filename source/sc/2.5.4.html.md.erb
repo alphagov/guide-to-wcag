@@ -1,43 +1,64 @@
 ---
 title: 2.5.4 Motion Actuation (A)
-updated: 2019-02
+updated: 2026-10
 ---
 
 # <%= current_page.data.title %>
 
-Check the official guidance for [Understanding <%= current_page.data.title %>](https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html)
+Users must be able to perform tasks without needing to move their devices or make gestures at the screen.
 
-In a page or on a mobile device functionality that can be operated by device motion or user motion can also be operated by alternatives like buttons, links or other controls. There should be a way for disabling responding motion, unless the motion can operate in an accessible way or is essential
+## What WCAG says:
 
-## Why is this a problem?
+> Functionality that can be operated by device motion or user motion can also be operated by user interface components and responding to the motion can be disabled to prevent accidental actuation, except when:
+>
+> **Supported Interface**: The motion is used to operate functionality through an accessibility supported interface
+>
+> **Essential**: The motion is essential for the function and doing so would invalidate the activity
 
-This Success Criterion helps people who may be unable to perform tilting, shaking, or gesturing to use an interface - or the device may be mounted. Fixing this will ensure users can still operate all functionality by other means.
+Check the official guidance for [Understanding 2.5.4 Motion Actuation](https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation)
 
-Notice how most of these following example are just about common sense alternatives to using motion to do things on a mobile device.
+## What this means
 
-* A user can’t hold and move the device to navigate content. A control exists to navigate also.
-* When inputting text - shaking a device shows a dialog where you can undo the text input. A cancel button next to the text field offers the same functionality.
-* A user can tilt a device to advance to the next or a previous page. Buttons or links are also provided to perform the same function.
-* A user can move the device to change the view of an image. A control is also available to do the same thing.
+Users must be able to perform a task without needing to perform gestures at the screen or tilt or shake their device. They should be able to use buttons, links or other controls instead.
 
-## Requirements / What to do?
+They must also be able to disable motion controls completely.
 
-* Do not use the <code>devicemotion</code> event to activate content functionality.
-* Ensure that alternative means of input exist when using device motion sensor input.
-* Provide a user preference to disable motion actuation.
-* Support OS features which allow the user to disable motion actuation.
-* Use the new <code>prefers-reduced-motion</code> CSS declaration. This will detect if the user would like to reduce animation or motion on the pages they visit.
+The only exceptions are if the motion control can operate in an accessible way or if it is essential for a function, like a pedometer that requires users to walk to count steps.
 
-## Common mistakes
+## Why it matters
 
-* Functionality that can only be activated via device motion events (e.g., shaking or tilting)
-* The user is unable to disable motion actuation.
-* The author has turned off system level features which allow the user to disable motion actuation.
+Some people with motor impairments will not be able to move themselves or their device in the required manner and so will be prevented from performing tasks.
 
-## Resources
+## How to check
 
-* [Mozilla - prefers-reduced-motion documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
-* [Demonstration of 'prefers-reduced-motion' in Webkit](https://webkit.org/blog-files/prefers-reduced-motion/prm.htm)
-* [iOS: Reduce Motion on iPhone, iPad or iPod touch](https://support.apple.com/en-gb/HT202655)
-* [Mac: Reduce Motion](https://apple.stackexchange.com/questions/253756/speed-up-mission-control-animations-in-macos-sierra)
-* [Windows 10: Reduce motion](https://www.laptopmag.com/articles/disable-minimize-maximize-animations-windows-10)
+Use a mobile device that has a motion sensor. Shake the device, move it physically around in multiple dimensions and move your hand around in front of the device.
+
+If any functionality is triggered, check:
+
+* it can also be triggered using a common alternative method, for example arrow buttons to move around in a game with a keyboard
+* motion input can be deactivated (deactivation in the system settings is fine)
+
+[How to test in detail for 2.5.4 Motion Actuation](https://github.com/alphagov/guide-to-wcag/wiki/2.5.4)
+
+## Common mistake
+
+### Only motion controls can be used
+
+For example, an app requires users to tilt their phone to move to the next page. There are no alternative ways of moving pages and no way to disable the motion controls.
+
+This would fail as it means users who are not able to move their phone in the required way would not be able to use the app.
+
+It could be fixed by including an alternative way of moving pages, like an arrow button, and a way to turn off the motion controls.
+
+## Good example
+
+### Motion controls are one option
+
+For example, an app allows users to move their phone to change the view of an image. It also allows users to select buttons to change the view and to disable motion controls.
+
+This would pass as it gives an accessible alternative to moving the phone and a way to turn off motion controls.
+
+## Related success criteria
+
+* [2.5.1 Pointer Gestures (A)](2.5.1.html) requires that users must not need to use complex touch gestures to perform a task, like swiping or pinching.
+* [2.5.7 Dragging Movements (AA)](2.5.7.html) requires that users must be able to complete a task without having to make a dragging motion on their screen.
