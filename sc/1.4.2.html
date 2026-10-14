@@ -96,10 +96,44 @@
     <a href="#1-4-2-audio-control-a"><span>1.4.2 Audio Control (A)</span></a>
     <ul>
       <li>
-        <a href="#requirements-what-to-do"><span>Requirements / What to do?</span></a>
+        <a href="#what-wcag-says"><span>What WCAG says:</span></a>
+      </li>
+      <li>
+        <a href="#what-this-means"><span>What this means</span></a>
+      </li>
+      <li>
+        <a href="#why-it-matters"><span>Why it matters</span></a>
+      </li>
+      <li>
+        <a href="#how-to-check"><span>How to check</span></a>
       </li>
       <li>
         <a href="#common-mistakes"><span>Common mistakes</span></a>
+        <ul>
+          <li>
+            <a href="#audio-content-plays-for-30-seconds"><span>Audio content plays for 30 seconds</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#good-examples"><span>Good examples</span></a>
+        <ul>
+          <li>
+            <a href="#predictable-controls"><span>Predictable controls</span></a>
+          </li>
+          <li>
+            <a href="#a-way-to-pause-or-stop-audio"><span>A way to pause or stop audio</span></a>
+          </li>
+          <li>
+            <a href="#a-way-to-control-the-audio-volume"><span>A way to control the audio volume</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#non-interference"><span>Non-interference</span></a>
+      </li>
+      <li>
+        <a href="#related-success-criteria"><span>Related success criteria</span></a>
       </li>
       <li>
         <a href="#"><span>Last updated</span></a>
@@ -116,22 +150,58 @@
         <div class="app-pane__content toc-open-disabled" aria-label="Content">
           <main id="content" class="technical-documentation">
               <h1 id="1-4-2-audio-control-a">1.4.2 Audio Control (A)</h1>
-<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-control.html">Understanding 1.4.2 Audio Control (A)</a></p>
-<p>When audio or video plays automatically on a page, it should last for less than three seconds or there must be a way to pause/stop it. This ensures that people who listen to content with a screen reader can do so without it being drowned out by the audio/video.</p>
-<h2 id="requirements-what-to-do">Requirements / What to do?</h2>
+<p>Avoid any autoplaying audio or allow users to turn it off.</p>
+<h2 id="what-wcag-says">What WCAG says:</h2>
+
+<blockquote>
+<p>If any audio on a Web page plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a mechanism is available to control audio volume independently from the overall system volume level.</p>
+</blockquote>
+<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/audio-control">Understanding 1.4.2 Audio Control</a></p>
+<h2 id="what-this-means">What this means</h2>
+<p>A page must not play audio content automatically for more than 3 seconds unless there’s a way to stop the audio or reduce the volume. This must be independent of the system volume.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>People who use screen readers need to be able to navigate by listening. Audio that starts automatically could prevent them from navigating a page. It’s also distracting, particularly for some neurodivergent people.</p>
+<h2 id="how-to-check">How to check</h2>
+<p>Make sure your volume is not muted, then reload the page.</p>
+<p>If there is any sound for longer than 3 seconds, check there is an accessible way to either:</p>
 
 <ul>
-<li>  Audio or video content that plays automatically lasts for three seconds or less;</li>
-<li>  Audio or video that plays automatically and lasts for more than three seconds, can be paused and/or stopped.</li>
+<li>pause and resume it</li>
+<li>stop it</li>
+<li>change and mute its volume independently of the system’s volume</li>
 </ul>
+<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/1.4.2">How to test in detail for 1.4.2 Success Criterion</a></p>
 <h2 id="common-mistakes">Common mistakes</h2>
+<h3 id="audio-content-plays-for-30-seconds">Audio content plays for 30 seconds</h3>
+<p>For example, a festival website plays background music on the homepage for a short period to encourage people to check out the lineup.</p>
+<p>This would fail as someone using a screen reader would not be able to listen to their screen reader voice to navigate around the page to discover the lineup.</p>
+<p>Adding audio controls at the top of the page so they&rsquo;re easy to find would help fix this.</p>
+<h2 id="good-examples">Good examples</h2>
+<h3 id="predictable-controls">Predictable controls</h3>
+<p>Like the bad example, the audio content plays when the festival page loads. However, on this page there are audio controls which:</p>
 
 <ul>
-<li>  Audio or video plays automatically for more than three seconds, but cannot be paused or stopped by the user.</li>
+<li>are at the top of the page</li>
+<li>can be used solely with a keyboard (no mouse)</li>
+<li>can be used with conventional keyboard commands</li>
+</ul>
+<h3 id="a-way-to-pause-or-stop-audio">A way to pause or stop audio</h3>
+<p>When someone’s keyboard focus is on the audio controls, the spacebar stops the audio.</p>
+<h3 id="a-way-to-control-the-audio-volume">A way to control the audio volume</h3>
+<p>When someone’s keyboard focus is on the volume controls, the arrow keys control volume.</p>
+<p>These are accessible options which would pass because a screen reader user would be able to intuitively navigate to the audio controls to pause or stop the audio or adjust the volume.</p>
+<h2 id="non-interference">Non-interference</h2>
+<p>This is one of four special criteria which all content on a page needs to meet, even if it is normally out of scope of an audit (such as adverts or other third party content). These are referred to as &ldquo;non-interference&rdquo; criteria because content must not interfere with the rest of the page. The official standard has <a href="https://www.w3.org/TR/WCAG22/#cc5">more detail about non-interference</a>.</p>
+<h2 id="related-success-criteria">Related success criteria</h2>
+
+<ul>
+<li><a href="2.1.2.html">2.1.2 No Keyboard Trap (A)</a> is a non-interference criterion which requires a way for someone using a keyboard to navigate a page to be able to navigate away from components.</li>
+<li><a href="2.2.2.html">2.2.2 Pause, Stop, Hide (A)</a> is a non-interference criterion which requires a way to stop content that updates frequently, blinks or scrolls automatically.</li>
+<li><a href="2.3.1.html">2.3.1 Three Flashes or Below Threshold (A)</a> is a non-interference criterion in which a page must not contain content that flashes more than three times a second.</li>
 </ul>
 
     <h2>Last updated</h2>
-    <p>This page was last updated in July 2018.</p>
+    <p>This page was last updated in October 2026.</p>
 
             
           </main>
