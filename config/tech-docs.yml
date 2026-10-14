@@ -8,11 +8,8 @@ service_link: /index.html
 
 # Links to show on right-hand-side of header
 header_links:
-  Overview: /index.html
   All success criteria: /all.html
-  Content: /content.html
-  Design: /design.html
-  Code: /code.html
+  Testing guide: /testing/index.html
   Checklist: /checklist.html
   Community: /community.html
 footer_links:
