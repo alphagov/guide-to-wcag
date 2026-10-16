@@ -96,16 +96,35 @@
     <a href="#2-5-4-motion-actuation-a"><span>2.5.4 Motion Actuation (A)</span></a>
     <ul>
       <li>
-        <a href="#why-is-this-a-problem"><span>Why is this a problem?</span></a>
+        <a href="#what-wcag-says"><span>What WCAG says:</span></a>
       </li>
       <li>
-        <a href="#requirements-what-to-do"><span>Requirements / What to do?</span></a>
+        <a href="#what-this-means"><span>What this means</span></a>
       </li>
       <li>
-        <a href="#common-mistakes"><span>Common mistakes</span></a>
+        <a href="#why-it-matters"><span>Why it matters</span></a>
       </li>
       <li>
-        <a href="#resources"><span>Resources</span></a>
+        <a href="#how-to-check"><span>How to check</span></a>
+      </li>
+      <li>
+        <a href="#common-mistake"><span>Common mistake</span></a>
+        <ul>
+          <li>
+            <a href="#only-motion-controls-can-be-used"><span>Only motion controls can be used</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#good-example"><span>Good example</span></a>
+        <ul>
+          <li>
+            <a href="#motion-controls-are-one-option"><span>Motion controls are one option</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#related-success-criteria"><span>Related success criteria</span></a>
       </li>
       <li>
         <a href="#"><span>Last updated</span></a>
@@ -122,46 +141,48 @@
         <div class="app-pane__content toc-open-disabled" aria-label="Content">
           <main id="content" class="technical-documentation">
               <h1 id="2-5-4-motion-actuation-a">2.5.4 Motion Actuation (A)</h1>
-<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation.html">Understanding 2.5.4 Motion Actuation (A)</a></p>
-<p>In a page or on a mobile device functionality that can be operated by device motion or user motion can also be operated by alternatives like buttons, links or other controls. There should be a way for disabling responding motion, unless the motion can operate in an accessible way or is essential</p>
-<h2 id="why-is-this-a-problem">Why is this a problem?</h2>
-<p>This Success Criterion helps people who may be unable to perform tilting, shaking, or gesturing to use an interface - or the device may be mounted. Fixing this will ensure users can still operate all functionality by other means.</p>
-<p>Notice how most of these following example are just about common sense alternatives to using motion to do things on a mobile device.</p>
+<p>Users must be able to perform tasks without needing to move their devices or make gestures at the screen.</p>
+<h2 id="what-wcag-says">What WCAG says:</h2>
+
+<blockquote>
+<p>Functionality that can be operated by device motion or user motion can also be operated by user interface components and responding to the motion can be disabled to prevent accidental actuation, except when:</p>
+<p><strong>Supported Interface</strong>: The motion is used to operate functionality through an accessibility supported interface</p>
+<p><strong>Essential</strong>: The motion is essential for the function and doing so would invalidate the activity</p>
+</blockquote>
+<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/motion-actuation">Understanding 2.5.4 Motion Actuation</a></p>
+<h2 id="what-this-means">What this means</h2>
+<p>Users must be able to perform a task without needing to perform gestures at the screen or tilt or shake their device. They should be able to use buttons, links or other controls instead.</p>
+<p>They must also be able to disable motion controls completely.</p>
+<p>The only exceptions are if the motion control can operate in an accessible way or if it is essential for a function, like a pedometer that requires users to walk to count steps.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>Some people with motor impairments will not be able to move themselves or their device in the required manner and so will be prevented from performing tasks.</p>
+<h2 id="how-to-check">How to check</h2>
+<p>Use a mobile device that has a motion sensor. Shake the device, move it physically around in multiple dimensions and move your hand around in front of the device.</p>
+<p>If any functionality is triggered, check:</p>
 
 <ul>
-<li>A user can’t hold and move the device to navigate content. A control exists to navigate also.</li>
-<li>When inputting text - shaking a device shows a dialog where you can undo the text input. A cancel button next to the text field offers the same functionality.</li>
-<li>A user can tilt a device to advance to the next or a previous page. Buttons or links are also provided to perform the same function.</li>
-<li>A user can move the device to change the view of an image. A control is also available to do the same thing.</li>
+<li>it can also be triggered using a common alternative method, for example arrow buttons to move around in a game with a keyboard</li>
+<li>motion input can be deactivated (deactivation in the system settings is fine)</li>
 </ul>
-<h2 id="requirements-what-to-do">Requirements / What to do?</h2>
+<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/2.5.4">How to test in detail for 2.5.4 Motion Actuation</a></p>
+<h2 id="common-mistake">Common mistake</h2>
+<h3 id="only-motion-controls-can-be-used">Only motion controls can be used</h3>
+<p>For example, an app requires users to tilt their phone to move to the next page. There are no alternative ways of moving pages and no way to disable the motion controls.</p>
+<p>This would fail as it means users who are not able to move their phone in the required way would not be able to use the app.</p>
+<p>It could be fixed by including an alternative way of moving pages, like an arrow button, and a way to turn off the motion controls.</p>
+<h2 id="good-example">Good example</h2>
+<h3 id="motion-controls-are-one-option">Motion controls are one option</h3>
+<p>For example, an app allows users to move their phone to change the view of an image. It also allows users to select buttons to change the view and to disable motion controls.</p>
+<p>This would pass as it gives an accessible alternative to moving the phone and a way to turn off motion controls.</p>
+<h2 id="related-success-criteria">Related success criteria</h2>
 
 <ul>
-<li>Do not use the <code>devicemotion</code> event to activate content functionality.</li>
-<li>Ensure that alternative means of input exist when using device motion sensor input.</li>
-<li>Provide a user preference to disable motion actuation.</li>
-<li>Support OS features which allow the user to disable motion actuation.</li>
-<li>Use the new <code>prefers-reduced-motion</code> CSS declaration. This will detect if the user would like to reduce animation or motion on the pages they visit.</li>
-</ul>
-<h2 id="common-mistakes">Common mistakes</h2>
-
-<ul>
-<li>Functionality that can only be activated via device motion events (e.g., shaking or tilting)</li>
-<li>The user is unable to disable motion actuation.</li>
-<li>The author has turned off system level features which allow the user to disable motion actuation.</li>
-</ul>
-<h2 id="resources">Resources</h2>
-
-<ul>
-<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion">Mozilla - prefers-reduced-motion documentation</a></li>
-<li><a href="https://webkit.org/blog-files/prefers-reduced-motion/prm.htm">Demonstration of &lsquo;prefers-reduced-motion&rsquo; in Webkit</a></li>
-<li><a href="https://support.apple.com/en-gb/HT202655">iOS: Reduce Motion on iPhone, iPad or iPod touch</a></li>
-<li><a href="https://apple.stackexchange.com/questions/253756/speed-up-mission-control-animations-in-macos-sierra">Mac: Reduce Motion</a></li>
-<li><a href="https://www.laptopmag.com/articles/disable-minimize-maximize-animations-windows-10">Windows 10: Reduce motion</a></li>
+<li><a href="2.5.1.html">2.5.1 Pointer Gestures (A)</a> requires that users must not need to use complex touch gestures to perform a task, like swiping or pinching.</li>
+<li><a href="2.5.7.html">2.5.7 Dragging Movements (AA)</a> requires that users must be able to complete a task without having to make a dragging motion on their screen.</li>
 </ul>
 
     <h2>Last updated</h2>
-    <p>This page was last updated in February 2019.</p>
+    <p>This page was last updated in October 2026.</p>
 
             
           </main>
