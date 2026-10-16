@@ -96,10 +96,35 @@
     <a href="#3-2-3-consistent-navigation-aa"><span>3.2.3 Consistent Navigation (AA)</span></a>
     <ul>
       <li>
-        <a href="#requirements-what-to-do"><span>Requirements / What to do?</span></a>
+        <a href="#what-wcag-says"><span>What WCAG says:</span></a>
       </li>
       <li>
-        <a href="#common-mistakes"><span>Common mistakes</span></a>
+        <a href="#what-this-means"><span>What this means</span></a>
+      </li>
+      <li>
+        <a href="#why-it-matters"><span>Why it matters</span></a>
+      </li>
+      <li>
+        <a href="#how-to-check"><span>How to check</span></a>
+      </li>
+      <li>
+        <a href="#common-mistake"><span>Common mistake</span></a>
+        <ul>
+          <li>
+            <a href="#filters-are-in-a-different-order"><span>Filters are in a different order</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#good-example"><span>Good example</span></a>
+        <ul>
+          <li>
+            <a href="#filters-are-in-a-consistent-order"><span>Filters are in a consistent order</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#related-success-criteria"><span>Related success criteria</span></a>
       </li>
       <li>
         <a href="#"><span>Last updated</span></a>
@@ -116,22 +141,48 @@
         <div class="app-pane__content toc-open-disabled" aria-label="Content">
           <main id="content" class="technical-documentation">
               <h1 id="3-2-3-consistent-navigation-aa">3.2.3 Consistent Navigation (AA)</h1>
-<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation.html">Understanding 3.2.3 Consistent Navigation (AA)</a></p>
-<p>When ways to navigate content are repeated on multiple pages, they must be presented in a consistent manner. This makes it easier for people to learn how to navigate the service, and it enables people to develop strategies (like using screen reader shortcuts) for more efficient navigation.</p>
-<h2 id="requirements-what-to-do">Requirements / What to do?</h2>
+<p>Repeated navigation should be consistent across a website, so users can interact with the content predictably.</p>
+<h2 id="what-wcag-says">What WCAG says:</h2>
+
+<blockquote>
+<p>Navigational mechanisms that are repeated on multiple web pages within a set of web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.</p>
+</blockquote>
+<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/consistent-navigation.html">Understanding 3.2.3 Consistent Navigation</a></p>
+<h2 id="what-this-means">What this means</h2>
+<p>If a website has navigation that appears on multiple pages, it should stay consistent. Users should not have to relearn where things are every time they move on to a new page.</p>
+<p>Websites should have a consistent layout so users can quickly navigate repeated content in a predictable way, so they feel more comfortable and confident. This includes things like navigation menus, search boxes, footer navigation, and so on. Navigation does not need to be identical on every page, but repeated items should stay in the same order.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>If people find something in one place on a page, they should be able to expect it to be in a similar place on other pages. This avoids unnecessary &lsquo;mental load&rsquo; (or stress) for the user.</p>
+<p>It is particularly important for people with disabilities. For example, people with low vision who use screen magnification which displays an enlarged small portion of the screen. If content is in a different place each time, they spend more time searching the page. Additionally, people with cognitive limitations may find the changing layouts confusing, and people who are blind and rely on screen readers may need to relearn where content appears on the page.</p>
+<p>Consistent navigation makes websites predictable. Users can focus their efforts on the task they are trying to complete instead of figuring out where things have moved to.</p>
+<h2 id="how-to-check">How to check</h2>
+<p>For any navigational elements that are repeated on more than one page, check that they are always in the same relative order on the page.</p>
+<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/3.2.3">How to test in detail for 3.2.3 Consistent Navigation</a></p>
+<h2 id="common-mistake">Common mistake</h2>
+<h3 id="filters-are-in-a-different-order">Filters are in a different order</h3>
+<p>A clothes shopping website uses filters for different types of women&rsquo;s clothing including tops, trousers, dresses, jackets and accessories. A user selects &lsquo;dresses&rsquo; and the dresses page loads. The website moves &lsquo;dresses&rsquo; to the top of the list to show which category is currently selected. Later, the user decides to look at &lsquo;tops&rsquo; instead and moves the cursor to where &lsquo;tops&rsquo; was before, expecting it to be at the top of the list but now it shows &lsquo;dresses&rsquo; and the user clicks on this by mistake. The user must then search the list again to find &lsquo;tops&rsquo;.</p>
+<p>If the order changes every time a category is selected, the user has to relearn where each option is each time. This makes navigation slower, less predictable and leaves the user feeling frustrated. This can be particularly difficult for people with cognitive disabilities who rely on predictable page layouts.</p>
+
+<figure>
+  <img src="../images/323/323-fail-inconsistent-order.png" alt="Two lists of clothing categories, one with tops at the top and one with dresses at the top." />
+</figure>
+<h2 id="good-example">Good example</h2>
+<h3 id="filters-are-in-a-consistent-order">Filters are in a consistent order</h3>
+<p>A clothes shopping website could show which category is selected by keeping the content in the same order but highlighting the selected option. A user moves from &lsquo;dresses&rsquo; to &lsquo;tops&rsquo; and because the navigation order has not changed, they can quickly find and select &lsquo;tops&rsquo; where they expected it to be. This consistency is predictable and reduces the user&rsquo;s effort when using the website.</p>
+
+<figure>
+  <img src="../images/323/323-pass-consistent-order.png" alt="Two lists of clothing categories. The third option is dresses and it is highlighted in the second list by inverting its colours" />
+</figure>
+<h2 id="related-success-criteria">Related success criteria</h2>
+<p>Consistent Navigation is closely related to the following:</p>
 
 <ul>
-<li>  Navigation mechanisms are presented consistently wherever they are used.</li>
-</ul>
-<h2 id="common-mistakes">Common mistakes</h2>
-
-<ul>
-<li>  A main navigation block is used on multiple pages, but is located in a different place on each page;</li>
-<li>  A breadcrumb navigation is used on multiple pages, but is presented in a different format on each page.</li>
+<li><a href="3.2.4.html">3.2.4 Consistent Identification (AA)</a> requires that repeated functionality has consistent labels.</li>
+<li><a href="3.2.6.html">3.2.6 Consistent Help (A)</a> requires that any repeated help options are in a consistent place across pages.</li>
 </ul>
 
     <h2>Last updated</h2>
-    <p>This page was last updated in July 2018.</p>
+    <p>This page was last updated in October 2026.</p>
 
             
           </main>
