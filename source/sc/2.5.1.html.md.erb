@@ -1,46 +1,67 @@
 ---
 title: 2.5.1 Pointer Gestures (A)
-updated: 2019-02
+updated: 2026-10
 ---
 
 # <%= current_page.data.title %>
 
-Check the official guidance for [Understanding <%= current_page.data.title %>](https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html)
+Users must be able to perform tasks with one finger and simple gestures.
 
-On mobile devices where you can use a touch - and need more than one finger or need to follow a path type gesture, functionality can still be operated using a single pointer.
+## What WCAG says:
 
-<strong>NOTE:</strong> This is true unless multi point or path based gestures are essential.
+> All functionality that uses multipoint or path-based gestures for operation can be operated with a single pointer without a path-based gesture, unless a multipoint or path-based gesture is essential.
 
-## Why is this a problem?
+Check the official guidance for [Understanding 2.5.1 Pointer Gestures](https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html)
 
-Some disabled users may need simple inputs or gestures to complete tasks and make selections. Complex movement or gestures requiring dexterity or accuracy may be hard for them. 
+## What this means
 
-### What is a path-based gesture?
-If an interaction is not just the end-to-end part but important but also the road or path taken.  These gestures could be swiping, dragging items or drawing. 
+Users must be able to perform tasks without making gestures:
 
-## What is a multi-point gesture?
-This can be zooming into content using a ‘pinch’ type motion with two fingers, a swipe with multiple fingers and so on.
+* that use more than one finger, like a two-finger pinch to zoom
+* where the movement of the pointer along a specific path matters, like swiping or drawing
 
-## Requirements / What to do?
+There are exceptions when a complex gesture is necessary for a task, like asking users to write their signature.
 
-Design your interface so controls and content can be used without these path or multi-point gestures. 
+## Why it matters
 
-<strong>Single point activation</strong> is like it sounds. This means ensuring that on a touchscreen or touchpad users will be able to do everything using only taps, double taps, and long presses. 
+Some users are physically unable to perform complex gestures. Others may struggle to understand how to perform these gestures.
 
-For a mouse, trackpad, head-pointer, or similar device include single clicks, click-and-hold and double clicks.
+Alternative options should be provided so all users can access the content through simple gestures, like taps, double taps and long presses.
 
-Some examples are:
+## How to check
 
-* In a map where you can pinch gesture to zoom the zooming can be done via [+] and [-] buttons.
-* In a Carousel with a horizontal content slider, hidden content can be moved into the viewport with swiping or forward and backward arrow buttons to navigate instead.
-* Do not rely only on path-based gestures.
-* Do not rely only on multi-point gestures.
+Check twice, once with a mobile touch device, and again with a mouse or trackpad.
+
+Check:
+
+* all functionality that uses multiple fingers can also be done with a single finger
+* all functionality that relies on following a path can be done in an alternative way
+
+[How to test in detail for 2.5.1 Pointer Gestures](https://github.com/alphagov/guide-to-wcag/wiki/2.5.1)
 
 ## Common mistakes
 
-* Requiring complex gestures to do things.
-* Functionality can be operated by pointer input but not with single-point activation alone.
+### Tasks require complex gestures
 
-## Resources
+For example, a map where you must make a pinch gesture to zoom. There is no other way to zoom.
 
-* [Knowability - Example of Pointer Gestures](https://knowbility.org/blog/2018/WCAG21-251PointerGestures/)
+This would fail as users unable to make the pinching gesture could not use the map.
+
+It could be fixed if users could also select 'plus' and 'minus' buttons to zoom in and out.
+
+<%= image_tag "../images/251/251-fail-map-pinch-to-zoom.png", { :alt => 'A map of towns and villages with no additional controls, centred on Ashby-de-la-Zouch' } %>
+
+## Good example
+
+### Tasks have multiple gesture options
+
+For example, a carousel of images allows users to either swipe or select arrows to see the next image.
+
+This would pass as users would not need to use complex gestures to perform tasks.
+
+<%= image_tag "../images/251/251-pass-carousel-left-right-buttons.png", { :alt => 'A photo of countryside overlaid with a left, right and play button. The right button has a dotted line around it.' } %>
+
+## Related success criteria
+
+* [2.5.4 Motion Actuation (A)](2.5.4.html) requires that users must be able to perform tasks without needing to move their devices or make gestures at the screen.
+* [2.5.7 Dragging Movements (AA)](2.5.7.html) requires that users must be able to complete a task without having to make a dragging motion on their screen.
