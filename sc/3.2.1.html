@@ -119,10 +119,38 @@
     <a href="#3-2-1-on-focus-a"><span>3.2.1 On Focus (A)</span></a>
     <ul>
       <li>
-        <a href="#requirements-what-to-do"><span>Requirements / What to do?</span></a>
+        <a href="#what-wcag-says"><span>What WCAG says:</span></a>
+      </li>
+      <li>
+        <a href="#what-this-means"><span>What this means</span></a>
+      </li>
+      <li>
+        <a href="#why-it-matters"><span>Why it matters</span></a>
+      </li>
+      <li>
+        <a href="#how-to-check"><span>How to check</span></a>
       </li>
       <li>
         <a href="#common-mistakes"><span>Common mistakes</span></a>
+        <ul>
+          <li>
+            <a href="#focus-jumps-unexpectedly"><span>Focus jumps unexpectedly</span></a>
+          </li>
+          <li>
+            <a href="#text-field-opens-a-new-screen"><span>Text field opens a new screen</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#good-example"><span>Good example</span></a>
+        <ul>
+          <li>
+            <a href="#focus-moves-through-a-page-as-expected"><span>Focus moves through a page as expected</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#related-success-criteria"><span>Related success criteria</span></a>
       </li>
       <li>
         <a href="#"><span>Last updated</span></a>
@@ -139,24 +167,70 @@
         <div class="app-pane__content toc-open-disabled" aria-label="Content">
           <main id="content" class="technical-documentation">
               <h1 id="3-2-1-on-focus-a">3.2.1 On Focus (A)</h1>
-<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html">Understanding 3.2.1 On Focus (A)</a></p>
-<p>When a keyboard user focuses on a control it must not cause a change of context, such as loading a new page/tab. This stops unexpected things happening without screen reader and screen magnifer users being aware of it.</p>
-<h2 id="requirements-what-to-do">Requirements / What to do?</h2>
+<p>Focusing on page elements must not cause anything unexpected to happen.</p>
+<h2 id="what-wcag-says">What WCAG says:</h2>
+
+<blockquote>
+<p>When any user interface component receives focus, it does not initiate a change of context.</p>
+</blockquote>
+<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/on-focus.html">Understanding 3.2.1 On Focus</a></p>
+<h2 id="what-this-means">What this means</h2>
+<p>When navigating a webpage, there are different ways to focus on an interactive element (such as a menu, radio button or text field), for example:</p>
 
 <ul>
-<li>  <code>focus</code> events do not cause navigation, nor form submission</li>
-<li>  components that respond to <code>focus</code> do not initiate a “focus trap”, where it is impossible or unclear how to navigate out of the component using the keyboard.</li>
+<li>moving to it using the Tab key</li>
+<li>clicking or tapping it</li>
+<li>navigating to it using a screen reader or speech recognition software</li>
 </ul>
-<h2 id="common-mistakes">Common mistakes</h2>
+<p>When a user focuses on something, nothing unexpected must happen - for example, keyboard focus must not move to a different part of the page.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>Users must be able to navigate webpages in a way they&rsquo;ll expect. Unexpected changes can be particularly disorienting to people with visual, cognitive or motor impairments.</p>
+<h2 id="how-to-check">How to check</h2>
+<p>Navigate through interactive elements using the Tab key and check that there is no unexpected behaviour such as:</p>
 
 <ul>
-<li>  Dropdown menus trigger navigation as the user tabs between options</li>
-<li>  Javascript triggers navigation when a user is merely leaving a form control</li>
-<li>  focus is moved by script in ways that surprise the user</li>
+<li>focus moving elsewhere</li>
+<li>a new page or window loading</li>
+<li>a form getting submitted</li>
+</ul>
+<p>Similarly, click or tap any form fields which you would not expect to move the user elsewhere.</p>
+<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/3.2.1">How to test in detail for 3.2.1 On Focus</a></p>
+<h2 id="common-mistakes">Common mistakes</h2>
+<h3 id="focus-jumps-unexpectedly">Focus jumps unexpectedly</h3>
+<p>One example comes from a museum website, where focusing on the “visit our shop” button causes the page to scroll down. This makes the focus unexpectedly move again to the first item in the next section, “More things to see”.</p>
+
+<figure>
+  <img src="../images/321/321-fail-focus-moves.png" alt="A &quot;visit our shop&quot; button with an arrow pointing down from it to a graphic with a thin black border" />
+</figure>
+<p>By default, when creating a webpage, focus stays on an interactive element until the user changes it. However, some website creators may change the default behaviours.</p>
+<p>In this example, there is extra JavaScript code which responds to the page scrolling, and automatically advances the page to the next section. Removing this functionality would be one way to make the focus behave as expected.</p>
+<h3 id="text-field-opens-a-new-screen">Text field opens a new screen</h3>
+<p>Upon clicking a search field on a college website, a separate screen opens containing a search field. However, on the new screen, focus is not in the search field and the user cannot type their search term. Focus should at least remain in the search field when it is activated.</p>
+
+<figure>
+  <img src="../images/321/321-fail-search-new-window.png" alt="A &quot;Start your search here&quot; prompt with a search field." />
+</figure>
+<h2 id="good-example">Good example</h2>
+<h3 id="focus-moves-through-a-page-as-expected">Focus moves through a page as expected</h3>
+<p>The previous example could be fixed by using a standard text field which gains focus when it is tabbed to or clicked.</p>
+<p>It would also be fine to have a separate search screen, as long as the user is not taken there unexpectedly and focus stays in the search field when it is activated.</p>
+
+<figure>
+  <img src="../images/321/321-pass-search-focused.png" alt="A search field with a visible border and cursor, showing that it has focus." />
+</figure>
+<h2 id="related-success-criteria">Related success criteria</h2>
+<p>There is often some crossover between this criterion and the following:</p>
+
+<ul>
+<li><a href="2.1.2.html">2.1.2 No Keyboard Trap (A)</a> ensures that users do not get “trapped” within a component which may appear on focus.</li>
+<li><a href="2.4.3.html">2.4.3 Focus Order (A)</a> ensures that everything receives focus in a logical order.</li>
+<li><a href="2.4.7.html">2.4.7 Focus Visible (AA)</a> relates to components having a visible focus indicator.</li>
+<li><a href="2.4.11.html">2.4.11 Focus Not Obscured (Minimum) (AA)</a> ensures that any focused elements are not covered up by other elements on screen.</li>
+<li><a href="3.2.2.html">3.2.2 On Input (A)</a> is similar to On Focus, but relates to elements behaving unexpectedly when data is entered.</li>
 </ul>
 
     <h2>Last updated</h2>
-    <p>This page was last updated in July 2018.</p>
+    <p>This page was last updated in October 2026.</p>
 
             
           </main>
