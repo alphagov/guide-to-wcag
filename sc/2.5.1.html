@@ -119,24 +119,35 @@
     <a href="#2-5-1-pointer-gestures-a"><span>2.5.1 Pointer Gestures (A)</span></a>
     <ul>
       <li>
-        <a href="#why-is-this-a-problem"><span>Why is this a problem?</span></a>
+        <a href="#what-wcag-says"><span>What WCAG says:</span></a>
+      </li>
+      <li>
+        <a href="#what-this-means"><span>What this means</span></a>
+      </li>
+      <li>
+        <a href="#why-it-matters"><span>Why it matters</span></a>
+      </li>
+      <li>
+        <a href="#how-to-check"><span>How to check</span></a>
+      </li>
+      <li>
+        <a href="#common-mistakes"><span>Common mistakes</span></a>
         <ul>
           <li>
-            <a href="#what-is-a-path-based-gesture"><span>What is a path-based gesture?</span></a>
+            <a href="#tasks-require-complex-gestures"><span>Tasks require complex gestures</span></a>
           </li>
         </ul>
       </li>
       <li>
-        <a href="#what-is-a-multi-point-gesture"><span>What is a multi-point gesture?</span></a>
+        <a href="#good-example"><span>Good example</span></a>
+        <ul>
+          <li>
+            <a href="#tasks-have-multiple-gesture-options"><span>Tasks have multiple gesture options</span></a>
+          </li>
+        </ul>
       </li>
       <li>
-        <a href="#requirements-what-to-do"><span>Requirements / What to do?</span></a>
-      </li>
-      <li>
-        <a href="#common-mistakes"><span>Common mistakes</span></a>
-      </li>
-      <li>
-        <a href="#resources"><span>Resources</span></a>
+        <a href="#related-success-criteria"><span>Related success criteria</span></a>
       </li>
       <li>
         <a href="#"><span>Last updated</span></a>
@@ -153,41 +164,53 @@
         <div class="app-pane__content toc-open-disabled" aria-label="Content">
           <main id="content" class="technical-documentation">
               <h1 id="2-5-1-pointer-gestures-a">2.5.1 Pointer Gestures (A)</h1>
-<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html">Understanding 2.5.1 Pointer Gestures (A)</a></p>
-<p>On mobile devices where you can use a touch - and need more than one finger or need to follow a path type gesture, functionality can still be operated using a single pointer.</p>
-<p><strong>NOTE:</strong> This is true unless multi point or path based gestures are essential.</p>
-<h2 id="why-is-this-a-problem">Why is this a problem?</h2>
-<p>Some disabled users may need simple inputs or gestures to complete tasks and make selections. Complex movement or gestures requiring dexterity or accuracy may be hard for them.</p>
-<h3 id="what-is-a-path-based-gesture">What is a path-based gesture?</h3>
-<p>If an interaction is not just the end-to-end part but important but also the road or path taken.  These gestures could be swiping, dragging items or drawing.</p>
-<h2 id="what-is-a-multi-point-gesture">What is a multi-point gesture?</h2>
-<p>This can be zooming into content using a ‘pinch’ type motion with two fingers, a swipe with multiple fingers and so on.</p>
-<h2 id="requirements-what-to-do">Requirements / What to do?</h2>
-<p>Design your interface so controls and content can be used without these path or multi-point gestures.</p>
-<p><strong>Single point activation</strong> is like it sounds. This means ensuring that on a touchscreen or touchpad users will be able to do everything using only taps, double taps, and long presses.</p>
-<p>For a mouse, trackpad, head-pointer, or similar device include single clicks, click-and-hold and double clicks.</p>
-<p>Some examples are:</p>
+<p>Users must be able to perform tasks with one finger and simple gestures.</p>
+<h2 id="what-wcag-says">What WCAG says:</h2>
+
+<blockquote>
+<p>All functionality that uses multipoint or path-based gestures for operation can be operated with a single pointer without a path-based gesture, unless a multipoint or path-based gesture is essential.</p>
+</blockquote>
+<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/pointer-gestures.html">Understanding 2.5.1 Pointer Gestures</a></p>
+<h2 id="what-this-means">What this means</h2>
+<p>Users must be able to perform tasks without making gestures:</p>
 
 <ul>
-<li>In a map where you can pinch gesture to zoom the zooming can be done via [+] and [-] buttons.</li>
-<li>In a Carousel with a horizontal content slider, hidden content can be moved into the viewport with swiping or forward and backward arrow buttons to navigate instead.</li>
-<li>Do not rely only on path-based gestures.</li>
-<li>Do not rely only on multi-point gestures.</li>
+<li>that use more than one finger, like a two-finger pinch to zoom</li>
+<li>where the movement of the pointer along a specific path matters, like swiping or drawing</li>
 </ul>
+<p>There are exceptions when a complex gesture is necessary for a task, like asking users to write their signature.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>Some users are physically unable to perform complex gestures. Others may struggle to understand how to perform these gestures.</p>
+<p>Alternative options should be provided so all users can access the content through simple gestures, like taps, double taps and long presses.</p>
+<h2 id="how-to-check">How to check</h2>
+<p>Check twice, once with a mobile touch device, and again with a mouse or trackpad.</p>
+<p>Check:</p>
+
+<ul>
+<li>all functionality that uses multiple fingers can also be done with a single finger</li>
+<li>all functionality that relies on following a path can be done in an alternative way</li>
+</ul>
+<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/2.5.1">How to test in detail for 2.5.1 Pointer Gestures</a></p>
 <h2 id="common-mistakes">Common mistakes</h2>
+<h3 id="tasks-require-complex-gestures">Tasks require complex gestures</h3>
+<p>For example, a map where you must make a pinch gesture to zoom. There is no other way to zoom.</p>
+<p>This would fail as users unable to make the pinching gesture could not use the map.</p>
+<p>It could be fixed if users could also select &lsquo;plus&rsquo; and &lsquo;minus&rsquo; buttons to zoom in and out.</p>
+<p><img src="../images/251/251-fail-map-pinch-to-zoom.png" alt="A map of towns and villages with no additional controls, centred on Ashby-de-la-Zouch" /></p>
+<h2 id="good-example">Good example</h2>
+<h3 id="tasks-have-multiple-gesture-options">Tasks have multiple gesture options</h3>
+<p>For example, a carousel of images allows users to either swipe or select arrows to see the next image.</p>
+<p>This would pass as users would not need to use complex gestures to perform tasks.</p>
+<p><img src="../images/251/251-pass-carousel-left-right-buttons.png" alt="A photo of countryside overlaid with a left, right and play button. The right button has a dotted line around it." /></p>
+<h2 id="related-success-criteria">Related success criteria</h2>
 
 <ul>
-<li>Requiring complex gestures to do things.</li>
-<li>Functionality can be operated by pointer input but not with single-point activation alone.</li>
-</ul>
-<h2 id="resources">Resources</h2>
-
-<ul>
-<li><a href="https://knowbility.org/blog/2018/WCAG21-251PointerGestures/">Knowability - Example of Pointer Gestures</a></li>
+<li><a href="2.5.4.html">2.5.4 Motion Actuation (A)</a> requires that users must be able to perform tasks without needing to move their devices or make gestures at the screen.</li>
+<li><a href="2.5.7.html">2.5.7 Dragging Movements (AA)</a> requires that users must be able to complete a task without having to make a dragging motion on their screen.</li>
 </ul>
 
     <h2>Last updated</h2>
-    <p>This page was last updated in February 2019.</p>
+    <p>This page was last updated in October 2026.</p>
 
             
           </main>
