@@ -119,10 +119,41 @@
     <a href="#2-3-1-three-flashes-or-below-threshold-a"><span>2.3.1 Three Flashes or Below Threshold (A)</span></a>
     <ul>
       <li>
-        <a href="#requirements-what-to-do"><span>Requirements / What to do?</span></a>
+        <a href="#what-wcag-says"><span>What WCAG says:</span></a>
+      </li>
+      <li>
+        <a href="#what-this-means"><span>What this means</span></a>
+      </li>
+      <li>
+        <a href="#why-it-matters"><span>Why it matters</span></a>
+      </li>
+      <li>
+        <a href="#how-to-check"><span>How to check</span></a>
       </li>
       <li>
         <a href="#common-mistakes"><span>Common mistakes</span></a>
+        <ul>
+          <li>
+            <a href="#flashing-colours-in-content"><span>Flashing colours in content</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#good-example"><span>Good example</span></a>
+        <ul>
+          <li>
+            <a href="#slow-changes-in-colour"><span>Slow changes in colour</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#non-interference"><span>Non-interference</span></a>
+      </li>
+      <li>
+        <a href="#related-success-criteria"><span>Related success criteria</span></a>
+      </li>
+      <li>
+        <a href="#useful-resources"><span>Useful resources</span></a>
       </li>
       <li>
         <a href="#"><span>Last updated</span></a>
@@ -139,21 +170,43 @@
         <div class="app-pane__content toc-open-disabled" aria-label="Content">
           <main id="content" class="technical-documentation">
               <h1 id="2-3-1-three-flashes-or-below-threshold-a">2.3.1 Three Flashes or Below Threshold (A)</h1>
-<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html">Understanding 2.3.1 Three Flashes or Below Threshold (A)</a></p>
-<p>A page must not contain content that flashes more than three times a second. This ensures that people with conditions like photosensitive Epilepsy are protected from harmful seizures.</p>
-<h2 id="requirements-what-to-do">Requirements / What to do?</h2>
+<p>Avoid any content which flashes more than 3 times a second.</p>
+<h2 id="what-wcag-says">What WCAG says:</h2>
 
-<ul>
-<li>  Content does not flash more than three times a second.</li>
-</ul>
+<blockquote>
+<p>Web pages do not contain anything that flashes more than three times in any one second period, or the flash is below the general flash and red flash thresholds.</p>
+</blockquote>
+<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/three-flashes-or-below-threshold.html">Understanding 2.3.1 Three Flashes or Below Threshold</a></p>
+<h2 id="what-this-means">What this means</h2>
+<p>A page must not contain content that flashes more than 3 times a second, unless the flashes take up a small enough section of the screen area.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>Intense flashes can cause some users to have harmful seizures if they have conditions like photosensitive epilepsy.</p>
+<h2 id="how-to-check">How to check</h2>
+<p>Check if anything flashes more than 3 times per second. If in doubt, fail it.</p>
+<p>Warning users of the flashing content in advance is not enough to pass.</p>
+<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/2.3.1">How to test in detail for 2.3.1 Three Flashes or Below Threshold</a></p>
 <h2 id="common-mistakes">Common mistakes</h2>
+<h3 id="flashing-colours-in-content">Flashing colours in content</h3>
+<p>For example, a promotional video contains rapidly flashing colours to get attention from users. The colours take up the whole screen and flash 5 times per second.</p>
+<p>This would fail as it could cause seizures.</p>
+<p>It can be fixed by reducing the flashing colours to 3 or less per second, or by removing the flashing colours completely.</p>
+<h2 id="good-example">Good example</h2>
+<h3 id="slow-changes-in-colour">Slow changes in colour</h3>
+<p>For example, a promotional video shows a few different colours. One colour is shown per second.</p>
+<p>This would pass. It should not cause seizures.</p>
+<h2 id="non-interference">Non-interference</h2>
+<p>This is one of four special criteria which all content on a page needs to meet, even if it is normally out of scope of an audit (such as adverts or other third party content). These are referred to as &ldquo;non-interference&rdquo; criteria because content must not interfere with the rest of the page. The official standard has <a href="https://www.w3.org/TR/WCAG22/#cc5">more detail about non-interference</a>.</p>
+<h2 id="related-success-criteria">Related success criteria</h2>
 
 <ul>
-<li>  Content flashes at more than three times a second.</li>
+<li><a href="1.4.2.html">1.4.2 Audio Control (A)</a> is another non-interference criterion which requires that autoplaying audio can be controlled or stopped.</li>
+<li><a href="2.2.2.html">2.2.2 Pause, Stop, Hide (A)</a> is another non-interference criterion which requires a way to stop content that updates frequently, blinks or scrolls automatically.</li>
 </ul>
+<h2 id="useful-resources">Useful resources</h2>
+<p>Read the <a href="https://www.epilepsy.org.uk/info/seizure-triggers/photosensitive-epilepsy">guidance on photosensitive epilepsy from Epilepsy Action</a>.</p>
 
     <h2>Last updated</h2>
-    <p>This page was last updated in July 2018.</p>
+    <p>This page was last updated in October 2026.</p>
 
             
           </main>
