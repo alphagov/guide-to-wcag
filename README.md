@@ -1,6 +1,6 @@
 # A guide to WCAG
 
-A guide to help people learn more about the Web Content Accessibility Guidelines.
+A guide to help people learn more about the Web Content Accessibility Guidelines version 2.2 AA standard.
 
 **This guide was previously known as the WCAG Primer.**
 
