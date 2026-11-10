@@ -1,19 +1,64 @@
 ---
 title: 2.1.2 No Keyboard Trap (A)
-updated: 2018-07
+updated: 2026-11
 ---
 
 # <%= current_page.data.title %>
 
-Check the official guidance for [Understanding <%= current_page.data.title %>](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html)
+## What WCAG says:
 
-When someone using a keyboard to navigate content moves to an element, they must be able to move away from it again. This ensures that people who use a keyboard do not get stuck on any part of the page.
+> If keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface, and, if it requires more than unmodified arrow or tab keys or other standard exit methods, the user is advised of the method for moving focus away.
 
-## Requirements / What to do?
+Check the official guidance for [Understanding 2.1.2 No Keyboard Trap](https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap)
 
-*   Keyboard focus can move to an element and away again.
+## What this means
 
-## Common mistakes
+Some users do not use a mouse or touchscreen, and navigate websites using keyboard commands such as the Tab, Shift+Tab, and arrow keys.
 
-*   A dialogue opens but cannot be closed with the keyboard, preventing the user from accessing the original content underneath;
-*   Content is presented in an infinite scroll, so a keyboard user is forced to tab through everything before they can exit the scroll area.
+Users who only use keyboards must be able to navigate in and out of page components and not get 'trapped' where they would need to use a mouse or touchscreen – they must always have a way to move on.
+
+## Why it matters
+
+This matters because some people with vision impairments or physical disabilities rely on a keyboard to use the web and cannot use a mouse (or other devices like a touch screen).
+
+## How to check
+
+You can check for a keyboard trap by using the Tab key to move through the page.
+
+When you reach an interactive component (such as a date picker or video player), move into it. Next try and leave it by only using the keyboard (Tab, Shift + Tab, arrow keys and Esc) and continue to the next part of the page.
+
+[How to test in detail for 2.1.2 No Keyboard Trap](https://github.com/alphagov/guide-to-wcag/wiki/2.1.2)
+
+## Common mistake
+
+### A date picker that cannot be dismissed using a keyboard
+
+A user tabs to a date picker in a form and presses Tab to move into the widget. They use the arrow keys to choose a date and press Tab again, but nothing happens. They try every key, but they are stuck inside the date picker. The only way to continue is to click or tap somewhere else.
+
+This widget would fail because the user is stuck inside the date picker if they are only using a keyboard. This has stopped them from completing their user journey.
+
+<figure>
+  <%= image_tag "../images/212/212-fail-date-picker-no-dismiss.png", { :alt => 'A pop-up date picker with two months visible, and selected start and end dates.' } %>
+</figure>
+
+## Good example
+
+### A date picker that can be dismissed using a keyboard
+
+A user tabs to a date picker in a form and presses Tab to move into the widget. They use the arrow keys to choose a date and press Tab again before selecting 'Done'. This moves them to the next form field.
+
+This widget would pass because the user was able to move into, around, and exit the date picker and continue with their user journey. Additionally, it aligns with what controls the user expects, such as being able to tab to the Done button and press it, or use Esc to leave.
+
+<figure>
+  <%= image_tag "../images/212/212-pass-date-picker-dismissible.png", { :alt => 'A date and time picker showing the current and selected dates, with time options and a Done button at the bottom.' } %>
+</figure>
+
+<%= partial 'partials/non-interference' %>
+
+## Related success criteria
+
+No Keyboard Trap is closely related to the following success criteria:
+
+* [2.1.1 Keyboard (A)](2.1.1.html) applies when users cannot use a component with a keyboard. 
+* [2.4.7 Focus Visible (AA)](2.4.7.html) applies when users can exit a component, but they cannot see where they are on the page. 
+* [2.4.11 Focus Not Obscured (AA)](2.4.11.html) applies when users can exit a component but something is covering the keyboard focus and they cannot see it. 
