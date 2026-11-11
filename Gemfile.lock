@@ -160,7 +160,7 @@ GEM
       prism (~> 1.5)
     multi_json (1.21.2)
     mutex_m (0.3.0)
-    nokogiri (1.19.4)
+    nokogiri (1.19.5)
       mini_portile2 (~> 2.8.2)
       racc (~> 1.4)
     openapi3_parser (0.10.1)
