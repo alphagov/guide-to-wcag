@@ -2584,7 +2584,7 @@
     margin-bottom: 0;
   }
 }
-@media screen and (min-width: 40.0625em) and (min-width: 0\0 ) {
+@media screen and (min-width: 40.0625em) and (min-width: 0�) {
   .govuk-service-navigation__list {
     display: block;
   }
