@@ -1,60 +1,165 @@
 ---
 title: 4.1.3 Status Messages (AA)
-updated: 2019-02
+updated: 2026-11
 ---
 
 # <%= current_page.data.title %>
 
-Check the official guidance for [Understanding <%= current_page.data.title %>](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html)
+Screen reader users need to be informed of status updates.
 
-There are different situations where a status message needs to be shown in a way that assistive technologies understand. These messages need to be presented to the user without receiving focus themselves, or disturbing the user's place in a page. 
+## What WCAG says:
 
-## Why is this a problem?
+> In content implemented using markup languages, status messages can be programmatically determined through role or properties such that they can be presented to the user by assistive technologies without receiving focus.
 
-* A sighted person can quickly see status messages on a page, and them go back to what they were doing or reading. Moving focus to a message can be disruptive for screen reader users, users of speech recognition software and keyboard only users.
-* If focus is always moved to the message users with cognitive impairments may also be confused by unpredictable focus changes. 
+Check the official guidance for [Understanding 4.1.3 Status Messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages)
 
-## Requirements / What to do?
+## What this means
 
-The following are different situations where you will need to cover.
+Changes to content that take place without reloading the page, and which require a user's attention, are announced without user intervention and without moving keyboard focus.
 
-### When a status message tells the user something is successful
+Examples of relevant changes include live notifications, client-side error messages, or loading notifications that update in real time.
 
-When a status message tells the user something is successful or is the results of an action. This can also be used for a state change when part of a page updates:
+Showing and hiding any other content on the page is not covered by this criterion. For example, the contents of an expanded menu, or the appearance of a new item in a section of scrollable content do not need to be announced when they appear.
 
-You can use these following techniques:
+## Why it matters
 
-[Use the ARIA role=status to present status messages](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA22) in combination with the technique [Providing success feedback when data is submitted successfully](https://www.w3.org/WAI/WCAG21/Techniques/general/G199).
+Screen reader users may be unable to tell when a status message has been dynamically updated if they are not focused on the element being updated.
 
-### If a status message conveys a suggestion, or a warning or error:
+## How to check
 
-<strong>NOTE:</strong> There may be time when you do want to move focus to a message, such as an error, as a part of form validation etc.
+Using a screen reader, activate a feature that dynamically changes part of a page's content.
 
-Use the following techniques:
+Any status message should be announced without needing to move the keyboard focus to the element containing the announced text.
 
-[Use ARIA role=alert or Live Regions to Identify Errors](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA19) in combination with any of the following:
+### For important status changes
 
-* [Providing text descriptions to identify required fields that were not completed](https://www.w3.org/WAI/WCAG21/Techniques/general/G83)
-* [Providing a text description when the user provides information that is not in the list of allowed values](https://www.w3.org/WAI/WCAG21/Techniques/general/G84)
-* [Providing a text description when user input falls outside the required format or values](https://www.w3.org/WAI/WCAG21/Techniques/general/G85)
-* [Creating a mechanism that allows users to jump to errors](https://www.w3.org/WAI/WCAG21/Techniques/general/G139)
-* [Providing suggested correction text](https://www.w3.org/WAI/WCAG21/Techniques/general/G177)
-* [Providing spell checking and suggestions for text input](https://www.w3.org/WAI/WCAG21/Techniques/general/G194)
+If the user should be informed of the status as soon as possible, such as something that prevents further interaction, the status message should be read immediately, interrupting any text currently being announced.
 
-### If a status message conveys information on the progress of a process:
+There may be situations where it's helpful to programmatically move keyboard focus to the element being announced, such as error messages or dialogs that require user intervention to dismiss.
 
-The ARIA <code>role="progressbar"</code> can be used but may not be enough on its own (depending on AT and browser support). For some examples of <code>progressbar</code> role see:
+### For passive status changes
 
-* [Mozilla - Using the progressbar role](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_progressbar_role)
-* [ARIA Progress bar example - LevelAccess Labs](https://labs.levelaccess.com/index.php/ARIA_Progressbar)
+If the user doesn't need to be informed immediately, such as if a task completed successfully or a live feed has been updated, the text currently being announced should finish being read first, followed by the status message. The user's keyboard or screen reader focus should not move to the status element.
 
-You can use the following techniques:
+### How to check status messages in code
 
-* [Using role=log to identify sequential information updates](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA23)
-* [Using role=status to present status messages](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA22) in combination with [Providing help by an assistant in the Web page](https://www.w3.org/WAI/WCAG21/Techniques/general/G193)
+To determine whether a status message is going to be read out to screen reader users through the code, inspect the message in the browser's inspector.
+
+Adding the following attributes to an element will cause anything inside it to be read to screen reader users:
+
+* `aria-live="assertive"` - this announces an important status change as described earlier.
+* `aria-live="polite"` - this announces a passive status change as described earlier.
+* `role="alert"`
+* `role="log"`
+* `role="status"`
+
+[How to test in detail for 4.1.3 Status Messages](https://github.com/alphagov/guide-to-wcag/wiki/4.1.3)
 
 ## Common mistakes
 
-* Status messages are not to be shown in a way that the AT understands or receive focus.
-* Using <code>role="alert"</code> or <code>aria-live="assertive"</code> on content which is not important.
-* On a page with ARIA live regions - if regions are hidden or not needed - always make sure to switch their active and inactive states accordingly.
+### Status change that isn't communicated to assistive technologies
+
+<figure>
+  <%= image_tag "../images/413/413-fail-event-added.png", { :alt => '"Add event" button with green status message of "Event has been added to calendar"' } %>
+</figure>
+
+Code:
+
+```html
+<div>Event has been added to calendar</div>
+```
+
+This example shows a new status which has been added to the page using a `<div>` tag. However, the element doesn't have a `role`.
+
+This fails because the status is added in a way that doesn't communicate the addition to assistive technologies. It should include an appropriate `role` or `aria-live` attribute. 
+
+### Status change that's communicated with the wrong importance
+
+<figure>
+  <%= image_tag "../images/413/413-fail-checks-complete.png", { :alt => 'A tick followed by "System checks complete, no issues found"' } %>
+</figure>
+
+Code:
+
+```html
+<div id="log" role="alert">System checks complete, no issues found</div>
+```
+
+This example shows a confirmation message that has been added to a status log. This element includes `role="alert"`, which makes sure that assistive technologies will be notified about it.
+
+However, this is not advised because the 'upload complete' status is given an unexpectedly high importance ('alert'). This status doesn't require the user's immediate attention, so a more passive `role` like 'status' should be used instead.
+
+Alternatively, instead of adding a `role` attribute to each status, the status log could have `role="log"` added to it. This implicitly adds the `aria-live="polite"` attribute, which announces any changes to the log's content with low importance.
+
+Code:
+
+```html
+<div id="log" role="log">System checks complete, no issues found</div>
+```
+
+## Good examples
+
+### Status change that's communicated passively
+
+<figure>
+  <%= image_tag "../images/413/413-pass-changes-saved.png", { :alt => 'A message of "Your changes have been saved" under a text box containing a passage from Alice in Wonderland' } %>
+</figure>
+
+Code:
+
+```html
+<div role="status">Your changes have been saved</div>
+```
+
+This example shows a new element just added to the page with a `role` of `status`, informing the user that their changes have been saved successfully.
+
+This passes, as it informs assistive technologies of the addition and will not interrupt the user's current task to inform them of the change.
+
+An alternative way to communicate the status would for the `<div>` element to include an `aria-live="polite"` attribute.
+
+### Status change that's communicated urgently
+
+<figure>
+  <%= image_tag "../images/413/413-pass-logout-warning.png", { :alt => 'Warning message of "You are about to be logged out" with a timer and options to stay logged in or log out' } %>
+</figure>
+
+Code:
+ 
+```html
+<div class="logout-warning" role="alert"> 
+  <h2>You are about to be logged out</h2> 
+  <div>You will be logged out in 23 seconds.</div> 
+  <button>Keep me logged in</button> 
+  <a href="/logout">Log me out</a> 
+</div>
+```
+
+This example adds a new element to the page with a `role` of `alert`, informing the user that they are about to be logged out. 
+
+This passes as it informs assistive technologies of the addition. The code interrupts what's currently being read and moves keyboard focus to the warning message. This is fine in this case because the only current action is for the user to extend their login or log out. 
+
+### Progress status of an ongoing task
+
+<figure>
+  <%= image_tag "../images/413/413-pass-upload-progress.png", { :alt => 'A blue "upload progress" bar that is half completed.' } %>
+</figure>
+
+Code:
+
+```html
+<div id="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">Upload progress</div>
+```
+
+This example defines a 'progress bar' element with a minimum value of 0 and a maximum value of 100. As a file is uploaded, the value of `aria-valuenow` is updated and passively announced to users. The text inside of the element is treated as the accessible label.
+
+This passes as it passively informs assistive technologies of the upload progress and will not interrupt the user's current task with superfluous information.
+
+The HTML `<progress>` element implicitly sets the same role and ARIA attributes and should be used whenever it is appropriate to the situation.
+
+## Related success criteria
+
+This criterion is about how status changes are communicated to assistive technologies. Content that updates live or is dismissed after a period of time must provide users with a mechanism to control when those updates or dismissals take place.
+
+* [1.3.1 Info and Relationships (A)](1.3.1.html) requires that any information presented visually is also available to assistive technologies – without requiring changes to be announced live.
+* [2.2.1 Timing Adjustable (A)](2.2.1.html) helps users to control how long content is visible for.
+* [4.1.2 Name, Role, Value (A)](4.1.2.html) relates to using code to ensure that user interface components can be read by assistive technologies. But this does not specifically cover live status messages.
