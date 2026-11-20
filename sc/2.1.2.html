@@ -119,10 +119,38 @@
     <a href="#2-1-2-no-keyboard-trap-a"><span>2.1.2 No Keyboard Trap (A)</span></a>
     <ul>
       <li>
-        <a href="#requirements-what-to-do"><span>Requirements / What to do?</span></a>
+        <a href="#what-wcag-says"><span>What WCAG says:</span></a>
       </li>
       <li>
-        <a href="#common-mistakes"><span>Common mistakes</span></a>
+        <a href="#what-this-means"><span>What this means</span></a>
+      </li>
+      <li>
+        <a href="#why-it-matters"><span>Why it matters</span></a>
+      </li>
+      <li>
+        <a href="#how-to-check"><span>How to check</span></a>
+      </li>
+      <li>
+        <a href="#common-mistake"><span>Common mistake</span></a>
+        <ul>
+          <li>
+            <a href="#a-date-picker-that-cannot-be-dismissed-using-a-keyboard"><span>A date picker that cannot be dismissed using a keyboard</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#good-example"><span>Good example</span></a>
+        <ul>
+          <li>
+            <a href="#a-date-picker-that-can-be-dismissed-using-a-keyboard"><span>A date picker that can be dismissed using a keyboard</span></a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#non-interference"><span>Non-interference</span></a>
+      </li>
+      <li>
+        <a href="#related-success-criteria"><span>Related success criteria</span></a>
       </li>
       <li>
         <a href="#last-updated"><span>Last updated</span></a>
@@ -139,22 +167,50 @@
         <div class="app-pane__content toc-open-disabled" aria-label="Content">
           <main id="content" class="technical-documentation">
               <h1 id="2-1-2-no-keyboard-trap-a">2.1.2 No Keyboard Trap (A)</h1>
-<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap.html">Understanding 2.1.2 No Keyboard Trap (A)</a></p>
-<p>When someone using a keyboard to navigate content moves to an element, they must be able to move away from it again. This ensures that people who use a keyboard do not get stuck on any part of the page.</p>
-<h2 id="requirements-what-to-do">Requirements / What to do?</h2>
+<h2 id="what-wcag-says">What WCAG says:</h2>
+
+<blockquote>
+<p>If keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface, and, if it requires more than unmodified arrow or tab keys or other standard exit methods, the user is advised of the method for moving focus away.</p>
+</blockquote>
+<p>Check the official guidance for <a href="https://www.w3.org/WAI/WCAG22/Understanding/no-keyboard-trap">Understanding 2.1.2 No Keyboard Trap</a></p>
+<h2 id="what-this-means">What this means</h2>
+<p>Some users do not use a mouse or touchscreen, and navigate websites using keyboard commands such as the Tab, Shift+Tab, and arrow keys.</p>
+<p>Users who only use keyboards must be able to navigate in and out of page components and not get &lsquo;trapped&rsquo; where they would need to use a mouse or touchscreen – they must always have a way to move on.</p>
+<h2 id="why-it-matters">Why it matters</h2>
+<p>This matters because some people with vision impairments or physical disabilities rely on a keyboard to use the web and cannot use a mouse (or other devices like a touch screen).</p>
+<h2 id="how-to-check">How to check</h2>
+<p>You can check for a keyboard trap by using the Tab key to move through the page.</p>
+<p>When you reach an interactive component (such as a date picker or video player), move into it. Next try and leave it by only using the keyboard (Tab, Shift + Tab, arrow keys and Esc) and continue to the next part of the page.</p>
+<p><a href="https://github.com/alphagov/guide-to-wcag/wiki/2.1.2">How to test in detail for 2.1.2 No Keyboard Trap</a></p>
+<h2 id="common-mistake">Common mistake</h2>
+<h3 id="a-date-picker-that-cannot-be-dismissed-using-a-keyboard">A date picker that cannot be dismissed using a keyboard</h3>
+<p>A user tabs to a date picker in a form and presses Tab to move into the widget. They use the arrow keys to choose a date and press Tab again, but nothing happens. They try every key, but they are stuck inside the date picker. The only way to continue is to click or tap somewhere else.</p>
+<p>This widget would fail because the user is stuck inside the date picker if they are only using a keyboard. This has stopped them from completing their user journey.</p>
+
+<figure>
+  <img src="../images/212/212-fail-date-picker-no-dismiss.png" alt="A pop-up date picker with two months visible, and selected start and end dates." />
+</figure>
+<h2 id="good-example">Good example</h2>
+<h3 id="a-date-picker-that-can-be-dismissed-using-a-keyboard">A date picker that can be dismissed using a keyboard</h3>
+<p>A user tabs to a date picker in a form and presses Tab to move into the widget. They use the arrow keys to choose a date and press Tab again before selecting &lsquo;Done&rsquo;. This moves them to the next form field.</p>
+<p>This widget would pass because the user was able to move into, around, and exit the date picker and continue with their user journey. Additionally, it aligns with what controls the user expects, such as being able to tab to the Done button and press it, or use Esc to leave.</p>
+
+<figure>
+  <img src="../images/212/212-pass-date-picker-dismissible.png" alt="A date and time picker showing the current and selected dates, with time options and a Done button at the bottom." />
+</figure>
+<h2 id="non-interference">Non-interference</h2>
+<p>This is one of four special criteria which all content on a page needs to meet, even if it is normally out of scope of an audit (such as adverts or other third party content). These are referred to as &ldquo;non-interference&rdquo; criteria because content must not interfere with the rest of the page. The official standard has <a href="https://www.w3.org/TR/WCAG22/#cc5">more detail about non-interference</a>.</p>
+<h2 id="related-success-criteria">Related success criteria</h2>
+<p>No Keyboard Trap is closely related to the following success criteria:</p>
 
 <ul>
-<li>  Keyboard focus can move to an element and away again.</li>
-</ul>
-<h2 id="common-mistakes">Common mistakes</h2>
-
-<ul>
-<li>  A dialogue opens but cannot be closed with the keyboard, preventing the user from accessing the original content underneath;</li>
-<li>  Content is presented in an infinite scroll, so a keyboard user is forced to tab through everything before they can exit the scroll area.</li>
+<li><a href="2.1.1.html">2.1.1 Keyboard (A)</a> applies when users cannot use a component with a keyboard. </li>
+<li><a href="2.4.7.html">2.4.7 Focus Visible (AA)</a> applies when users can exit a component, but they cannot see where they are on the page. </li>
+<li><a href="2.4.11.html">2.4.11 Focus Not Obscured (AA)</a> applies when users can exit a component but something is covering the keyboard focus and they cannot see it. </li>
 </ul>
 
     <h2 id="last-updated">Last updated</h2>
-    <p>This page was last updated in July 2018.</p>
+    <p>This page was last updated in November 2026.</p>
 
             
           </main>
